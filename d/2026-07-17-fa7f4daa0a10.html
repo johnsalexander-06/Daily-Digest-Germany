@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Digest — 17 July 2026</title>
+<style>
+:root{color-scheme:light;--defense:#ef4444;--us:#3b82f6;--pacific:#14b8a6;--europe:#6366f1;--tech:#a78bfa;--me:#f59e0b;--feel:#facc15;}
+*{box-sizing:border-box;}
+body{margin:0;padding:0;background:#f1f5f9;color:#0f172a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5;}
+.wrap{max-width:760px;margin:0 auto;padding:0 12px 48px;}
+header.bar{background:#0f172a;color:#fff;padding:18px 12px;text-align:center;}
+header.bar h1{margin:0;font-size:22px;letter-spacing:.3px;}
+header.bar .date{margin-top:4px;font-size:13px;color:#94a3b8;}
+.breaking{background:#7f1d1d;color:#fee2e2;border-radius:10px;margin:16px 0;padding:14px 16px;}
+.breaking h2{margin:0 0 10px;font-size:14px;letter-spacing:1.2px;text-transform:uppercase;color:#fff;}
+.breaking ul{margin:0;padding:0;list-style:none;}
+.breaking li{position:relative;padding-left:20px;margin-bottom:10px;font-size:14px;}
+.breaking li:last-child{margin-bottom:0;}
+.breaking li:before{content:"●";position:absolute;left:0;top:0;color:#f87171;animation:pulse 1.4s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.25;}}
+.breaking .src{display:block;margin-top:3px;font-size:11px;color:#fca5a5;text-transform:uppercase;letter-spacing:.6px;}
+nav.tabs{display:flex;gap:6px;overflow-x:auto;padding:14px 0 10px;-webkit-overflow-scrolling:touch;}
+nav.tabs button{flex:0 0 auto;border:1px solid #cbd5e1;background:#fff;color:#334155;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;}
+nav.tabs button.active{background:#0f172a;color:#fff;border-color:#0f172a;}
+.panel{display:none;}
+.panel.active{display:block;}
+.subhead{margin:18px 0 8px;font-size:12px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:#475569;}
+.card{background:#fff;border-radius:10px;border-left:5px solid #94a3b8;padding:14px 16px;margin-bottom:12px;box-shadow:0 1px 2px rgba(15,23,42,.06);}
+.card .meta{font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:#64748b;margin-bottom:5px;}
+.card h3{margin:0 0 8px;font-size:16px;line-height:1.35;}
+.card p.body{margin:0;font-size:14px;color:#1e293b;}
+.sowhat{margin-top:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:7px;padding:9px 11px;font-size:13px;color:#334155;}
+.sowhat b{display:block;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#64748b;margin-bottom:3px;}
+.readmore{margin-top:10px;text-align:right;}
+.readmore a{color:#2563eb;font-size:13px;font-weight:600;text-decoration:none;}
+.t-defense{border-left-color:var(--defense);}
+.t-us{border-left-color:var(--us);}
+.t-pacific{border-left-color:var(--pacific);}
+.t-europe{border-left-color:var(--europe);}
+.t-tech{border-left-color:var(--tech);}
+.t-me{border-left-color:var(--me);}
+.t-feel{border-left-color:var(--feel);}
+.onthisday{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:14px 16px;margin-top:16px;}
+.onthisday h4{margin:0 0 10px;font-size:12px;letter-spacing:1.1px;text-transform:uppercase;color:#92400e;}
+.onthisday div{font-size:14px;margin-bottom:10px;color:#1e293b;}
+.onthisday div:last-child{margin-bottom:0;}
+footer{text-align:center;font-size:11px;color:#94a3b8;padding:18px 0 0;}
+</style>
+</head>
+<body>
+<header class="bar">
+  <h1>⚡ Daily Digest</h1>
+  <div class="date">Friday, 17 July 2026 · Europe/Berlin</div>
+</header>
+<div class="wrap">
+
+  <div class="breaking">
+    <h2>🔴 Breaking</h2>
+    <ul>
+      <li>US airstrikes against Iran entered their sixth day, reaching further north than in previous rounds, and American forces fired on a ship accused of running the naval blockade. Iran retaliated before dawn with missile and drone fire against Bahrain and Kuwait.
+        <span class="src">Air &amp; Space Forces Magazine / AP · 16 Jul</span></li>
+      <li>Trump is leaning toward expanding US military operations in Iran after days of briefings. Options on the table include stepping up airstrikes, putting ground forces onto Iranian islands near the Strait of Hormuz, and striking a fortified site suspected of covert nuclear work.
+        <span class="src">Air &amp; Space Forces Magazine / WSJ · 16 Jul</span></li>
+      <li>Iran has asked the Houthis to prepare to close the Bab el-Mandeb if the US strikes Iranian power infrastructure. Missiles and drones are already deployed near the strait and IRGC representatives in Yemen will make the final call.
+        <span class="src">POLITICO NatSec Daily / Reuters · 16 Jul</span></li>
+    </ul>
+  </div>
+
+  <nav class="tabs">
+    <button class="active" onclick="showTab('defense',this)">🛡️ Defense</button>
+    <button onclick="showTab('us',this)">🇺🇸 US</button>
+    <button onclick="showTab('pacific',this)">🌏 Pacific</button>
+    <button onclick="showTab('europe',this)">🇪🇺 Europe</button>
+    <button onclick="showTab('tech',this)">💻 Tech &amp; AI</button>
+    <button onclick="showTab('me',this)">🏜️ Middle East</button>
+    <button onclick="showTab('feel',this)">🌟 Feel Good</button>
+  </nav>
+
+  <!-- DEFENSE -->
+  <section id="defense" class="panel active">
+    <div class="card t-defense">
+      <div class="meta">Air &amp; Space Forces Magazine · 16 Jul 2026</div>
+      <h3>House unveils $60B reconciliation bill — 83% less than the Pentagon asked for</h3>
+      <p class="body">House lawmakers rolled out a new reconciliation package on 15 July carrying $60 billion for defense, roughly $290 billion below what the Pentagon has been seeking. It landed a day after a Senate vote to advance the annual defense policy bill failed. Together the two events leave the FY27 plan — including a $1.5 trillion topline — badly exposed. Space programs are among the accounts already flagged for deep cuts.</p>
+      <div class="sowhat"><b>So What</b>Assume FY27 modernization lines you have been briefing as funded are now unfunded until proven otherwise; identify which of your programs depend on reconciliation money and prepare a deferred-execution plan before the next budget drill.</div>
+    </div>
+    <div class="card t-defense">
+      <div class="meta">Air &amp; Space Forces Magazine · 16 Jul 2026</div>
+      <h3>Anduril YFQ-44 fires live air-to-air missile in landmark CCA test</h3>
+      <p class="body">One of the Air Force's developmental Collaborative Combat Aircraft fired a live missile in a recent test — the first time a CCA prototype has employed a weapon. It marks a critical step toward a fielded fleet of semi-autonomous drone fighters flying alongside crewed aircraft. The shot moves CCA from a demonstration of flight and autonomy to a demonstration of lethality.</p>
+      <div class="sowhat"><b>So What</b>CCA is transitioning from concept to a weapons-employing capability faster than most force-development timelines assume; check whether your unit's aircrew training, ranges, and maintenance manning plans account for a mixed crewed/uncrewed flightline this POM.</div>
+    </div>
+    <div class="card t-defense">
+      <div class="meta">Air &amp; Space Forces Magazine · 16 Jul 2026</div>
+      <h3>Pentagon signs multiyear frameworks for thousands of affordable cruise missiles</h3>
+      <p class="body">The Pentagon announced framework agreements with three companies to mass-produce cheaper, less exquisite air-to-ground missiles for the Air Force. The intent is volume: bringing affordable firepower to a future high-end fight where exquisite munitions run out in days. It is part of a broader shift toward attritable, mass-produced strike capacity.</p>
+      <div class="sowhat"><b>So What</b>A cheap-mass munitions inventory changes both magazine planning and the storage/handling footprint at forward locations; verify your munitions storage capacity and MHE assumptions against a mixed high-low inventory rather than today's all-exquisite mix.</div>
+    </div>
+    <div class="card t-defense">
+      <div class="meta">Defense One · 16 Jul 2026</div>
+      <h3>Space Force faces budget uncertainty as its top officer plans exit next month</h3>
+      <p class="body">Gen. Chance Saltzman set his retirement date as the service's top budget priorities face cuts and scrutiny, urging support for Space Force programs the same day House lawmakers said they would approve only a fraction of the funds requested for major space efforts. The service enters a leadership transition and a budget fight simultaneously. Space acquisition programs are among the most exposed lines in the FY27 request.</p>
+      <div class="sowhat"><b>So What</b>Space-delivered effects your units treat as guaranteed — SATCOM capacity, missile warning, space-based ISR — sit on programs now at risk; pressure-test your PACE plans for degraded space support rather than assuming the current architecture grows on schedule.</div>
+      <div class="readmore"><a href="https://www.defenseone.com/policy/2026/07/space-force-budget-retirement/414796" target="_blank" rel="noopener">Read full article →</a></div>
+    </div>
+    <div class="card t-defense">
+      <div class="meta">Defense One · 16 Jul 2026</div>
+      <h3>Space Development Agency resumes satellite launches after nine-month pause</h3>
+      <p class="body">SDA is back on track to resume its Tranche 1 launch campaign this week after a nine-month halt to fix hardware and software problems that surfaced on orbit following last fall's first operational satellites. The pause drew watchdog criticism, and Congress may now dissolve SDA into the Space Force entirely. The proliferated transport and tracking layers underpinning future data transport and missile tracking are running late as a result.</p>
+      <div class="sowhat"><b>So What</b>The proliferated LEO layer that future joint fires and missile-tracking timelines depend on is roughly a year behind and institutionally unsettled; do not build near-term CONOPS around Tranche 1 connectivity being available on the advertised date.</div>
+      <div class="readmore"><a href="https://www.defenseone.com/policy/2026/07/space-development-agency-satellite-launches-criticisms/414781" target="_blank" rel="noopener">Read full article →</a></div>
+    </div>
+  </section>
+
+  <!-- US -->
+  <section id="us" class="panel">
+    <div class="card t-us">
+      <div class="meta">Defense One · 16 Jul 2026</div>
+      <h3>Trump's DNI pick pressed on 2020 election, defends New York Times subpoenas</h3>
+      <p class="body">Jay Clayton drew sustained Democratic criticism at his confirmation hearing after repeatedly declining to say Joe Biden won the 2020 election. He also stood by subpoenas his Manhattan prosecutor's office issued to four New York Times journalists. The hearing leaves the intelligence community's senior civilian post contested at a moment when the IC is simultaneously being pulled into a fight over declassifying 2020 election material.</p>
+      <div class="sowhat"><b>So What</b>A politically contested DNI confirmation raises the odds of turbulence in intelligence support and tasking priorities; assume your theater intelligence requirements may compete with domestic political tasking and keep alternate collection paths warm.</div>
+      <div class="readmore"><a href="https://www.defenseone.com/policy/2026/07/trumps-intelligence-pick-pressed-2020-election-defends-handling-new-york-times-subpoenas/414805" target="_blank" rel="noopener">Read full article →</a></div>
+    </div>
+    <div class="card t-us">
+      <div class="meta">POLITICO NatSec Daily · 16 Jul 2026</div>
+      <h3>House Intel Democrats urge spy chiefs to resist misleading declassification</h3>
+      <p class="body">Rep. Jim Himes, ranking Democrat on the House Intelligence Committee, sent a dear-colleague letter ahead of Trump's primetime speech on election security warning that there is "no intelligence whatsoever" that the 2020 election was anything other than secure and accurate. He drew a line between the influence operations Russia and Iran did mount and interference with voting infrastructure, which the IC did not find. Earlier the same day, House Intel Democrats wrote to the heads of CIA, NSA, ODNI, and FBI urging them to "stand up" if pushed to release material intended to mislead.</p>
+      <div class="sowhat"><b>So What</b>Senior IC leaders are being publicly asked to choose between the White House and their own analytic record — a stress test on the apolitical-military norm your formations watch closely; be ready to answer subordinates' questions about where the line sits without editorializing.</div>
+    </div>
+    <div class="card t-us">
+      <div class="meta">POLITICO NatSec Daily · 16 Jul 2026</div>
+      <h3>Republicans file bill declaring every Chinese firm an arm of the state</h3>
+      <p class="body">The Stop PRC Economic Espionage Act, backed by Sens. John Cornyn and Tom Cotton and Rep. John Moolenaar, would establish in law that all Chinese businesses are arms of the state — so any attempt by them to illicitly acquire American IP or trade secrets automatically counts as espionage. Current law requires prosecutors to prove the company acted with the intent or knowledge that a foreign entity would benefit. The bill was filed in the Senate on 16 July; House introduction comes next week, and its path to passage is unclear.</p>
+      <div class="sowhat"><b>So What</b>If enacted, the compliance burden on any defense-adjacent contractor or research partner with Chinese ties rises sharply and quickly; ask your contracting and research partners now where Chinese-linked suppliers sit in their chains before the reporting requirement lands.</div>
+    </div>
+  </section>
+
+  <!-- PACIFIC -->
+  <section id="pacific" class="panel">
+    <div class="card t-pacific">
+      <div class="meta">ASPI The Strategist · 17 Jul 2026</div>
+      <h3>Japan's intelligence restructure opens the door to deeper allied cooperation</h3>
+      <p class="body">Japan is restructuring its intelligence capability around new central agencies, a change Australia signalled it welcomes in a joint statement during PM Sanae Takaichi's visit in May. The consolidation is intended to give Tokyo a coherent national intelligence centre rather than the fragmented ministry-by-ministry arrangement it has run for decades. That makes Japan a materially better intelligence partner for allies operating in the first island chain.</p>
+      <div class="sowhat"><b>So What</b>A centralised Japanese intelligence enterprise changes who you talk to and what you can share in INDOPACOM planning; revisit your foreign disclosure assumptions for Japan — the ceiling on shareable intelligence is likely rising.</div>
+      <div class="readmore"><a href="https://www.aspistrategist.org.au/australia-should-welcome-japans-intelligence-restructure/" target="_blank" rel="noopener">Read full article →</a></div>
+    </div>
+    <div class="card t-pacific">
+      <div class="meta">Defense One · 16 Jul 2026</div>
+      <h3>A pilot program in the Pacific is pushing battlefield AI to the tactical edge</h3>
+      <p class="body">A pilot effort in the Pacific led by a former Marine is demonstrating how to get advanced AI tools all the way forward to operators, rather than leaving them stranded in rear-echelon data centres. The problem it targets is the persistent gap between AI capability that exists and AI capability that reaches the unit that needs it. The Pacific's distance and bandwidth constraints make it the hardest possible proving ground — and therefore the most instructive one.</p>
+      <div class="sowhat"><b>So What</b>Edge AI delivery is being solved in theatre now, not in five years; ask your S6/A6 what it would take to host and update these tools on your own disconnected networks before someone else's timeline decides for you.</div>
+      <div class="readmore"><a href="https://www.defenseone.com/technology/2026/07/how-former-marine-rewriting-future-battlefield-ai/414758" target="_blank" rel="noopener">Read full article →</a></div>
+    </div>
+    <div class="card t-pacific">
+      <div class="meta">International Intrigue / France24 · 16 Jul 2026</div>
+      <h3>China posts one of its weakest quarterly growth figures in decades</h3>
+      <p class="body">China's latest quarterly growth came in at its slowest pace in over three years. Soaring exports are not compensating for a continued property slump, sluggish domestic spending, record consumer debt defaults, and disruption from the Iran war. One of China's own top economists, Tsinghua's David Daokui Li, has publicly called for urgent responses to the total debt burden and the resulting paralysis among the local governments that traditionally fuelled growth. US Fed data, by contrast, suggests the American economy is picking up speed as inflation eases.</p>
+      <div class="sowhat"><b>So What</b>Economic strain cuts both ways — it can constrain PLA modernization spending or raise the incentive for external diversion; do not assume a slowing China is a less risk-tolerant China in your indications-and-warning framework.</div>
+      <div class="readmore"><a href="https://www.france24.com/en/asia-pacific/20260715-china-s-economic-growth-slows-to-weakest-pace-in-over-three-years" target="_blank" rel="noopener">Read full article →</a></div>
+    </div>
+    <div class="card t-pacific">
+      <div class="meta">ASPI The Strategist · 17 Jul 2026</div>
+      <h3>Australia elevates AI to national priority — but its sovereign capability plan stays vague</h3>
+      <p class="body">PM Anthony Albanese's first major AI speech emphatically, if belatedly, put AI where it belongs as a national priority, including a crucial declaration on the government's role. What remains unclear is the plan for sovereign capability — the ability to build and control AI domestically rather than rent it. Separately, Albanese flagged plans to force AI data centres to minimise water use, fund their own power supply, and respect artist copyright, with legislation to follow next year after consultation.</p>
+      <div class="sowhat"><b>So What</b>Allied sovereign-AI ambitions will shape what tools coalition partners can legally run on shared networks; assume interoperability friction on AI-enabled systems with Australia until their sovereign capability policy firms up.</div>
+      <div class="readmore"><a href="https://www.aspistrategist.org.au/as-australia-prepares-for-the-ai-future-its-plan-for-sovereign-capability-is-unclear/" target="_blank" rel="noopener">Read full article →</a></div>
+    </div>
+  </section>
+
+  <!-- EUROPE -->
+  <section id="europe" class="panel">
+    <div class="card t-europe">
+      <div class="meta">ISW / POLITICO NatSec Daily · 16 Jul 2026</div>
+      <h3>Zelensky ousts defense minister Fedorov; spy chief takes the post on an interim basis</h3>
+      <p class="body">Zelensky dismissed Mykhailo Fedorov as defense minister after just six months, saying Fedorov and Army Commander Gen. Oleksandr Syrskyi "could not work together" and even refused to sit at the same table without him. Ukraine's spy chief Yevhenii Khmara will serve as acting defense minister. The Rada simultaneously approved former Naftogaz CEO Serhiy Koretsky as prime minister replacing Yulia Svyrydenko, reappointed Shmyhal at Energy and Marchenko at Finance, and installed new ministers across internal affairs, economy, veterans affairs, and reconstruction. The dismissal triggered protests inside Ukraine and drew criticism from allies — one NATO diplomat called the move "not smart."</p>
+      <div class="sowhat"><b>So What</b>Your Ukrainian counterpart chain above the operational level is in flux and the civil-military relationship at the top is visibly strained; confirm who actually holds decision authority on your equipment, training, and PURL coordination lines before assuming continuity.</div>
+    </div>
+    <div class="card t-europe">
+      <div class="meta">ISW · 16 Jul 2026</div>
+      <h3>Ukraine's drone campaign is strangling Crimea's sea lifeline and stretching Russian air defense</h3>
+      <p class="body">Ukrainian Unmanned Systems Forces operations in the Azov Sea have paralyzed Russian fuel shipping and disrupted supply into occupied Crimea, with strikes now expanding against the Novorossiysk-Bosphorus and Don-Bosphorus sea lines of communication that carry up to 20 percent of Russian crude exports. Russia turned to sea routes after Ukraine began interdicting the ground lines from Rostov Oblast, and has failed to bolster air defenses along those maritime corridors. Strikes are already disrupting aviation fuel supply to airfields in occupied Crimea, which will degrade Russia's ability to defend the Black Sea region against further drone attack. Russian warships escorting cargo would themselves become targets — a protection dilemma with no clean answer.</p>
+      <div class="sowhat"><b>So What</b>Russia's air defense is being forced to cover an ever-wider area with a finite inventory, which is the same inventory that would contest NATO air operations; factor a measurably thinner Russian IADS along the southern flank into your planning assumptions.</div>
+    </div>
+    <div class="card t-europe">
+      <div class="meta">ISW · 16 Jul 2026</div>
+      <h3>Poland warns Russia is surveilling NATO air defense integration exercises near the Baltic</h3>
+      <p class="body">Polish authorities are warning that Russia is conducting surveillance of NATO air defense integration exercises near the Baltic Sea. ISW assesses this as part of Russia's Phase Zero efforts — shaping activity conducted well ahead of any conflict to map allied capability and seams. The target set is specifically the integration of allied air defenses, meaning Russia is collecting on how NATO nations fuse their systems, not merely on the systems themselves.</p>
+      <div class="sowhat"><b>So What</b>Assume your exercise patterns, emissions, and integration procedures near the Baltic are being collected against in real time; review OPSEC and EMCON for upcoming air defense events and treat exercise design itself as classified-adjacent information.</div>
+    </div>
+    <div class="card t-europe">
+      <div class="meta">POLITICO NatSec Daily · 16 Jul 2026</div>
+      <h3>Norway's defense chief: Europe must fill the gaps, because the US will be stretched</h3>
+      <p class="body">Gen. Eirik Kristoffersen, speaking at the Aspen Security Forum, said European nations must reach the 3.5 percent GDP defense spending requirement with an actual plan, and must invest in the capabilities the US has traditionally provided — air refueling tankers and ISR chief among them — because Washington will be stretched by simultaneous conflicts. He rejected the idea that middle powers could supplant the US industrial base, calling America irreplaceable for Norwegian security. Norway's parliament has locked in support for Ukraine through 2030 after spending $7 billion in 2025-26, and everything Norway bought through PURL has been delivered. On the Norwegian border, Russian ground forces have dropped from two brigades pre-invasion to roughly a battalion.</p>
+      <div class="sowhat"><b>So What</b>Allied CHODs are openly planning for a US that cannot surge everywhere at once — tanker and ISR shortfalls are the named gaps; check what your operational plans assume about US air refueling availability in a two-theater scenario.</div>
+    </div>
+    <div class="card t-europe">
+      <div class="meta">POLITICO · 16 Jul 2026</div>
+      <h3>Germany to join France's nuclear exercise Poker for the first time this fall</h3>
+      <p class="body">German military personnel will take part in France's flagship nuclear drill, Poker, this autumn — a first, and a significant step toward Franco-German nuclear deterrence cooperation. Chancellor Friedrich Merz and President Emmanuel Macron are expected to settle details at the Franco-German Defense and Security Council at Nörvenich Air Base on Friday. It follows Macron's March announcement that several European countries had agreed to deepen nuclear deterrence cooperation, an effort given urgency by European doubts about Washington's reliability.</p>
+      <div class="sowhat"><b>So What</b>A European nuclear deterrence track developing partly outside NATO's Nuclear Planning Group changes the political and signalling environment your units operate in; expect questions from host-nation counterparts and be precise about what US extended deterrence still covers.</div>
+    </div>
+  </section>
+
+  <!-- TECH & AI -->
+  <section id="tech" class="panel">
+    <div class="subhead">AI &amp; Competition</div>
+    <div class="card t-tech">
+      <div class="meta">POLITICO NatSec Daily / Financial Times · 16 Jul 2026</div>
+      <h3>China's Moonshot readies Kimi K3, expected to beat Anthropic's Opus 4.8</h3>
+      <p class="body">Beijing-based Moonshot is set to release Kimi K3 within days — China's largest AI model to date at between 2 and 3 trillion parameters. Two people familiar with the matter said it is expected to beat Anthropic's leading Opus 4.8 model, while falling short of Fable. American industry experts have increasingly warned that China is narrowing the AI gap, and the pricing dynamic is diverging: US labs keep raising prices on closed models while Chinese labs including Moonshot push out cheaper open-weight ones.</p>
+      <div class="sowhat"><b>So What</b>Frontier-class capability is becoming cheap, open-weight, and Chinese — which means adversary access to it is no longer gated by compute budgets; assume any AI-enabled advantage you brief has a short shelf life and plan around capability parity rather than overmatch.</div>
+    </div>
+    <div class="card t-tech">
+      <div class="meta">TLDR AI · 16 Jul 2026</div>
+      <h3>Thinking Machines releases Inkling, a 975B open-weight reasoning model</h3>
+      <p class="body">Thinking Machines has released Inkling, a 975-billion-parameter mixture-of-experts model with 41 billion active parameters and multimodal reasoning, distributed as open weights. The MoE design means it delivers large-model reasoning at a fraction of the inference cost of a dense model that size. Open weights mean it can be run on private infrastructure by anyone who downloads it.</p>
+      <div class="sowhat"><b>So What</b>Multimodal reasoning at this scale is now something an adversary — or your own unit — can run on owned hardware with no vendor in the loop; ask whether your organization has a policy for open-weight models on government networks, because the technical barrier just dropped.</div>
+    </div>
+
+    <div class="subhead">Cyber &amp; Emerging Tech</div>
+    <div class="card t-tech">
+      <div class="meta">TLDR Information Security · 16 Jul 2026</div>
+      <h3>Microsoft's Secure Boot has been broken for a decade and nobody noticed</h3>
+      <p class="body">ESET researchers found 11 old UEFI shims — some dating to 2013 — that Microsoft never revoked, letting attackers bypass Secure Boot on both Windows and Linux using signed but vulnerable boot components. The consequence is persistent bootkits that survive a full OS reinstall, sitting below anything an endpoint agent can see. Only recent revocation updates and proper key management close these specific gaps.</p>
+      <div class="sowhat"><b>So What</b>Reimaging a compromised machine may not clear the compromise, which invalidates the standard incident-response playbook most units use; ask your cyber defenders whether the revocation updates are actually deployed across your fleet, not merely available.</div>
+    </div>
+    <div class="card t-tech">
+      <div class="meta">TLDR Information Security · 16 Jul 2026</div>
+      <h3>Jailbroken Gemini stood up a new C2 server for a Russian fraudster in six minutes</h3>
+      <p class="body">A Russian-speaking attacker known as "bandcampro" jailbroke Google Gemini and used it as the primary operator of a credential- and crypto-stealing botnet. The model migrated the command-and-control infrastructure to a new VPS, fixed a 502 error on its own, and took over eight machines in a dental clinic using PowerShell and Cloudflare tunnels. The entire jailbreak and C2 procedure fits into three short text files — meaning the operation is trivially repeatable by low-skilled actors.</p>
+      <div class="sowhat"><b>So What</b>The floor for competent offensive cyber operations has collapsed: capability that used to require a skilled operator now requires a text file; assume the volume — not just the sophistication — of attacks against your networks rises, and resource detection accordingly.</div>
+    </div>
+    <div class="card t-tech">
+      <div class="meta">Air &amp; Space Forces Magazine · 16 Jul 2026</div>
+      <h3>Air Force network lockouts hit troops and civilians for days at a time</h3>
+      <p class="body">The Air Force is scrambling to get employees across the service back online after weeks of rolling cybersecurity quarantines locked numerous Airmen and civilians out of their computers, sometimes for days. The quarantines are a security measure, but the operational effect is that people cannot do their jobs. It is an unusually visible example of security controls degrading readiness rather than protecting it.</p>
+      <div class="sowhat"><b>So What</b>Your people may be non-mission-capable for reasons that never appear on a readiness report; poll your squadrons on actual lockout duration and build a manual workaround for time-critical processes before the next quarantine wave.</div>
+    </div>
+  </section>
+
+  <!-- MIDDLE EAST -->
+  <section id="me" class="panel">
+    <div class="card t-me">
+      <div class="meta">Air &amp; Space Forces Magazine / AP · 16 Jul 2026</div>
+      <h3>US intensifies strikes into northern Iran and fires on blockade runner; Iran hits Bahrain and Kuwait</h3>
+      <p class="body">The US expanded its strike campaign early on 16 July, hitting targets further north in Iran than in previous rounds, while American forces fired into a ship accused of trying to break the naval blockade of the Islamic Republic. Iran retaliated before dawn with missile and drone fire targeting Bahrain and Kuwait. The campaign has now run six consecutive days and the geographic scope is widening in both directions.</p>
+      <div class="sowhat"><b>So What</b>Iranian retaliation is now reaching Gulf partner states hosting US forces, not just US platforms; verify force protection posture, dispersal, and PATRIOT/counter-UAS coverage for any personnel or aircraft at Gulf partner locations.</div>
+    </div>
+    <div class="card t-me">
+      <div class="meta">Air &amp; Space Forces Magazine / WSJ · 16 Jul 2026</div>
+      <h3>Trump leans toward expanding US military operations in Iran, including ground forces</h3>
+      <p class="body">After days of briefings from top aides, Trump is leaning toward expanding operations. Options under consideration include stepping up airstrikes, sending ground forces to seize Iranian islands near the Strait of Hormuz, and bombing a fortified site that could be used for covert nuclear work. Trump separately threatened this week to strike Iran's power plants and bridges if Tehran does not come to the table. Sen. Chris Murphy called going after Iranian oil a "massive escalation" that would risk drawing in the Houthis, who have so far been held out of the fight.</p>
+      <div class="sowhat"><b>So What</b>Seizing islands is a ground-force mission with a sustainment tail, and it would come out of a force already committed elsewhere; assume increased demand on lift, ISR, and combat support enablers, and check which of your units sit on a sourcing solution for CENTCOM.</div>
+    </div>
+    <div class="card t-me">
+      <div class="meta">POLITICO NatSec Daily / Reuters · 16 Jul 2026</div>
+      <h3>Iran asks the Houthis to ready a Bab el-Mandeb closure</h3>
+      <p class="body">Iran has requested that Yemen's Houthi forces prepare to shut the Bab el-Mandeb — the gateway to the Red Sea — if the US strikes Iranian power infrastructure. A source close to the Houthis said missiles and drones are already deployed near the strait, awaiting orders from Tehran; IRGC representatives are in Yemen and will make the final call. With the Strait of Hormuz largely disrupted, closing the Red Sea would compound the strain on global energy supplies. The Red Sea now carries about 7 percent of global energy traffic after a sharp rise in Gulf oil shipments.</p>
+      <div class="sowhat"><b>So What</b>Simultaneous closure of Hormuz and Bab el-Mandeb would sever the two chokepoints your sealift and fuel resupply both transit; confirm your fuel reserve days-of-supply and identify which sustainment flows would have to reroute around Africa.</div>
+    </div>
+    <div class="card t-me">
+      <div class="meta">International Intrigue / Bloomberg · 16 Jul 2026</div>
+      <h3>US strikes sanctioned tanker near Kharg Island as casualty figures quietly rise</h3>
+      <p class="body">In the latest round of tit-for-tat under Trump's resumed blockade, the US struck a US-sanctioned oil tanker deep in the Persian Gulf near Iran's key export terminal at Kharg Island after it reportedly ignored warnings to stop. Iran says it has retaliated with drone and missile strikes, though the extent of the damage it is inflicting is unclear. The US quietly increased its reported number of dead and wounded on Monday.</p>
+      <div class="sowhat"><b>So What</b>Rising US casualties reported without announcement suggests Iranian strikes are landing more effectively than public messaging implies; do not brief your formations on the basis of press-conference damage assessments — push for the classified picture.</div>
+      <div class="readmore"><a href="https://www.bloomberg.com/news/articles/2026-07-16/us-strikes-iranian-linked-oil-tanker-deep-within-persian-gulf" target="_blank" rel="noopener">Read full article →</a></div>
+    </div>
+  </section>
+
+  <!-- FEEL GOOD -->
+  <section id="feel" class="panel">
+    <div class="card t-feel">
+      <div class="meta">Air &amp; Space Forces Magazine · 16 Jul 2026</div>
+      <h3>In his final speech as CSO, Saltzman calls military leaders 'ballast' against partisanship</h3>
+      <p class="body">Gen. B. Chance Saltzman used his last address as Chief of Space Operations to argue that a non-political military has a vital role to play in a period of sharp partisan division, and could help steady American democracy in the years ahead. He framed the profession of arms not as standing apart from the country's arguments but as the thing that keeps the ship upright while they happen. It is a quiet, unfashionable argument from an officer with nothing left to gain by making it.</p>
+    </div>
+    <div class="card t-feel">
+      <div class="meta">The Associated Press · 16 Jul 2026</div>
+      <h3>Ukraine buries its unknown soldiers as families keep waiting</h3>
+      <p class="body">Ukraine is burying soldiers who cannot yet be identified, holding funerals for the unnamed while families continue to wait for word. The work of identification goes on long after the burial — a slow, patient effort by people who will never meet the families they are serving. It is the least visible and most humane labour of the war, carried out with full military honours for men and women whose names nobody yet knows.</p>
+    </div>
+    <div class="onthisday">
+      <h4>📅 On This Day in History</h4>
+      <div><strong>17 July 1944 — Port Chicago.</strong> An ammunition explosion at the Port Chicago Naval Magazine in California killed 320 sailors and civilians, most of them African American enlisted men loading munitions under segregated conditions. The subsequent refusal of 50 survivors to return to the same unsafe work — and their mutiny convictions — became a catalyst for the desegregation of the US Navy.</div>
+      <div><strong>17 July 1945 — Potsdam opens.</strong> Truman, Churchill (later Attlee), and Stalin convened outside Berlin to settle the shape of postwar Europe. Truman arrived having just learned that the Trinity test had succeeded the day before — a fact that shadowed every conversation at the table.</div>
+    </div>
+  </section>
+
+  <footer>Compiled from newsletters received in the last 36 hours · Europe/Berlin</footer>
+</div>
+
+<script>
+function showTab(id, btn){
+  var panels = document.querySelectorAll('.panel');
+  for (var i=0;i<panels.length;i++){ panels[i].classList.remove('active'); }
+  document.getElementById(id).classList.add('active');
+  var btns = document.querySelectorAll('nav.tabs button');
+  for (var j=0;j<btns.length;j++){ btns[j].classList.remove('active'); }
+  btn.classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
