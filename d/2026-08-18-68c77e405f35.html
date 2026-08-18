@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Digest — 18 August 2026</title>
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:#f1f5f9;color:#0f172a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+.wrap{max-width:760px;margin:0 auto;padding:0 12px 48px}
+header{background:#0f172a;color:#fff;padding:18px 12px}
+header .inner{max-width:760px;margin:0 auto}
+header h1{margin:0;font-size:22px;letter-spacing:.3px}
+header .date{margin-top:4px;font-size:13px;color:#94a3b8}
+.breaking{background:#7f1d1d;color:#fee2e2;border-radius:10px;margin:14px 0;padding:12px 14px}
+.breaking h2{margin:0 0 8px;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;color:#fecaca}
+.breaking ul{margin:0;padding-left:4px;list-style:none}
+.breaking li{margin:8px 0;font-size:14px;display:flex;gap:8px;align-items:flex-start}
+.dot{color:#f87171;font-size:14px;line-height:1.5;animation:pulse 1.4s infinite}
+@keyframes pulse{0%{opacity:1}50%{opacity:.25}100%{opacity:1}}
+nav{display:flex;gap:6px;overflow-x:auto;padding:12px 0 6px;-webkit-overflow-scrolling:touch}
+nav button{flex:0 0 auto;border:1px solid #cbd5e1;background:#fff;color:#334155;border-radius:999px;padding:8px 13px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+nav button.active{background:#0f172a;color:#fff;border-color:#0f172a}
+.tab{display:none}
+.tab.active{display:block}
+.sub{margin:18px 0 8px;font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#475569}
+.card{background:#fff;border-radius:10px;border-left:5px solid #94a3b8;padding:14px 16px;margin:12px 0;box-shadow:0 1px 2px rgba(15,23,42,.06)}
+.meta{font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:#64748b;font-weight:700}
+.card h3{margin:6px 0 8px;font-size:17px;line-height:1.3}
+.card p{margin:0 0 10px;font-size:14.5px;color:#1e293b}
+.sowhat{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:9px 11px;font-size:13.5px;color:#334155}
+.sowhat b{color:#0f172a}
+.readmore{display:block;text-align:right;margin-top:9px;font-size:13px;font-weight:600}
+.readmore a{color:#2563eb;text-decoration:none}
+.events{background:#fff;border-radius:10px;padding:14px 16px;margin:12px 0;border-left:5px solid #38bdf8}
+.events h3{margin:0 0 4px;font-size:17px}
+.evday{margin:12px 0 4px;font-size:13px;font-weight:700;color:#0369a1}
+.ev{border-top:1px solid #e2e8f0;padding:9px 0;font-size:14px}
+.ev .n{font-weight:700}
+.ev .d{color:#475569;font-size:13.5px}
+.ev .tip{color:#0369a1;font-size:12.5px;margin-top:3px}
+.ev a{color:#2563eb;text-decoration:none}
+.otd{background:#fff;border-radius:10px;padding:14px 16px;margin:12px 0;border-left:5px solid #facc15}
+.otd h3{margin:0 0 8px;font-size:17px}
+.otd li{font-size:14px;margin:7px 0}
+footer{margin-top:26px;font-size:12px;color:#64748b;text-align:center}
+</style>
+</head>
+<body>
+<header><div class="inner">
+<h1>⚡ Daily Digest</h1>
+<div class="date">Tuesday, 18 August 2026 · rolling 36-hour window</div>
+</div></header>
+
+<div class="wrap">
+
+<div class="breaking">
+<h2>🔴 Breaking</h2>
+<ul>
+<li><span class="dot">●</span><span>Trump directed the Pentagon to "substantially reduce" joint military exercises with South Korea, citing cost, his "very good relationship" with Kim Jong Un, and Seoul's refusal to assist in the Iran war. This year's drills began Monday as scheduled.</span></li>
+<li><span class="dot">●</span><span>The Army's fleet-wide Apache grounding will be lifted this week, per an internal memo; the previously confirmed transmission problem was not a factor in the crash that triggered it.</span></li>
+<li><span class="dot">●</span><span>A likely Russian Banderol loitering munition crashed and exploded near Talmaza, Moldova, roughly 20km from the Ukrainian border — the latest of at least 12 Russian drones/missiles to enter European airspace between 15 July and 15 August.</span></li>
+</ul>
+</div>
+
+<nav>
+<button class="active" onclick="showTab('defense',this)">🛡️ Defense</button>
+<button onclick="showTab('us',this)">🇺🇸 US</button>
+<button onclick="showTab('pacific',this)">🌏 Pacific</button>
+<button onclick="showTab('europe',this)">🇪🇺 Europe</button>
+<button onclick="showTab('tech',this)">💻 Tech &amp; AI</button>
+<button onclick="showTab('me',this)">🏜️ Middle East</button>
+<button onclick="showTab('cities',this)">🏙️ Cities</button>
+<button onclick="showTab('feel',this)">🌟 Feel Good</button>
+</nav>
+
+<!-- DEFENSE -->
+<section id="defense" class="tab active">
+
+<div class="card" style="border-left-color:#ef4444">
+<div class="meta">Defense One · 17 Aug 2026</div>
+<h3>Army paid General Dynamics $533M for an artillery plant that produced nothing</h3>
+<p>A half-billion-dollar 155mm shell facility stood up to break the artillery production bottleneck has delivered zero rounds. Assembly robots failed repeatedly and in unpredictable ways, and the automation problems are only the leading item in a longer list of program failures. The plant was a centerpiece of the post-2022 surge intended to lift monthly 155mm output to wartime levels.</p>
+<div class="sowhat"><b>So what:</b> The munitions ramp underwriting both Ukraine resupply and theater war-reserve stocks is further behind than program briefings suggest. Assume no near-term relief in 155mm allocation and re-validate your unit's basic load and training-ammunition assumptions against actual, not programmed, availability.</div>
+<div class="readmore"><a href="https://www.defenseone.com/business/2026/08/artillery-plant-made-nothing/415443" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+<div class="card" style="border-left-color:#ef4444">
+<div class="meta">Air &amp; Space Forces Magazine · 17 Aug 2026</div>
+<h3>US has lost roughly 25% of its MQ-9 Reaper fleet in the Iran war</h3>
+<p>At least 45 MQ-9 Reapers have been lost since the war with Iran began — about a quarter of the total fleet — according to three US officials. The losses reflect the cost of persistent ISR and strike orbits over contested airspace defended by capable integrated air defenses. Reaper is not in production at a rate that replaces attrition on this scale.</p>
+<div class="sowhat"><b>So what:</b> Medium-altitude ISR is now a consumable, not an assumed constant, and competing theaters will feel the shortfall first. Plan for degraded full-motion-video coverage in exercises and contingencies, and identify which of your intelligence requirements can shift to space-based, airborne pod, or partner-nation collection.</div>
+</div>
+
+<div class="card" style="border-left-color:#ef4444">
+<div class="meta">Air &amp; Space Forces Magazine · 17 Aug 2026</div>
+<h3>NORTHCOM deputy warns the homeland still cannot defeat a drone swarm</h3>
+<p>Army Lt. Gen. Joseph Jarrard, NORTHCOM deputy commander, said again that the US military lacks the detection capability and weapons to defeat a mass UAS attack on domestic installations. His warning adds to a steady drumbeat of senior-leader statements identifying homeland counter-UAS as an unresolved capability gap. Separately, a top Pentagon technology official asked industry this week for "lighter, more efficient" airborne directed-energy weapons suited to counter-drone and special operations missions.</p>
+<div class="sowhat"><b>So what:</b> Base defense against small UAS remains an installation-commander problem with no fielded joint solution behind it. Re-check your detection coverage, engagement authorities, and reporting chain for a drone over the fence line now — not after the first incident.</div>
+</div>
+
+<div class="card" style="border-left-color:#ef4444">
+<div class="meta">Breaking Defense · 17 Aug 2026</div>
+<h3>SPACECOM chief: the joint force needs kinetic and non-kinetic weapons for space war</h3>
+<p>"We're a combatant command and we fight to win wars," Gen. Stephen Whiting told the Space and Missile Defense Symposium, arguing for a mix of kinetic and non-kinetic effects. Deputy commander Lt. Gen. Rick Zellmann said directed-energy, cyber, and strikes on ground communications hubs all offer paths to disabling large satellite constellations. The Army described its own space-superiority focus on countering adversary ISR satellites and on "stratospheric warfare." Gen. Michael Guetlein warned that Golden Dome "will stop with everything we've already built" absent continued funding, and said space-based interceptor vendors cleared a first feasibility milestone.</p>
+<div class="sowhat"><b>So what:</b> Counterspace is moving from concept to declared warfighting requirement, and adversary targeting of your space-enabled C2 is the mirror image. Assume degraded SATCOM and GPS in your next exercise and confirm your unit has a rehearsed PACE plan that does not silently depend on space.</div>
+</div>
+
+<div class="card" style="border-left-color:#ef4444">
+<div class="meta">Defense One · 17 Aug 2026</div>
+<h3>Army's Apache grounding lifts this week</h3>
+<p>An internal memo says the service-wide AH-64 grounding will end this week. The transmission problem the service confirmed on the fleet three months ago was not a factor in the crash that prompted the stand-down, an official told Defense One. Units have been absorbing the aviation training and readiness backlog for the duration.</p>
+<div class="sowhat"><b>So what:</b> Attack aviation availability returns, but crews come back with a currency and progression deficit that will not clear itself. Get your aviation training plan re-phased and check which crews fall out of currency windows in the next 30 days.</div>
+</div>
+
+</section>
+
+<!-- US -->
+<section id="us" class="tab">
+
+<div class="card" style="border-left-color:#3b82f6">
+<div class="meta">WSJ Politics · 17 Aug 2026</div>
+<h3>Trump recasts the White House ballroom as a "military complex" after court setbacks</h3>
+<p>The East Wing addition was announced as a matter of beauty and space for hosting VIP guests. With courts blocking the project, the justification has shifted to national security, with Trump now describing the build as a military complex. The reframing is a legal strategy as much as a rhetorical one, aimed at a different set of authorities than those the courts have so far constrained.</p>
+<div class="sowhat"><b>So what:</b> Watch for national-security framing being applied to domestic construction and procurement decisions — it can pull military funding lines and personnel into politically contested projects. Expect questions from your staff and be precise about what your organization is and is not resourcing.</div>
+<div class="readmore"><a href="https://www.wsj.com/politics/policy/trumps-ballroom-was-his-dream-of-beauty-and-space-now-its-a-military-complex-89a7e230" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+<div class="card" style="border-left-color:#3b82f6">
+<div class="meta">Politico NatSec Daily · 17 Aug 2026</div>
+<h3>Order to return Ford-class carriers to steam catapults draws engineering and cost backlash</h3>
+<p>A national security memorandum signed last week gives the Pentagon two months to produce a plan to replace the electromagnetic launch system on Ford-class carriers with steam catapults, beginning with USS Doris Miller (delivery scheduled 2034). Retired Rear Adm. Mark Montgomery called the reversion "illogical, inefficient and a waste of money," noting EMALS reduces wear and maintenance across the ship. Government-oversight analysts say the change is impossible without a complete redesign of the reactor plant's steam-generating system, adding up to three years and a staggering cost increase. Sen. Mark Kelly, a former carrier aviator and test pilot, publicly objected to directing the Navy's engineering choices.</p>
+<div class="sowhat"><b>So what:</b> A single memorandum can consume years of shipbuilding schedule and money before any hardware changes, and that bill competes with readiness accounts. Track this in NDAA markup language rather than press coverage, since the funding effects will surface in your programs first.</div>
+</div>
+
+<div class="card" style="border-left-color:#3b82f6">
+<div class="meta">Politico Inside Congress / Washington Post · 17 Aug 2026</div>
+<h3>Congress moves again on self-policing as another ethics case opens</h3>
+<p>The House Ethics Committee opened a sexual misconduct investigation into Rep. Jimmy Gomez (D-Calif.), who is seeking a sixth term and said he had "made personal mistakes outside my marriage" and would cooperate. The case lands amid a broader reckoning over member behavior and renewed attempts on the Hill to strengthen internal accountability mechanisms. Both parties have incentives to appear responsive without ceding real enforcement power to an outside body.</p>
+<div class="sowhat"><b>So what:</b> Ethics turbulence consumes floor time and committee bandwidth that appropriations and NDAA conference need in the autumn. Assume schedule risk on anything requiring congressional action before the fiscal year turns.</div>
+</div>
+
+<div class="card" style="border-left-color:#3b82f6">
+<div class="meta">Washington Post · 17 Aug 2026</div>
+<h3>Supreme Court asked to hear Texas Ten Commandments school case</h3>
+<p>The justices are expected to decide in coming months whether to take up a challenge to the Texas law requiring the Ten Commandments be displayed in public school classrooms. The case is being watched closely as conservatives in Texas and elsewhere work to expand religious expression in public institutions. A grant of certiorari would set up a landmark establishment-clause clash.</p>
+<div class="sowhat"><b>So what:</b> Establishment-clause rulings flow directly into military policy on religious accommodation, chaplain practice, and displays in government spaces. Note it now so your legal and chaplain teams are not reacting cold if the Court takes the case.</div>
+</div>
+
+</section>
+
+<!-- PACIFIC -->
+<section id="pacific" class="tab">
+
+<div class="card" style="border-left-color:#14b8a6">
+<div class="meta">Politico NatSec Daily · 17 Aug 2026</div>
+<h3>Exercise cuts push Seoul and Tokyo closer to their own nuclear options</h3>
+<p>Trump's move to substantially reduce joint exercises with South Korea — announced alongside praise for Kim Jong Un and criticism of Seoul for declining to help against Iran — has left South Korean officials "still in shock," according to a person familiar with Seoul's thinking. Eighty percent of South Koreans back an indigenous nuclear capability in Asan Institute polling from April, and Japanese Defense Minister Shinjiro Koizumi last month called for ending the "taboo" on debating nuclear weapons. Analysts note Seoul is watching whether a proposed US-Saudi nuclear agreement permits enrichment, which would set a precedent Seoul would demand. Sen. Jack Reed, SASC ranking member, warned that China and Russia are watching how easily allies are abandoned; roughly 28,500 US troops remain in South Korea.</p>
+<div class="sowhat"><b>So what:</b> Extended deterrence credibility is being tested in public, and allied hedging behavior is the leading indicator. Expect allied planners in your engagements to press harder on US commitment assurances — have a consistent, cleared line and do not freelance beyond it.</div>
+<div class="readmore"><a href="https://www.wsj.com/politics/national-security/trump-orders-cuts-to-u-s-south-korea-military-drills-2bc63cec" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+<div class="card" style="border-left-color:#14b8a6">
+<div class="meta">International Intrigue · 17 Aug 2026</div>
+<h3>Seoul proposes formally ending the Korean War as Pyongyang stays silent</h3>
+<p>President Lee Jae Myung used Liberation Day to propose direct talks to formally end the 1950–53 war, new safeguards against accidental border clashes, and practical discussions on halting the North's nuclear build-up. Pyongyang has not responded, though it conducted another ballistic test and committed this year's first violation of the DMZ dividing line, drawing warning shots from the South. Kim continues sending troops and missiles to support Russia in Ukraine while his economy absorbs Russian payments, and persistent rumors point to renewed interest in Trump–Kim summitry.</p>
+<div class="sowhat"><b>So what:</b> Concessions are arriving from both Washington and Seoul without reciprocal Northern steps, which raises rather than lowers the odds of miscalculation along the DMZ. If you support INDOPACOM requirements, assume near-term ambiguity in exercise scope and posture messaging.</div>
+<div class="readmore"><a href="https://www.yna.co.kr/view/AKR20260815027000001" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+<div class="card" style="border-left-color:#14b8a6">
+<div class="meta">CSIS AMTI · 17 Aug 2026</div>
+<h3>China begins construction at Antelope Reef — possible new runway</h3>
+<p>Imagery analysis shows construction underway at Antelope Reef in the Paracels, with the pattern of work consistent with a new runway. Any airstrip there would extend the reach of Chinese fighter, ISR, and maritime patrol coverage over the northern South China Sea and thicken the sensor picture across contested waters. It follows the established playbook of incremental reclamation and dual-use build-out that produced the Spratly outposts.</p>
+<div class="sowhat"><b>So what:</b> Each added airstrip shortens PLA sortie times and lengthens the list of targets any regional plan must account for. If you touch INDOPACOM planning or force-flow assumptions, treat Paracel basing as a growing variable rather than a static baseline.</div>
+</div>
+
+<div class="card" style="border-left-color:#14b8a6">
+<div class="meta">CSIS Japan Chair · 17 Aug 2026</div>
+<h3>Japan's new National Intelligence Bureau opens the door to deeper allied intel sharing</h3>
+<p>Tokyo's newly established National Intelligence Bureau is an early but substantive step in Japanese intelligence reform, consolidating assessment functions that had been dispersed across ministries. The change creates openings for closer intelligence cooperation with the US and other partners, provided Japan's information-security regime matures alongside it. Reform of this kind has historically been the gating factor on what can be shared with Tokyo and at what classification.</p>
+<div class="sowhat"><b>So what:</b> Better Japanese analytic architecture eventually means faster, richer bilateral sharing — but only where security agreements and clearances keep pace. Check whether your staff's Japan-facing information-sharing plan is written against current policy or an outdated assumption.</div>
+</div>
+
+</section>
+
+<!-- EUROPE -->
+<section id="europe" class="tab">
+
+<div class="card" style="border-left-color:#6366f1">
+<div class="meta">ISW · 17 Aug 2026</div>
+<h3>Russia builds 59 new drone launch rails along the Ukraine and Belarus borders</h3>
+<p>Russia has constructed 59 new drone-launching rails across 10 sites near the Ukrainian and Belarusian borders, with each base able to house over 1,000 drones. About 20 of the rails are notably long, indicating use for jet-powered Geran-4 and Geran-5 strike drones with ranges of 450–850km and 950–1,000km respectively. Moving launch points deeper into western Russia both protects the infrastructure from Ukrainian strikes on forward sites near occupied Donetsk and enables larger salvos deeper into western Ukraine. ISW assesses the same bases would support strike packages against NATO should the Kremlin choose that course, since the ranges and salvo volumes reach into alliance territory.</p>
+<div class="sowhat"><b>So what:</b> The launch infrastructure now physically supports NATO-range salvos regardless of current intent, which shortens the warning time between decision and mass. Review your installation's air and missile defense warning procedures and shelter plans against a many-drone, not single-drone, scenario.</div>
+</div>
+
+<div class="card" style="border-left-color:#6366f1">
+<div class="meta">International Intrigue / Euronews · 17 Aug 2026</div>
+<h3>Spanish NATO jet downs another Russian drone over Romania as debris falls in Moldova</h3>
+<p>A Spanish fighter on NATO deployment shot down a suspected Russian drone in Romanian airspace — Russia's fourth such incursion this year. Separately, a likely Russian Banderol loitering munition entered Moldovan airspace from Odesa Oblast on 17 August and exploded near Talmaza, prompting condemnation from Chisinau. Ukrainian counter-disinformation authorities count at least 12 Russian drones and missiles entering European airspace between 15 July and 15 August. ISW places the pattern within Russia's "Phase Zero" activity intended to set conditions for future provocations against NATO.</p>
+<div class="sowhat"><b>So what:</b> Airspace violations on the alliance's southeastern flank are now routine enough to normalize, which is precisely the effect being sought. Confirm your alert and cross-border reporting timelines assume repeated incursions rather than an isolated event.</div>
+<div class="readmore"><a href="https://www.euronews.com/my-europe/2026/08/16/nato-fighter-jets-shoot-down-drone-over-romania-near-moldova-border" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+<div class="card" style="border-left-color:#6366f1">
+<div class="meta">Politico NatSec Daily / ISW · 17 Aug 2026</div>
+<h3>Ukraine's deep-strike campaign forces Moscow to cancel another showcase event</h3>
+<p>Moscow's Spasskaya Tower International Military Music Festival has been cancelled and postponed to 2027 — only the second cancellation since 2007, after the 2020 pandemic year. Ukraine launched more than 600 drones at Moscow and the surrounding region overnight, sparking large fires and killing one person, with strikes reported against facilities of the online marketplace Wildberries. ISW notes Ukrainian forces have now hit seven of Wildberries' 10 largest logistics centers since July as part of a campaign against Russian defense-industrial and logistics throughput. The Kremlin has already scrapped a Russia Day gala in June and pared back the 9 May Victory Day parade.</p>
+<div class="sowhat"><b>So what:</b> Russia is visibly reallocating air defense to protect the capital, which thins coverage elsewhere and reveals how it prioritizes under pressure. Track which Russian assets go uncovered as a read on Moscow's actual, rather than declared, defensive priorities.</div>
+</div>
+
+<div class="card" style="border-left-color:#6366f1">
+<div class="meta">Politico NatSec Daily · 17 Aug 2026</div>
+<h3>Kyiv presses the EU to sanction Rosatom after safety allegations</h3>
+<p>Ukraine is urging the EU to sanction Russian state nuclear company Rosatom following an investigation into alleged safety and engineering failures at one of its projects. Foreign Minister Andrii Sybiha called Rosatom "the instrument of Russia's ambition to secure a global monopoly in nuclear energy" and urged member states to restart stalled sanctions talks. Several EU countries continue to work with Rosatom despite the war, and unanimity requirements make any listing difficult.</p>
+<div class="sowhat"><b>So what:</b> Nuclear fuel dependency is the remaining soft spot in Europe's energy decoupling from Russia, and it maps onto host-nation politics where US forces are based. Expect this to surface as friction in EUCOM host-nation engagements before it surfaces as policy.</div>
+</div>
+
+</section>
+
+<!-- TECH & AI -->
+<section id="tech" class="tab">
+
+<div class="sub">AI &amp; Competition</div>
+
+<div class="card" style="border-left-color:#a78bfa">
+<div class="meta">The Rundown AI · 17 Aug 2026</div>
+<h3>Anthropic's Amodei publicly rejects the claim that AI safety warnings have backfired</h3>
+<p>In a rare direct intervention, Dario Amodei pushed back on investor arguments that his risk messaging has cost the field public trust and fueled anti-data-center campaigns. He called the choice between locking AI down and spreading it via open models a "false choice," arguing Anthropic's proposals constrain large labs while sparing small ones. He said no lab can market its way out of the trust problem and that early results in biology and medicine will move public sentiment more than communications will. The exchange also saw Anthropic staff deny a circulating rumor about the company's long-term corporate ambitions.</p>
+<div class="sowhat"><b>So what:</b> The regulatory settlement for frontier AI is being negotiated in public and will shape what models and vendors are available for defense use. If your organization is fielding AI tools, assume the compliance and provenance rules around them will tighten, not loosen.</div>
+<div class="readmore"><a href="https://www.therundown.ai/p/dario-amodei-logs-on-to-answer-the-critics" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+<div class="card" style="border-left-color:#a78bfa">
+<div class="meta">TLDR AI / The Rundown · 17 Aug 2026</div>
+<h3>China's Z.ai releases GLM-5.3, claiming the strongest open-source coding and cyber scores</h3>
+<p>Z.ai released GLM-5.3, claiming the leading open-source coding model and top scores on certain cyber benchmarks, with open weights due in roughly two weeks. The gain came almost entirely from additional post-training on an existing stack rather than a new base model — a cheap, repeatable path to capability. Once weights publish, the capability is unconditionally available to any actor who downloads them.</p>
+<div class="sowhat"><b>So what:</b> Offensive-cyber-relevant capability is being commoditized in open weights on a two-week clock, with no export control that reaches it. Assume adversary and criminal tooling improves on that cadence and push your network defenders to compress detection timelines accordingly.</div>
+<div class="readmore"><a href="https://z.ai/blog/glm-5.3" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+<div class="sub">Cyber &amp; Emerging Tech</div>
+
+<div class="card" style="border-left-color:#a78bfa">
+<div class="meta">Defense One · 17 Aug 2026</div>
+<h3>White House authorizes private cyber firms to strike foreign targets</h3>
+<p>An administration policy revives what amounts to privateering for the digital age, authorizing commercial cyber firms to conduct offensive operations against foreign targets. It moves a category of effects previously reserved to Title 10 and Title 50 actors into contracted hands, with attendant questions about attribution, escalation control, and legal exposure. The reasoning frames warfare as increasingly an engineering discipline in which commercial capability outpaces government organic capacity.</p>
+<div class="sowhat"><b>So what:</b> Effects delivered by contractors in your operational area may not appear in any military tasking or deconfliction channel you monitor. Ask your J2/J3 how contracted offensive cyber activity is deconflicted against your operations before an incident forces the question.</div>
+<div class="readmore"><a href="https://www.defenseone.com/policy/2026/08/warfare-becomes-engineering-era-digital-mercenary-dawns/415421" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+<div class="card" style="border-left-color:#a78bfa">
+<div class="meta">TLDR Cybersecurity · 17 Aug 2026</div>
+<h3>RingCentral breach exposes 1.6 million records</h3>
+<p>Cloud collaboration and communications provider RingCentral disclosed a breach in which a threat actor compromised its systems, affecting roughly 1.6 million records. The same reporting cycle carried an AmnesiaStealer macOS infostealer campaign and a cloud data-theft campaign against Azure tenants. Unified-communications platforms are attractive targets precisely because they aggregate voice, message, and directory data across an entire organization.</p>
+<div class="sowhat"><b>So what:</b> Collaboration platforms hold the org chart, phone tree, and travel chatter that make convincing social engineering possible against your people. Have your security manager confirm which commercial collaboration tools your unit and its contractors actually use, and reset assumptions about what is exposed.</div>
+</div>
+
+</section>
+
+<!-- MIDDLE EAST -->
+<section id="me" class="tab">
+
+<div class="card" style="border-left-color:#f59e0b">
+<div class="meta">WSJ Politics · 17 Aug 2026</div>
+<h3>Carrier rotation exposes the sustainment cost of the Iran blockade</h3>
+<p>USS George Washington is relieving USS Abraham Lincoln in the Middle East after the Lincoln spent more than 200 days in a combat zone and launched over 10,000 sorties, per acting Navy Secretary Hung Cao. Nearly 20 US service members have died in the region since the war began roughly six months ago, including in Iranian attacks in Kuwait and Jordan. The naval blockade meant to choke Iran's economy requires a large number of ships across the region and Trump has suggested it could remain in place indefinitely. Reporting on food supply problems and mental health strain aboard the Lincoln has prompted Senate Democrats to demand answers from Secretary Hegseth; the administration says the issues were misrepresented.</p>
+<div class="sowhat"><b>So what:</b> An open-ended blockade converts a campaign into a rotation problem, and the bill is paid in people and maintenance across every theater that sources those ships. Expect deployment-to-dwell pressure to reach your formation and start the resilience and family-support conversation before the tasking arrives.</div>
+<div class="readmore"><a href="https://www.wsj.com/politics/pentagon-rotates-aircraft-carriers-showing-toll-of-the-iran-war-4fe8a57e" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+<div class="card" style="border-left-color:#f59e0b">
+<div class="meta">Politico NatSec Daily / WSJ · 17 Aug 2026</div>
+<h3>Iran shifts to a "fully offensive" posture as the 60-day MOU deadline lapses</h3>
+<p>Washington and Tehran have passed the self-imposed 60-day deadline from the June memorandum of understanding without a broader agreement, with both sides having already declared the MOU over. A senior Iranian official told Reuters that Iranian entities must be prepared to escalate in the Strait of Hormuz and the wider region, and that Tehran would use a "timely and precise" military attack to break the US blockade if talks keep failing. Iran-backed Houthis have escalated against US partners near the Bab el-Mandeb, claiming a strike on a Saudi ship in the Red Sea. Trump threatened to "bomb the shit out of" Oman over its separate talks with Tehran on reopening shipping lanes; intercepted communications reported by WSJ point to a deliberate hardline strategy to raise costs for the US and its regional allies.</p>
+<div class="sowhat"><b>So what:</b> Both chokepoints — Hormuz and Bab el-Mandeb — are now under simultaneous, deliberate pressure with the diplomatic off-ramp closed. Assume disruption to sealift and commercial resupply timelines affecting your theater and check what in your sustainment plan transits either strait.</div>
+<div class="readmore"><a href="https://www.wsj.com/world/middle-east/iran-plan-escalate-war-cc657664" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+<div class="card" style="border-left-color:#f59e0b">
+<div class="meta">Politico NatSec Daily / Axios · 17 Aug 2026</div>
+<h3>Gaza working groups form, but "disarmament" means different things to each party</h3>
+<p>Netanyahu and White House envoy Jared Kushner agreed in Jerusalem to create two working groups covering disarmament and public health, with Board of Peace envoy Nickolay Mladenov and Tony Blair also attending; Kushner had met a Hamas political leader in Egypt days earlier. The Board defines disarmament as "every weapon, light and heavy, and every tunnel," fully decommissioned, while a Hamas official described the signed road map as requiring only storage of heavy weapons under board-supervised committee. The Board's readout states there will be no IDF redeployment until Hamas is fully disarmed and Gaza demilitarized; Israel's readout says disarmament must be complete before any reconstruction begins. Israeli elections roughly two months out sharply limit Netanyahu's room for conciliation.</p>
+<div class="sowhat"><b>So what:</b> The parties have agreed on a word, not a condition, which is how ceasefire frameworks fail after the cameras leave. Treat any announced Gaza sequencing as provisional in your planning assumptions and watch the reconstruction-conditionality language as the real indicator.</div>
+</div>
+
+<div class="card" style="border-left-color:#f59e0b">
+<div class="meta">Air &amp; Space Forces Magazine · 17 Aug 2026</div>
+<h3>Strava data still exposes routines at Middle East bases despite CENTCOM restrictions</h3>
+<p>US personnel using fitness-tracking apps are still publicly publishing location data that reveals patterns of life at military installations across the Middle East, months after CENTCOM imposed restrictive geolocation controls theater-wide. The exposure reveals perimeter routes, gym and dining timing, and movement rhythms — the exact inputs an adversary needs for targeting or infiltration planning. Policy alone has not changed individual device behavior.</p>
+<div class="sowhat"><b>So what:</b> This is a solved policy problem with an unsolved compliance problem, and it is entirely within a commander's reach to fix. Conduct a device and app check with your formation this week rather than reissuing the guidance that already exists.</div>
+</div>
+
+</section>
+
+<!-- CITIES -->
+<section id="cities" class="tab">
+
+<div class="card" style="border-left-color:#38bdf8">
+<div class="meta">The Nevadan · 17 Aug 2026</div>
+<h3>Reno's growth keeps reshaping Nevada's political and economic center of gravity</h3>
+<p>Northern Nevada's continued population growth is shifting the state's demographic weight away from a Clark County–only story, with knock-on effects for housing, water allocation, and legislative representation. The trend has been building since the 2024 baseline and is now visible in local service demand. Southern Nevada remains the population core, but the gap narrows each cycle.</p>
+<div class="sowhat"><b>So what:</b> Housing supply and cost in the Las Vegas valley are shaped by statewide dynamics that PCS-ing families feel directly. Factor local housing pressure into sponsorship and inbound-family expectations for Nellis and Creech assignments.</div>
+</div>
+
+<div class="events">
+<h3>🎟️ What To Do — Las Vegas</h3>
+<p style="font-size:13.5px;color:#475569;margin:6px 0 0">Family-friendly picks for the next three days, drawn from City Cast Las Vegas's events listing.</p>
+
+<div class="evday">Tuesday, Aug. 18</div>
+<div class="ev">
+<div class="n">🖼️ <a href="https://events.thelibrarydistrict.org/event/17004275" target="_blank" rel="noopener">Herstory 3: The Legal History of Chinese American Women — Gallery Reception</a></div>
+<div class="d">Spring Valley Library (Jones &amp; Flamingo), 5:30–7pm · Free</div>
+<div class="tip">Insider tip: gallery receptions at the library district are quiet, air-conditioned, and genuinely welcoming to school-age kids — a good low-commitment weeknight outing.</div>
+</div>
+<div class="ev">
+<div class="n">🎻 <a href="https://events.thelibrarydistrict.org/event/16783049" target="_blank" rel="noopener">Marina Pendleton Live</a></div>
+<div class="d">Sahara West Library (Sahara &amp; Grand Canyon), 6pm · Free</div>
+<div class="tip">Insider tip: Sahara West has one of the better performance spaces in the valley and seating is first-come — arrive 15 minutes early with kids.</div>
+</div>
+
+<div class="evday">Wednesday, Aug. 19</div>
+<div class="ev">
+<div class="n">☕ <a href="https://www.instagram.com/p/DboQRyyRrYy/" target="_blank" rel="noopener">Coffee with Our First Responders</a></div>
+<div class="d">Aspire Coffee House, Skye Canyon, 11am–1pm · Free</div>
+<div class="tip">Insider tip: an easy win for military kids who like trucks and uniforms — go near the start before the crews get pulled to calls.</div>
+</div>
+<div class="ev">
+<div class="n">💻 <a href="https://hendersonlibraries.com/event/16889767" target="_blank" rel="noopener">Cyber Security for Parents</a></div>
+<div class="d">Paseo Verde Library, Henderson, 5:30pm · Free</div>
+<div class="tip">Insider tip: worth an hour if you have a middle-schooler with a phone — practical account and privacy settings, not fear-mongering.</div>
+</div>
+
+<div class="evday">Thursday, Aug. 20</div>
+<div class="ev">
+<div class="n">🎨 <a href="https://www.lasvegasnevada.gov/Residents/Events/Details?id=our-city-our-nevada-black-artists-and-elders-in-conversation" target="_blank" rel="noopener">Our City, Our Nevada: Black Artists and Elders in Conversation</a></div>
+<div class="d">Las Vegas Civic Center, Downtown, 5:30pm · Free</div>
+<div class="tip">Insider tip: pair it with an early dinner in the Arts District — parking downtown is easiest before 5pm.</div>
+</div>
+<div class="ev">
+<div class="n">🎹 <a href="https://www.facebook.com/share/19JcMV191t/" target="_blank" rel="noopener">Fourever Fab: A Tribute to The Beatles &amp; SixtiesMania</a></div>
+<div class="d">The Showroom, South Point, 7pm · $39</div>
+<div class="tip">Insider tip: South Point is family-tolerant and off-Strip — far cheaper parking and a shorter drive from Henderson or Summerlin than a Strip show.</div>
+</div>
+</div>
+
+</section>
+
+<!-- FEEL GOOD -->
+<section id="feel" class="tab">
+
+<div class="card" style="border-left-color:#facc15">
+<div class="meta">Air &amp; Space Forces Magazine · 17 Aug 2026</div>
+<h3>US cargo crews begin flying earthquake relief into Colombia</h3>
+<p>Air Force cargo aircraft started delivering supplies into Colombia over the weekend after a massive earthquake devastated large parts of the country and killed at least 285 people. The flights began within days of the quake, moving relief into a country where road access to affected areas is limited. Aircrews, loadmasters, and contingency response teams turned the mission inside a compressed timeline alongside everything else on the schedule.</p>
+</div>
+
+<div class="otd">
+<h3>📅 On This Day in History</h3>
+<ul>
+<li><b>18 August 1940 — "The Hardest Day."</b> The Luftwaffe and RAF suffered their heaviest combined aircraft losses of the entire Battle of Britain, with major raids on Kenley, Biggin Hill, and Thorney Island. Neither side could sustain that rate, and Fighter Command's survival that day helped decide the campaign.</li>
+<li><b>18 August 1965 — Operation Starlite.</b> US Marines launched the first major independent American ground operation of the Vietnam War, a combined amphibious, helicopter, and overland assault against the 1st Viet Cong Regiment on the Van Tuong peninsula.</li>
+</ul>
+</div>
+
+</section>
+
+<footer>Compiled from newsletters received in the last 36 hours. Links go to the original publications; some are paywalled.</footer>
+
+</div>
+
+<script>
+function showTab(id, btn){
+  var tabs = document.querySelectorAll('.tab');
+  for (var i=0;i<tabs.length;i++){ tabs[i].classList.remove('active'); }
+  var btns = document.querySelectorAll('nav button');
+  for (var j=0;j<btns.length;j++){ btns[j].classList.remove('active'); }
+  var el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  if (btn) btn.classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
