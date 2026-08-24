@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Digest — 24 August 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0 0 48px 0;
+  background: #f1f5f9; color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5; -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 14px; }
+header.bar {
+  background: #0f172a; color: #f8fafc; padding: 18px 0 16px 0; margin-bottom: 0;
+}
+header.bar .wrap { display: flex; flex-direction: column; gap: 3px; }
+header.bar h1 { margin: 0; font-size: 24px; letter-spacing: -0.4px; }
+header.bar .date { font-size: 13px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+.breaking {
+  background: #7f1d1d; color: #fee2e2; padding: 14px 0; border-bottom: 3px solid #ef4444;
+}
+.breaking h2 {
+  margin: 0 0 8px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #fecaca;
+}
+.breaking ul { margin: 0; padding-left: 4px; list-style: none; }
+.breaking li { position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 14.5px; }
+.breaking li:last-child { margin-bottom: 0; }
+.breaking li::before {
+  content: "\25CF"; position: absolute; left: 0; top: 0; color: #ef4444;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+.breaking .src { color: #fca5a5; font-size: 12px; }
+nav.tabs {
+  background: #fff; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 10;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+}
+nav.tabs .row { display: flex; gap: 2px; min-width: max-content; padding: 0 14px; max-width: 760px; margin: 0 auto; }
+nav.tabs button {
+  background: none; border: none; border-bottom: 3px solid transparent;
+  padding: 13px 12px; font-size: 14px; font-weight: 600; color: #64748b;
+  cursor: pointer; white-space: nowrap; font-family: inherit;
+}
+nav.tabs button.active { color: #0f172a; border-bottom-color: var(--accent, #0f172a); }
+.panel { display: none; padding-top: 20px; }
+.panel.active { display: block; }
+.subhead {
+  font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: #64748b;
+  font-weight: 700; margin: 4px 0 12px 0;
+}
+.card {
+  background: #fff; border-radius: 8px; border-left: 4px solid var(--accent, #64748b);
+  box-shadow: 0 1px 2px rgba(15,23,42,0.06); padding: 15px 16px; margin-bottom: 14px;
+}
+.card .meta { font-size: 11.5px; color: #64748b; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 5px; }
+.card h3 { margin: 0 0 8px 0; font-size: 17px; line-height: 1.3; letter-spacing: -0.2px; }
+.card p.body { margin: 0; font-size: 15px; color: #1e293b; }
+.sowhat {
+  margin-top: 12px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+  padding: 10px 12px; font-size: 14px; color: #334155;
+}
+.sowhat b { display: block; font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; color: #475569; margin-bottom: 4px; }
+.readmore { display: block; text-align: right; margin-top: 10px; font-size: 13.5px; }
+.readmore a { color: #2563eb; text-decoration: none; font-weight: 600; }
+.events { background: #fff; border-radius: 8px; border-left: 4px solid #38bdf8; padding: 15px 16px; box-shadow: 0 1px 2px rgba(15,23,42,0.06); }
+.events h3 { margin: 0 0 4px 0; font-size: 17px; }
+.events .note { font-size: 12.5px; color: #64748b; margin: 0 0 14px 0; }
+.events .day { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #0369a1; margin: 16px 0 8px 0; }
+.events .day:first-of-type { margin-top: 0; }
+.ev { border-top: 1px solid #e2e8f0; padding: 10px 0 2px 0; }
+.ev .n { font-weight: 700; font-size: 15px; }
+.ev .v { font-size: 13px; color: #475569; margin: 2px 0; }
+.ev .d { font-size: 14px; margin: 4px 0 0 0; }
+.ev .tip { font-size: 13px; color: #475569; margin-top: 5px; font-style: italic; }
+.ev a { color: #2563eb; text-decoration: none; }
+footer { text-align: center; font-size: 12px; color: #94a3b8; margin-top: 28px; }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <h1>&#9889; Daily Digest</h1>
+    <div class="date">Monday, 24 August 2026</div>
+  </div>
+</header>
+
+<div class="breaking">
+  <div class="wrap">
+    <h2>Breaking</h2>
+    <ul>
+      <li>US&ndash;Canada trade talks collapsed at the eleventh hour Friday night; 50% US tariffs on $20 billion of Canadian goods are now in force and Ottawa will impose dollar-for-dollar retaliation on 8 September. Prime Minister Mark Carney called the tariffs "an attack in a war." <span class="src">&mdash; WSJ / Politico / Washington Post</span></li>
+      <li>Russia's military is running readiness tests for a fresh round of mobilization, US and European officials say, after months of failing to recruit enough troops to cover losses. Zelensky separately claims the Kremlin is preparing to call up roughly 300,000 after the 18&ndash;20 September Duma elections. <span class="src">&mdash; WSJ / ISW</span></li>
+    </ul>
+  </div>
+</div>
+
+<nav class="tabs">
+  <div class="row">
+    <button class="active" data-tab="defense" style="--accent:#ef4444" onclick="showTab('defense',this)">&#128737;&#65039; Defense</button>
+    <button data-tab="us" style="--accent:#3b82f6" onclick="showTab('us',this)">&#127482;&#127480; US</button>
+    <button data-tab="pacific" style="--accent:#14b8a6" onclick="showTab('pacific',this)">&#127759; Pacific</button>
+    <button data-tab="europe" style="--accent:#6366f1" onclick="showTab('europe',this)">&#127466;&#127482; Europe</button>
+    <button data-tab="tech" style="--accent:#a78bfa" onclick="showTab('tech',this)">&#128187; Tech &amp; AI</button>
+    <button data-tab="me" style="--accent:#f59e0b" onclick="showTab('me',this)">&#127964; Middle East</button>
+    <button data-tab="cities" style="--accent:#38bdf8" onclick="showTab('cities',this)">&#127961;&#65039; Cities</button>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- DEFENSE -->
+<section id="defense" class="panel active" style="--accent:#ef4444">
+  <div class="card" style="--accent:#ef4444">
+    <div class="meta">Defense One &middot; 23 Aug 2026</div>
+    <h3>No shortcut exists to rebuild US munitions stockpiles drawn down by the Iran fight</h3>
+    <p class="body">Precision munitions expended against Iran have left inventories thinner than the industrial base can quickly refill, and neither the Pentagon's recent weapons deals nor the wave of low-cost munitions being pitched by industry will close the gap on a useful timeline. Vendors are marketing cheap, mass-producible effectors as the answer; experts counter that the binding constraints are solid rocket motors, seekers, energetics, and qualified production lines &mdash; none of which respond to a contract award inside a year. Deals signed now largely deliver in FY28 and beyond. The stockpile problem is therefore a planning fact for the next two budget cycles, not a procurement problem about to be solved.</p>
+    <div class="sowhat"><b>So What</b>Munitions scarcity will be rationed through allocation decisions, not fixed by production, so expect tighter expenditure controls and competition between theaters. Review your unit's basic load assumptions and war reserve materiel posture now, and be prepared to justify every training expenditure of precision munitions against a wartime allocation rule.</div>
+    <div class="readmore"><a href="https://www.defenseone.com/business/2026/08/theres-no-shortcut-replenish-us-munitions-stockpiles/415558" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+  </div>
+
+  <div class="card" style="--accent:#ef4444">
+    <div class="meta">Washington Post &middot; 23 Aug 2026</div>
+    <h3>Nuclear-hardened White House bunker built a decade ago surfaces in ballroom litigation</h3>
+    <p class="body">Three former officials have confirmed the existence of a nuclear-proof facility beneath the White House complex, constructed more than ten years ago and sized to shelter the president and senior aides during a national security emergency. The disclosure came out through litigation over the White House ballroom project, where the government's stated construction rationale is now undercut by the fact that the hardened facility already exists. The revelation puts a continuity-of-government capability that is normally handled through closed channels into open court filings and press reporting.</p>
+    <div class="sowhat"><b>So What</b>Continuity-of-government and COOP details are leaking into open litigation, which raises the baseline adversary knowledge of national leadership survivability arrangements. Assume your own COOP and alternate-site plans are similarly discoverable through contracting and facilities records, and scrub what your installation publishes about hardened facilities and relocation sites.</div>
+  </div>
+
+  <div class="card" style="--accent:#ef4444">
+    <div class="meta">Wall Street Journal &middot; 23 Aug 2026</div>
+    <h3>Russia tests readiness for a new round of military mobilization</h3>
+    <p class="body">Moscow has spent recent months falling short of the recruiting numbers needed to replace killed and wounded personnel, and its military is now running readiness checks on the machinery required for a fresh mobilization wave &mdash; the first since the opening months of the war. US and European officials stress no decision has been taken, but the preparatory activity is real and observable. Inside Russia the rumors alone are already producing behavioral effects, with men researching routes out of the country ahead of any announcement. A mobilization at scale would change the manpower arithmetic on the Ukrainian front through 2027.</p>
+    <div class="sowhat"><b>So What</b>A second Russian mobilization would extend the war's manpower horizon well past current planning assumptions and increase pressure on European force posture and munitions supply simultaneously. Watch for mobilization indicators in your intelligence summaries after the 18&ndash;20 September Duma elections, and assume rotation and sustainment demands on US forces in Europe stay elevated rather than easing.</div>
+    <div class="readmore"><a href="https://www.wsj.com/world/russia/russia-tests-readiness-for-new-round-of-military-mobilization-87d61b96" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+  </div>
+</section>
+
+<!-- US -->
+<section id="us" class="panel" style="--accent:#3b82f6">
+  <div class="card" style="--accent:#3b82f6">
+    <div class="meta">Wall Street Journal / Politico &middot; 23 Aug 2026</div>
+    <h3>US&ndash;Canada talks collapse hours from a deal, triggering a full trade war</h3>
+    <p class="body">After more than a week of continuous negotiation, USTR Jamieson Greer was close to an agreement before the talks fell apart Friday night under a combination of late demands and domestic political constraints on both sides. Tariffs of 50% on $20 billion of Canadian goods took effect Saturday and Ottawa has committed to matching levies beginning 8 September. Reporting also surfaced friction inside the US side, with Commerce Secretary Howard Lutnick's agency described as having the framework "sprung on" it by Greer's trade office. Carney's characterization of the tariffs as an act of war signals Ottawa intends to escalate rather than absorb.</p>
+    <div class="sowhat"><b>So What</b>A trade rupture with the closest US defense-industrial partner touches NORAD cost-sharing, cross-border supply for aerospace and munitions components, and the political temperature around bilateral military cooperation. Check which of your unit's sustainment contracts and spares pipelines route through Canadian suppliers, and flag any that would be exposed to 8 September retaliation.</div>
+    <div class="readmore"><a href="https://www.wsj.com/economy/trade/canada-announces-new-post-labor-day-tariffs-ef1de8e1" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+  </div>
+
+  <div class="card" style="--accent:#3b82f6">
+    <div class="meta">Washington Post &middot; 22 Aug 2026</div>
+    <h3>National debt passes $40 trillion, forcing deferred fiscal choices</h3>
+    <p class="body">The federal debt has crossed $40 trillion, and reporting indicates lawmakers will soon face decisions on spending and revenue that have been postponed for decades. The framing is that no significant constituency escapes the eventual adjustment, which sets up entitlement, tax, and discretionary spending fights that will run through the coming budget cycles. Defense sits inside the discretionary account most exposed to across-the-board pressure when the reckoning arrives.</p>
+    <div class="sowhat"><b>So What</b>Sustained fiscal pressure makes flat or declining topline defense budgets the planning default, with modernization and readiness competing directly for the same dollars. Build your FY28 unfunded requirements list assuming you defend every line against a zero-growth topline, and identify now which programs you would sacrifice rather than have the choice made for you.</div>
+  </div>
+
+  <div class="card" style="--accent:#3b82f6">
+    <div class="meta">Politico Playbook / NYT &middot; 23 Aug 2026</div>
+    <h3>Jeffries met privately with Kushner to explore common ground with the administration</h3>
+    <p class="body">House Minority Leader Hakeem Jeffries held a private meeting with Jared Kushner to discuss areas where the Democratic caucus and the administration might cooperate, according to reporting neither side commented on. The timing is the story: the White House is visibly preparing for the possibility of a Democrat-controlled House after November and is opening back channels before it has to. That preparation shapes how hard the administration pushes contested items through the current Congress versus banking them for negotiation later.</p>
+    <div class="sowhat"><b>So What</b>A split-control Congress after November would slow NDAA passage, appropriations, and confirmations, raising the odds of another long continuing resolution. Assume CR conditions for the first quarter of FY28 in your execution planning and identify which new starts and MILCON items would be frozen under one.</div>
+  </div>
+
+  <div class="card" style="--accent:#3b82f6">
+    <div class="meta">Politico &middot; 23 Aug 2026</div>
+    <h3>Trump's ICE nominee stalled amid internal DHS resistance</h3>
+    <p class="body">Officials inside DHS are questioning whether Oklahoma state trooper Lance Schroyer, Secretary Markwayne Mullin's pick to lead ICE, has the immigration enforcement background for the role, with several preferring acting director Dave Venturella. Even enforcement hawks are reported as skeptical, and one official called the nomination "not even JV level for literally the most important job in the admin that remains unfilled." The agency continues under acting leadership while the mass deportation agenda is the administration's stated priority.</p>
+    <div class="sowhat"><b>So What</b>Prolonged acting leadership at ICE keeps interior enforcement policy unsettled, which matters for units supporting DHS missions and for families with non-citizen dependents or spouses. Make sure your legal office and family readiness staff can answer immigration status questions accurately, since policy guidance will keep shifting without a confirmed director.</div>
+  </div>
+</section>
+
+<!-- PACIFIC -->
+<section id="pacific" class="panel" style="--accent:#14b8a6">
+  <div class="card" style="--accent:#14b8a6">
+    <div class="meta">ASPI The Strategist &middot; 23 Aug 2026</div>
+    <h3>Australia's warning time has collapsed, and its war-warning machinery has not caught up</h3>
+    <p class="body">Australian defence strategy before 2020 rested on a planning assumption of at least ten years' warning of a major war &mdash; the time needed to expand the force, build stocks, and mobilize industry. Michael Pezzullo argues that assumption is dead and that Australia is in its "most dangerous" strategic circumstances without a functioning war-warning assessment system to replace it. The gap is institutional rather than analytical: nobody owns the judgment that a war is coming, or the authority to act on that judgment before it does. The same critique applies to any allied planning system that quietly still assumes years of strategic notice.</p>
+    <div class="sowhat"><b>So What</b>If warning time is measured in months rather than years, readiness has to be held rather than generated, and pre-positioning and mobilization decisions must be made before the indicators are unambiguous. Review whether your unit's tiered readiness model and deployment timelines assume a mobilization runway you would not actually get in an INDOPACOM contingency.</div>
+    <div class="readmore"><a href="https://www.aspistrategist.org.au/war-warning-assessment-in-australias-most-dangerous-times/" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+  </div>
+
+  <div class="card" style="--accent:#14b8a6">
+    <div class="meta">Japan Times &middot; 23 Aug 2026</div>
+    <h3>LDP mounts a full-court press in the Okinawa governor race</h3>
+    <p class="body">The ruling LDP is treating the Okinawa governorship as a must-win and is sending executives to the prefecture in sequence to build support for Genta Koja, a 42-year-old former vice mayor of Naha. Okinawa's governorship is the single most consequential Japanese local office for the US military, since the prefecture hosts the bulk of US forces in Japan and the governor controls permitting levers that have repeatedly slowed base construction, most visibly at Henoko. An LDP win would ease friction on realignment; a loss would restore an obstructive counterparty at exactly the moment force posture in the first island chain matters most.</p>
+    <div class="sowhat"><b>So What</b>The outcome directly affects the pace of base realignment, dispersal infrastructure, and training-area access across Okinawa. If you have units programmed to rotate through or build in Okinawa, treat the construction timeline as politically contingent and keep alternate bed-down options warm.</div>
+  </div>
+
+  <div class="card" style="--accent:#14b8a6">
+    <div class="meta">Japan Times &middot; 23 Aug 2026</div>
+    <h3>Magnitude 5.9 quake jolts Kanto, with warnings of similar shaking for a week</h3>
+    <p class="body">Tokyo and the wider Kanto region were woken early Sunday by a magnitude 5.9 earthquake that registered up to a lower 5 on Japan's seven-point seismic intensity scale. Japanese authorities have warned that comparable shaking is possible over the coming week. Kanto hosts Yokota, Yokosuka, Atsugi, and Camp Zama, so the affected area covers the command, air mobility, and naval hubs that underwrite any US response in the region.</p>
+    <div class="sowhat"><b>So What</b>A week of elevated seismic risk over the Kanto basing cluster is a force-protection and continuity issue for the headquarters and logistics nodes that would run a Pacific contingency. Confirm your units in Japan have current shelter, accountability, and alternate-communications procedures exercised rather than filed, and expect possible short-notice HA/DR tasking.</div>
+  </div>
+</section>
+
+<!-- EUROPE -->
+<section id="europe" class="panel" style="--accent:#6366f1">
+  <div class="card" style="--accent:#6366f1">
+    <div class="meta">ISW &middot; 23 Aug 2026</div>
+    <h3>Russian forces advance east of Slovyansk, shaping for assaults on the Fortress Belt</h3>
+    <p class="body">Russian units advanced east of Slovyansk, working to secure positions east and southeast of the city ahead of frontal assaults on Slovyansk and the wider Fortress Belt. Ukrainian observer Kostyantyn Mashovets reports simultaneous advances across several tactical areas, with the 3rd Combined Arms Army reinforcing assault infantry immediately after successful infiltrations to consolidate gains &mdash; a repeatable method rather than a one-off. Russian troops reached the southeastern outskirts of Pyskunivka from consolidated positions at Zakitne and Kryva Luka, and infiltrated southern and southeastern Mykolaivka from Rai-Oleksandrivka. Seizing Mykolaivka would open an eastern approach to Slovyansk after Ukrainian defenses stalled Russian efforts from Lyman and Yampil.</p>
+    <div class="sowhat"><b>So What</b>The infiltrate-then-reinforce method is producing steady tactical gains against a fortified belt without a visible breakthrough, which means attrition of Ukrainian defensive depth continues regardless of headline stalemate. Track Slovyansk and Kostyantynivka as the indicators that matter for any near-term shift in the war's trajectory, not the diplomatic traffic.</div>
+  </div>
+
+  <div class="card" style="--accent:#6366f1">
+    <div class="meta">ISW &middot; 23 Aug 2026</div>
+    <h3>Zelensky presents a joint Ukraine&ndash;US&ndash;Europe peace framework as Moscow holds its maximalist line</h3>
+    <p class="body">Zelensky said on 23 August that Ukraine developed a negotiating proposal in talks with US envoy Steve Witkoff and former senior adviser Jared Kushner, built on three elements: a ceasefire, a reciprocal withdrawal of Russian and Ukrainian forces from the current front line, and EU and NATO security guarantees. He stated the US and European parties have already agreed and that Washington plans to raise it with both capitals. The proposal concedes significantly on Ukraine's part, while Putin has continued to refuse compromise on any core demand and has reportedly ordered his military to take all of Donetsk Oblast by 31 December. A TASS source claims Witkoff and Kushner have indefinitely postponed their Kyiv and Moscow visits, which ISW could neither confirm nor refute.</p>
+    <div class="sowhat"><b>So What</b>Ukrainian concessions are widening while Russian demands have not moved, so the practical outcome of this round is continued fighting rather than a ceasefire &mdash; and any deal that does emerge would carry EU and NATO guarantee obligations. Plan on the assumption that no ceasefire materializes before winter, and begin thinking through what a guarantee-enforcement mission would demand of your formation.</div>
+  </div>
+</section>
+
+<!-- TECH & AI -->
+<section id="tech" class="panel" style="--accent:#a78bfa">
+  <div class="subhead">AI &amp; Competition</div>
+  <div class="card" style="--accent:#a78bfa">
+    <div class="meta">Wall Street Journal &middot; 23 Aug 2026</div>
+    <h3>Nvidia commits $6 billion to build a US open-weight model to counter China</h3>
+    <p class="body">Nvidia is spending $6 billion to build one of the world's most powerful open-weight AI models, aimed squarely at competing with Chinese open-weight releases as well as the American frontier labs. Open-weight matters strategically: freely downloadable models set the global default for what developers, allies, and adversaries build on, and Chinese labs have been winning that adoption race by releasing capable weights at no cost. A chipmaker funding the model layer itself is a hedge against its customers consolidating and a direct attempt to keep the open ecosystem on US foundations.</p>
+    <div class="sowhat"><b>So What</b>Open-weight models are the ones that can realistically run in classified and disconnected environments, so which weights dominate determines what DoD can actually field on-premises. Expect open-weight US models to appear in mission applications faster than commercial API services, and ask your innovation and cyber staff which weights are already running on your networks.</div>
+    <div class="readmore"><a href="https://www.wsj.com/tech/ai/nvidia-is-spending-6-billion-to-build-a-powerful-u-s-alternative-to-chinese-ai-c51c38cc" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+  </div>
+
+  <div class="card" style="--accent:#a78bfa">
+    <div class="meta">Politico Playbook / NYT &middot; 23 Aug 2026</div>
+    <h3>Data centers become a top-tier midterm issue, with Texas imposing a local-approval requirement</h3>
+    <p class="body">Voter anger over data centers &mdash; driven by rising electricity prices, water consumption, and distrust of the tech sector &mdash; has moved the issue into the front rank of the midterms, with both parties now competing to oppose unfettered construction. Texas Governor Greg Abbott has imposed a one-year moratorium requiring local community approval before a data center can open, saying operators "dug their own grave" by skipping community consent. The political turn matters because AI compute buildout depends on exactly the permitting and power interconnection that is now becoming contested at the local level.</p>
+    <div class="sowhat"><b>So What</b>Local resistance to data centers constrains the compute and grid capacity that DoD AI programs and installation microgrid plans both depend on, and installations competing for the same power will draw the same scrutiny. If you have energy resilience or compute-hosting projects in the pipeline, invest in community engagement early rather than treating permitting as a formality.</div>
+  </div>
+
+  <div class="subhead" style="margin-top:22px">Cyber &amp; Emerging Tech</div>
+  <div class="card" style="--accent:#a78bfa">
+    <div class="meta">Japan Times &middot; 23 Aug 2026</div>
+    <h3>Beijing's World Humanoid Robot Games showcase speed but expose dexterity limits</h3>
+    <p class="body">The five-day World Humanoid Robot Games opened Saturday in Beijing, pairing sport-style events with tasks designed to test robots in simulated real-world situations &mdash; the reporting frames the gap bluntly, noting the machines can outrun humans but struggle to plug in a cable. That gap is the actual state of the art: locomotion and gross motion are largely solved, while fine manipulation, perception under clutter, and unscripted task recovery are not. China is using a public competition format to drive its humanoid industrial base and to signal progress internationally, which is itself part of the point.</p>
+    <div class="sowhat"><b>So What</b>Humanoid platforms are near-term credible for logistics movement, sentry, and CBRN-adjacent tasks but not for maintenance or manipulation-heavy work, and China is building the supply chain regardless. Calibrate expectations when vendors pitch humanoid robotics for depot or flightline tasks, and assume adversary fielding of locomotion-capable ground systems ahead of manipulation-capable ones.</div>
+  </div>
+</section>
+
+<!-- MIDDLE EAST -->
+<section id="me" class="panel" style="--accent:#f59e0b">
+  <div class="card" style="--accent:#f59e0b">
+    <div class="meta">Japan Times &middot; 23 Aug 2026</div>
+    <h3>Economic isolation strategy toward Iran raises the odds of renewed strikes across the Gulf</h3>
+    <p class="body">The administration's plan to isolate Iran economically carries a structural risk: analysts assess that if the pressure actually works, Tehran will eventually have no option other than to lash out again. The logic is the familiar coercion trap &mdash; a regime denied economic off-ramps and facing internal legitimacy costs has stronger incentives to demonstrate capability than to absorb the squeeze quietly. Gulf energy infrastructure, shipping, and US regional facilities are the historically preferred targets when that calculation flips, and Iran retains the proxy and missile means to act on it.</p>
+    <div class="sowhat"><b>So What</b>Successful economic pressure raises rather than lowers near-term force protection risk across CENTCOM, and the trigger point is unlikely to be well telegraphed. Units with CENTCOM rotations or Gulf-transiting movements should review base defense, air and missile defense posture, and dispersal plans now rather than on indications and warning.</div>
+  </div>
+
+  <div class="card" style="--accent:#f59e0b">
+    <div class="meta">Politico Magazine &middot; 23 Aug 2026</div>
+    <h3>Gadi Eisenkot emerges as Netanyahu's most formidable challenger ahead of October elections</h3>
+    <p class="body">Gadi Eisenkot, former IDF chief of staff and a former member of Netanyahu's war cabinet, has risen rapidly to become the prime minister's most serious opponent going into Israel's October election, according to a profile by Jan Philipp Burgard. He is campaigning on redirecting the country's course and drawing unusual international attention for an Israeli domestic race. A change of government in Jerusalem would reshape Israeli decision-making on Iran, Gaza, and Lebanon &mdash; the three files where US force posture in the region is most directly coupled to Israeli choices.</p>
+    <div class="sowhat"><b>So What</b>An Israeli leadership change in October would alter the risk calculus on Iran strikes and regional escalation that US regional posture is currently sized against. Treat October as a scheduled inflection point in your regional risk assessment rather than a domestic political story, and avoid locking in posture assumptions that run past it.</div>
+  </div>
+</section>
+
+<!-- CITIES -->
+<section id="cities" class="panel" style="--accent:#38bdf8">
+  <div class="events">
+    <h3>&#127968; What To Do &mdash; Las Vegas</h3>
+    <p class="note">No City Cast Las Vegas newsletter arrived in the last 36 hours; events below are drawn directly from the City Cast Las Vegas events listing, filtered for military families with school-age children.</p>
+
+    <div class="day">Monday, 24 August</div>
+    <div class="ev">
+      <div class="n"><a href="https://events.thelibrarydistrict.org/event/16855007" target="_blank" rel="noopener">Sunrise Chess Club</a></div>
+      <div class="v">Sunrise Library, Washington &amp; Christy &middot; 4&ndash;5:30pm &middot; Free</div>
+      <div class="d">Weekly drop-in chess for all skill levels, run by the Las Vegas-Clark County Library District.</div>
+      <div class="tip">Insider tip: library-district clubs run year-round and take walk-ins &mdash; a low-commitment way to see whether a kid sticks with it before buying into a paid program.</div>
+    </div>
+    <div class="ev">
+      <div class="n"><a href="https://www.eventbrite.com/e/free-movie-mondays-rio-tickets-1990199718934" target="_blank" rel="noopener">Movie Mondays: Rio</a></div>
+      <div class="v">The Pool, Sahara &middot; 8pm &middot; All ages, Free</div>
+      <div class="d">Free outdoor screening of the animated film Rio, open to all ages.</div>
+      <div class="tip">Insider tip: an 8pm start in August means it is finally tolerable outside &mdash; bring your own towels and layers, since poolside seating gets claimed early.</div>
+    </div>
+
+    <div class="day">Tuesday, 25 August</div>
+    <div class="ev">
+      <div class="n"><a href="https://www.cityofhenderson.com/government/departments/parks-and-recreation/special-events" target="_blank" rel="noopener">Art Exhibit: Home Means Nevada</a></div>
+      <div class="v">City Hall Art Gallery, Henderson &middot; Free, runs through 17 November</div>
+      <div class="d">A free Nevada-themed exhibition at Henderson City Hall, open through the autumn.</div>
+      <div class="tip">Insider tip: it runs until November, so pair it with any errand that already takes you to Henderson rather than making a dedicated trip.</div>
+    </div>
+
+    <div class="day">Wednesday, 26 August</div>
+    <div class="ev">
+      <div class="n"><a href="https://www.facebook.com/photo/?fbid=1524695203035637&amp;set=a.553671820137985" target="_blank" rel="noopener">The Great Depletion (screening)</a></div>
+      <div class="v">Winchester Theater, McLeod &amp; Desert Inn &middot; 6pm &middot; $5</div>
+      <div class="d">A $5 documentary screening at the county-run Winchester Dondero Cultural Center.</div>
+      <div class="tip">Insider tip: Winchester is a small county theater, so five dollars a seat and easy parking &mdash; good for an older kid who will actually sit through a documentary.</div>
+    </div>
+    <div class="ev">
+      <div class="n"><a href="https://www.facebook.com/share/19McuBe6JW/" target="_blank" rel="noopener">4th Annual Country Music Showcase</a></div>
+      <div class="v">Pioneer Saloon, Goodsprings &middot; 12&ndash;9pm &middot; Free, runs through 30 August</div>
+      <div class="d">A free multi-day country music showcase at the historic Pioneer Saloon, about 35 minutes southwest of the valley.</div>
+      <div class="tip">Insider tip: Goodsprings is a genuine 1913 ghost-town saloon and the drive out is half the appeal &mdash; go in daylight hours with kids and treat it as an afternoon outing.</div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>Compiled from newsletters received in the 36 hours to 24 Aug 2026 &middot; Sunday editions only</footer>
+
+<script>
+function showTab(id, btn) {
+  var panels = document.querySelectorAll('.panel');
+  for (var i = 0; i < panels.length; i++) { panels[i].classList.remove('active'); }
+  var target = document.getElementById(id);
+  if (target) { target.classList.add('active'); }
+  var btns = document.querySelectorAll('nav.tabs button');
+  for (var j = 0; j < btns.length; j++) { btns[j].classList.remove('active'); }
+  if (btn) { btn.classList.add('active'); }
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
