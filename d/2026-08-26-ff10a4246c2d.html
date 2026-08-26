@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Digest — 26 August 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #f1f5f9;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 0 48px; }
+header.bar {
+  background: #0f172a; color: #fff; padding: 18px 16px;
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px;
+}
+header.bar h1 { margin: 0; font-size: 21px; letter-spacing: .3px; }
+header.bar .date { font-size: 13px; color: #cbd5e1; }
+.breaking {
+  background: #7f1d1d; color: #fee2e2; padding: 14px 16px; border-bottom: 3px solid #b91c1c;
+}
+.breaking h2 { margin: 0 0 8px; font-size: 13px; letter-spacing: 1.4px; text-transform: uppercase; color: #fecaca; }
+.breaking ul { margin: 0; padding: 0; list-style: none; }
+.breaking li { display: flex; gap: 9px; align-items: flex-start; padding: 6px 0; font-size: 14.5px; }
+.breaking li + li { border-top: 1px solid rgba(254,226,226,.18); }
+.dot {
+  flex: none; width: 9px; height: 9px; border-radius: 50%; background: #ef4444; margin-top: 6px;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.75); } }
+.breaking b { color: #fff; }
+nav.tabs {
+  display: flex; gap: 6px; overflow-x: auto; -webkit-overflow-scrolling: touch;
+  background: #fff; padding: 10px 12px; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 5;
+}
+nav.tabs button {
+  flex: none; border: 1px solid #e2e8f0; background: #f8fafc; color: #475569;
+  padding: 8px 13px; border-radius: 999px; font-size: 13.5px; font-weight: 600; cursor: pointer; white-space: nowrap;
+  font-family: inherit;
+}
+nav.tabs button.active { background: #0f172a; color: #fff; border-color: #0f172a; }
+.panel { display: none; padding: 16px 12px 0; }
+.panel.active { display: block; }
+.panel h2.tabtitle { margin: 4px 0 14px; font-size: 15px; letter-spacing: .6px; text-transform: uppercase; color: #64748b; }
+.sub { margin: 22px 0 10px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #7c3aed; }
+.sub:first-of-type { margin-top: 4px; }
+.card {
+  background: #fff; border-radius: 10px; padding: 14px 16px; margin-bottom: 14px;
+  border-left: 5px solid #94a3b8; box-shadow: 0 1px 2px rgba(15,23,42,.07);
+}
+.meta { font-size: 11.5px; text-transform: uppercase; letter-spacing: .7px; color: #64748b; margin-bottom: 5px; }
+.card h3 { margin: 0 0 8px; font-size: 17px; line-height: 1.3; }
+.card p.body { margin: 0; font-size: 15px; color: #1e293b; }
+.sowhat {
+  margin-top: 11px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 12px; font-size: 14px;
+}
+.sowhat b { display: block; font-size: 11px; letter-spacing: 1.1px; text-transform: uppercase; color: #64748b; margin-bottom: 3px; }
+.readmore { margin-top: 10px; text-align: right; font-size: 13.5px; }
+.readmore a { color: #2563eb; text-decoration: none; font-weight: 600; }
+.readmore a:hover { text-decoration: underline; }
+.events { background: #fff; border-radius: 10px; padding: 14px 16px; border-left: 5px solid #38bdf8; box-shadow: 0 1px 2px rgba(15,23,42,.07); }
+.events h3 { margin: 0 0 4px; font-size: 17px; }
+.events .note { font-size: 12.5px; color: #64748b; margin: 0 0 12px; }
+.events h4 { margin: 14px 0 6px; font-size: 13px; letter-spacing: .8px; text-transform: uppercase; color: #0369a1; }
+.ev { border-top: 1px solid #e2e8f0; padding: 9px 0 4px; font-size: 14.5px; }
+.ev a { color: #2563eb; text-decoration: none; font-weight: 600; }
+.ev .venue { color: #475569; font-size: 13.5px; }
+.ev .tip { display: block; margin-top: 4px; font-size: 13px; color: #475569; font-style: italic; }
+.onthisday { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 14px 16px; }
+.onthisday h3 { margin: 0 0 8px; font-size: 15px; letter-spacing: .5px; text-transform: uppercase; color: #92400e; }
+.onthisday ul { margin: 0; padding-left: 18px; font-size: 14.5px; }
+.onthisday li { margin-bottom: 7px; }
+footer.foot { text-align: center; font-size: 12px; color: #64748b; padding: 26px 16px 0; }
+@media (max-width: 480px) { .card h3 { font-size: 16px; } .card p.body { font-size: 14.5px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="bar">
+  <h1>⚡ Daily Digest</h1>
+  <div class="date">Wednesday, 26 August 2026 · 36-hour window</div>
+</header>
+
+<div class="breaking">
+  <h2>🔴 Breaking</h2>
+  <ul>
+    <li><span class="dot"></span><span><b>Treasury launches "Operation Economic Outcast" against Iran.</b> Secretary Scott Bessent announced secondary sanctions on any entity still trading with Tehran — new sectoral determinations covering digital assets, gold, tech, aviation and shipping, 60 designated entities and individuals, and a major unnamed financial institution to be sanctioned by week's end. Iran has vowed to retaliate against states that comply.</span></li>
+    <li><span class="dot"></span><span><b>CIA Director John Ratcliffe arrives in Moscow on an unscheduled trip.</b> ISW reports this would be Ratcliffe's first visit to Russia since becoming director, coming amid Russia's intensified strike campaign against Ukrainian port and border infrastructure.</span></li>
+    <li><span class="dot"></span><span><b>US military conducts first drug-boat strike in two months.</b> The Aug. 23 strike in the eastern Pacific off Latin America killed two alleged "narco-terrorists," resuming a campaign that had paused since June.</span></li>
+  </ul>
+</div>
+
+<nav class="tabs" role="tablist">
+  <button class="active" onclick="showTab('defense', this)">🛡️ Defense</button>
+  <button onclick="showTab('us', this)">🇺🇸 US</button>
+  <button onclick="showTab('pacific', this)">🌏 Pacific</button>
+  <button onclick="showTab('europe', this)">🇪🇺 Europe</button>
+  <button onclick="showTab('tech', this)">💻 Tech &amp; AI</button>
+  <button onclick="showTab('me', this)">🏜️ Middle East</button>
+  <button onclick="showTab('cities', this)">🏙️ Cities</button>
+  <button onclick="showTab('feel', this)">🌟 Feel Good</button>
+</nav>
+
+<!-- DEFENSE -->
+<section id="defense" class="panel active">
+  <h2 class="tabtitle">🛡️ Defense</h2>
+
+  <div class="card" style="border-left-color:#ef4444">
+    <div class="meta">Air &amp; Space Forces Magazine · Aug 25</div>
+    <h3>Navy unveils AIM-424 "Malice" long-range air-to-air missile; Air Force watching closely</h3>
+    <p class="body">The Navy's portfolio acquisition executive for munitions posted details of the AIM-424 Long Range Air-to-Air Missile on Aug. 22, the same day it was unveiled at the Tailhook Symposium in Reno. The weapon is already deep in development and could fill a long-standing long-range air-to-air gap for Air Force fourth-, fifth- and sixth-generation fighters. Alongside it, the Navy highlighted a Compact Air-to-Air Missile optimized for shorter-range engagements and internal carriage on stealthy platforms like the F-35 and future drones. The pairing signals a two-tier future missile vision: reach on the outside, magazine depth on the inside.</p>
+    <div class="sowhat"><b>So What</b>A credible long-range AAM changes the counter-air math against PLA and Russian standoff shooters and reopens fighter-loadout planning. Assume weapons-employment TTPs, aircrew training syllabi and magazine-depth assumptions in your unit's plans will need revision — ask your weapons officers what a 424-class shot changes about your engagement geometry.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#ef4444">
+    <div class="meta">GAO via Air &amp; Space Forces Magazine · Aug 25</div>
+    <h3>Military facilities maintenance backlog doubles to $285 billion</h3>
+    <p class="body">The cost of deferred maintenance on barracks and other military buildings has doubled over five years to $285 billion, according to a new Government Accountability Office report. GAO attributes the growth to chronic underfunding of on-base repairs combined with the Pentagon's struggle to hire and retain the civilian workforce that performs the work. The backlog compounds: deferred repairs escalate into failures that cost far more than scheduled work.</p>
+    <div class="sowhat"><b>So What</b>This is the number behind every unaccompanied-housing complaint and failed HVAC in your footprint, and it will not be bought down centrally. Check your installation's current FSRM backlog and prioritize the facilities that directly affect readiness and junior-enlisted quality of life before the FY27 build.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#ef4444">
+    <div class="meta">Air &amp; Space Forces Magazine · Aug 25</div>
+    <h3>One year in, national counter-drone task force "still has a ton of work to do"</h3>
+    <p class="body">Drones from hostile, reckless, and unknown operators continue to cross jurisdictional lines and threaten military installations, civilian areas and mass-gathering events across the United States. Senior officials say they are still working to stand up a first-of-its-kind national counter-drone surveillance network a year after the task force was created. The core obstacles remain jurisdictional and authorities-based rather than technical — who may detect, who may mitigate, and over whose airspace.</p>
+    <div class="sowhat"><b>So What</b>Base defense against small UAS remains a commander's problem with incomplete authorities and no national sensing backbone to lean on. Re-verify your installation's detection coverage, mitigation authority, and the specific approval chain for engagement — and rehearse it before an incident forces the question.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#ef4444">
+    <div class="meta">Defense One · Aug 25</div>
+    <h3>NSA non-disclosure agreements lack required whistleblower-rights provisions, IG finds</h3>
+    <p class="body">An inspector general report determined that NSA's non-disclosure agreements omit the whistleblower-protection language federal law requires them to carry. The finding lands as the Trump administration weighs imposing a standardized NDA across the federal government. Improperly drafted NDAs can chill protected disclosures and expose the signing organization to legal challenge.</p>
+    <div class="sowhat"><b>So What</b>If a government-wide NDA standard follows, every SAP, SCI and program NDA your staff administers may need review for the same defect. Have your JA and security manager confirm the NDAs your organization issues carry the statutory whistleblower carve-out.</div>
+    <div class="readmore"><a href="https://www.defenseone.com/policy/2026/08/nsa-nda-whistleblower-law/415595" target="_blank" rel="noopener">Read full article →</a></div>
+  </div>
+
+  <div class="card" style="border-left-color:#ef4444">
+    <div class="meta">Defense One · Aug 25</div>
+    <h3>Space Force expands "Integrate" contract to keep multibillion-dollar programs on budget</h3>
+    <p class="body">The Space Force has awarded a new contract to keep its growing portfolio of national security programs on schedule and on cost. The Integrate vehicle previously covered only the service's complicated launch programs; it is now expanding across a wider set of multibillion-dollar projects. The move reflects institutional concern that program-management capacity has not kept pace with the money flowing into space acquisition.</p>
+    <div class="sowhat"><b>So What</b>Space acquisition growth is now being managed as a cost-control problem, which usually precedes tighter reporting demands on supported units. Expect more program-management data calls and build the staff capacity to answer them without pulling operators off mission.</div>
+    <div class="readmore"><a href="https://www.defenseone.com/business/2026/08/new-contract-aims-keep-space-forces-multi-billion-dollar-projects-budget/415588" target="_blank" rel="noopener">Read full article →</a></div>
+  </div>
+</section>
+
+<!-- US -->
+<section id="us" class="panel">
+  <h2 class="tabtitle">🇺🇸 United States</h2>
+
+  <div class="card" style="border-left-color:#3b82f6">
+    <div class="meta">Washington Post / Reuters via International Intrigue · Aug 25</div>
+    <h3>Canada retaliates with tariffs up to 50 percent as Trump doubles auto duties</h3>
+    <p class="body">Canada announced retaliatory tariffs of up to 50 percent on US imports, effective Sept. 8, after US tariffs took effect following the collapse of trade talks. President Trump separately said he will double tariffs on Canada's auto sector to 50 percent from Jan. 1, while Prime Minister Carney signalled he would return to the table if Washington arrives with "the right attitude." US-Canada automotive supply chains are deeply integrated, with parts routinely crossing the border half a dozen times before a finished vehicle rolls off the line.</p>
+    <div class="sowhat"><b>So What</b>A tariff war with the closest US defense-industrial partner touches NORAD-adjacent supply chains, vehicle sustainment and Canadian co-production programs. Ask your logistics and contracting staff which of your sustainment lines cross the northern border and where cost or lead-time exposure now sits.</div>
+    <div class="readmore"><a href="https://www.reuters.com/business/autos-transportation/trump-says-he-will-raise-tariffs-all-cars-trucks-50-amid-canada-trade-spat-2026-08-24/" target="_blank" rel="noopener">Read full article →</a></div>
+  </div>
+
+  <div class="card" style="border-left-color:#3b82f6">
+    <div class="meta">Washington Post / International Intrigue · Aug 25</div>
+    <h3>State Department to revoke tourist and business visas of asylum claimants</h3>
+    <p class="body">The State Department will revoke B1 (business) and B2 (tourism) visas held by people who have since sought asylum in the United States, applying to visas granted between 2016 and 2026. International Intrigue puts the reported scale at roughly 200,000 visas. The Deputy Secretary of State publicly criticized what he called frivolous asylum claims on Monday. It is the latest in a series of administrative measures narrowing legal pathways into the United States.</p>
+    <div class="sowhat"><b>So What</b>Visa-status churn at this scale reaches foreign national employees, contractor personnel and family members connected to your installations. Direct your personnel and security offices to identify any assigned or contracted personnel whose status could be affected before an unplanned loss of access.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#3b82f6">
+    <div class="meta">Washington Post · Aug 25</div>
+    <h3>DHS watchdog: FEMA workers broke law by skipping homes with Trump signs</h3>
+    <p class="body">FEMA workers violated the law when they bypassed homes displaying Trump signs during the 2024 hurricane response, according to the DHS inspector general. A crew leader told staff to avoid such homes on stated safety grounds after Hurricane Milton, and notes obtained by the inspector general show workers followed that direction. The finding goes to the integrity of federal disaster assistance delivered without regard to political affiliation.</p>
+    <div class="sowhat"><b>So What</b>DSCA support and defense support to civil authorities carry the same non-discrimination obligation, and your people will be operating alongside FEMA in the next event. Reinforce with DSCA-tasked personnel that assistance decisions are made on need alone, and that safety concerns get elevated, not applied selectively.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#3b82f6">
+    <div class="meta">Defense One / AFA · Aug 25</div>
+    <h3>White House space policy targets 1,000 launches a year by 2030, folds launch into air traffic modernization</h3>
+    <p class="body">A new White House space transportation policy directs the Pentagon to plan additional launch infrastructure to support demand that could reach 1,000 launches annually by 2030 — more than a fivefold increase over 2025. The guidance separately directs the Transportation Department and other agencies to implement a plan integrating space launch and reentry management into airspace and air traffic control modernization. The two lines together treat launch as routine airspace activity rather than exceptional events.</p>
+    <div class="sowhat"><b>So What</b>Launch-driven airspace closures at that tempo will collide with training airspace scheduling and range availability. Have your airspace and range managers model what a fivefold launch increase does to your annual flying-hour and range-day plan.</div>
+    <div class="readmore"><a href="https://www.defenseone.com/policy/2026/08/white-house-space-transportation-policy-calls-integration-air-traffic-control-modernization/415615" target="_blank" rel="noopener">Read full article →</a></div>
+  </div>
+</section>
+
+<!-- PACIFIC -->
+<section id="pacific" class="panel">
+  <h2 class="tabtitle">🌏 Pacific</h2>
+
+  <div class="card" style="border-left-color:#14b8a6">
+    <div class="meta">Breaking Defense · Aug 25</div>
+    <h3>US–South Korea military drills cut in half after Trump's broadside</h3>
+    <p class="body">The combined US-ROK exercise has been drastically shortened following President Trump's public call to scale it back out of deference to North Korea's leader. Reporting indicates the decision took Seoul by surprise rather than emerging from alliance consultation. Halving a capstone combined exercise removes repetitions from combined command-and-control, reception-staging-onward movement, and integration events that cannot be recovered in a single cycle.</p>
+    <div class="sowhat"><b>So What</b>Exercise volume is the alliance's primary readiness currency on the peninsula, and this is a measurable cut to it delivered without warning to the ally. If your unit supports INDOPACOM rotations or exercise augmentation, expect tasking churn and confirm which combined training objectives are now unmet.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#14b8a6">
+    <div class="meta">ISW China &amp; Taiwan Update · Aug 25</div>
+    <h3>Taiwan reveals "Chiang Kung" hypersonic interceptor as outer layer of T-Dome</h3>
+    <p class="body">Taiwan's National Chung-Shan Institute of Science and Technology disclosed specifications on Aug. 22 for the Chiang Kung (Strong Bow), also designated Tien Kung IV. The land-based mobile vertical launch system fires interceptors at hypersonic speeds against ballistic missiles at altitudes up to 70 km — a major increase over the Tien Kung III's 45 km ceiling — using a two-stage solid-fuel rocket with thrust-vector control, four missiles per launcher, and a mobile AESA radar vehicle co-developed with the United States. Taiwan's Ministry of National Defense plans two systems with at least 128 missiles for roughly $1.13 billion, forming the outermost layer of President Lai's T-Dome integrated air and missile defense concept alongside Tien Kung III and PAC-3. Legislative gridlock remains the binding constraint: the special defense budget passed in May excluded funding for the missile.</p>
+    <div class="sowhat"><b>So What</b>Indigenous upper-tier interception would materially reduce Taiwan's dependence on US Patriot deliveries and change the PLA's missile-salvo calculus — if the money ever appears. Track the Legislative Yuan budget fight as the real indicator, not the technical reveal.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#14b8a6">
+    <div class="meta">Breaking Defense · Aug 25</div>
+    <h3>Taiwan proposes record $35 billion defense budget</h3>
+    <p class="body">Taipei has put forward a record defense budget of roughly $35 billion. The proposal must clear an opposition-controlled legislature that has repeatedly trimmed or blocked domestic-production line items — the same body that stripped Chiang Kung missile funding from the 2026 special defense budget. The gap between proposed and appropriated defense spending has become the clearest single measure of Taiwan's actual deterrent trajectory.</p>
+    <div class="sowhat"><b>So What</b>Taiwanese self-defense capability is now gated by domestic politics more than by technology or US willingness to sell. Watch appropriation outcomes rather than announcements when assessing timelines for any Taiwan contingency planning your staff supports.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#14b8a6">
+    <div class="meta">ISW China &amp; Taiwan Update · Aug 25</div>
+    <h3>Taiwan charges nine in AI server smuggling ring, including Nvidia and Super Micro employees</h3>
+    <p class="body">Taiwanese prosecutors are charging nine individuals — among them one Nvidia employee and two Super Micro employees — with smuggling advanced AI servers containing high-end chips to the PRC in violation of US export controls. The controls exist because PRC integration of AI into military systems presents a direct national security concern. Insider involvement at two major hardware firms indicates diversion is running through trusted personnel rather than only through shell intermediaries.</p>
+    <div class="sowhat"><b>So What</b>Export-control enforcement is now an insider-threat problem inside allied supply chains, not just a customs problem at the border. If your organization touches AI hardware acquisition or partner-nation technology transfer, treat personnel vetting as part of the control regime.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#14b8a6">
+    <div class="meta">Breaking Defense · Aug 25</div>
+    <h3>US flexes ship-sinking weapons at summer naval exercises</h3>
+    <p class="body">A B-2 bomber employed a precision-guided, stealthy air-launched anti-ship cruise missile against a decommissioned vessel during summer exercises. The Navy also fielded unmanned surface vessels to survey and strike targets in a paired exercise. Demonstrating heavy-bomber anti-surface warfare alongside USV strike is a deliberate signal about how the US intends to hold surface combatants at risk across the Pacific's distances.</p>
+    <div class="sowhat"><b>So What</b>Maritime strike is being distributed across bombers and unmanned surface platforms rather than concentrated in carrier air wings, which changes basing, munitions and targeting-support demands. If your unit supports long-range strike or maritime ISR, expect anti-surface warfare to feature more heavily in tasking.</div>
+  </div>
+</section>
+
+<!-- EUROPE -->
+<section id="europe" class="panel">
+  <h2 class="tabtitle">🇪🇺 Europe</h2>
+
+  <div class="card" style="border-left-color:#6366f1">
+    <div class="meta">ISW Russian Offensive Campaign Assessment · Aug 25</div>
+    <h3>Russia escalates strikes on Ukraine–Moldova border crossings to sever Ukraine's land routes to Europe</h3>
+    <p class="body">Russian forces struck the Zatoka and Mayakyi bridges near Odesa and the Vynohradivka-Vulcănești, Reni-Giurgiulești and Tabakyi border crossings northwest of Izmail between late July and late August. A Ukrainian State Border Guard spokesperson said Russian forces hit crossings along the Moldova–Odesa Oblast border three times since Aug. 20. ISW assesses this is a deliberate campaign against Ukraine's ground lines of communication into Moldova, running in parallel with strikes on port infrastructure that target sea lines of communication — a dual effort to block grain exports and isolate Ukraine from Europe. ISW further assesses Moscow is using the strikes to signal that Moldovan accession to Western structures would be a liability, and to test Moldovan and NATO air defense responses while normalizing violations.</p>
+    <div class="sowhat"><b>So What</b>Deliberate strikes adjacent to NATO and Moldovan territory are a calibrated probe of alliance air defense response thresholds, and the next one may not stay on the Ukrainian side. If you have any EUCOM air defense, ISR or logistics equity, confirm your unit's understanding of current cross-border incident reporting and engagement criteria.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#6366f1">
+    <div class="meta">Wall Street Journal via International Intrigue · Aug 25</div>
+    <h3>Western intelligence: Putin running nationwide dry-runs for a second mobilization wave</h3>
+    <p class="body">Citing Western intelligence, the Wall Street Journal reports Putin has conducted nationwide exercises testing Russia's ability to absorb a fresh wave of mobilized troops. Moscow denies the claims and publicly insists a second mobilization is unnecessary, relying on lucrative contract signup bonuses. Analysts note Putin must maintain that position both to sustain the narrative that the war is going well and to avoid another exodus of draft-age men before any order drops — likely after September's Duma elections. The reporting comes amid heavy Russian losses around Lyman.</p>
+    <div class="sowhat"><b>So What</b>A second mobilization wave would extend Russia's ability to sustain offensive operations well past current force-generation projections and reset planning assumptions across EUCOM. Treat post-Duma-election September as the decision window and watch for the administrative indicators, not the announcement.</div>
+    <div class="readmore"><a href="https://www.wsj.com/world/russia/russia-tests-readiness-for-new-round-of-military-mobilization-87d61b96" target="_blank" rel="noopener">Read full article →</a></div>
+  </div>
+
+  <div class="card" style="border-left-color:#6366f1">
+    <div class="meta">Air &amp; Space Forces Magazine · Aug 25</div>
+    <h3>Ukraine faces €23 billion defense funding hole as Western cash lags</h3>
+    <p class="body">Ukraine confronts a €23 billion gap in its defense budget this year, leaving Kyiv scrambling for cash to sustain the fight against Russia. The shortfall was made public even as Western leaders gathered in Kyiv to mark the country's independence day and pledge continued support. A gap of that size falls first on the things that are hardest to see from outside — pay, sustainment, munitions replenishment — rather than on headline capability purchases.</p>
+    <div class="sowhat"><b>So What</b>Funding shortfalls translate into reduced Ukrainian operational tempo months before they show up in territorial change, which is what your intelligence picture will reflect. Assume Ukrainian consumption rates and requests for donated sustainment will rise through the autumn.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#6366f1">
+    <div class="meta">Air &amp; Space Forces Magazine · Aug 25</div>
+    <h3>UK and France to share classified cruise missile technology so Ukraine can build its own</h3>
+    <p class="body">London and Paris are transferring classified technology to Kyiv to enable Ukrainian manufacture of the Anglo-French cruise missile. The move continues a widening Western pattern of helping Ukraine produce weapons domestically rather than only donating finished stocks. Indigenous production insulates Ukraine from the political cycle of individual donation decisions — and puts sensitive design data into an active war zone.</p>
+    <div class="sowhat"><b>So What</b>Allied willingness to transfer classified design data marks a threshold shift in what counts as acceptable risk, and it will shape future US technology-release debates. If your organization handles foreign disclosure, expect the aperture questions to reach you.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#6366f1">
+    <div class="meta">Defense One (Ideas) · Aug 25</div>
+    <h3>Mara Karlin and Julianne Smith: the wrong way to review US force posture in Europe</h3>
+    <p class="body">Two former senior defense officials argue that the way the current European force posture review is being conducted — framed around loyalty rather than capability — will damage the alliance relationships the posture depends on. Their contention is blunt: loyalty tests do not build loyalty, they erode it. The piece is an argument about method, not about whether the posture should change.</p>
+    <div class="sowhat"><b>So What</b>Whatever the review concludes, the process itself is already affecting how European partners plan around US presence. If you command in or support EUCOM, expect partner staffs to hedge, and preserve the working relationships that will still be there after the review closes.</div>
+    <div class="readmore"><a href="https://www.defenseone.com/ideas/2026/08/force-posture-review-europe/415584" target="_blank" rel="noopener">Read full article →</a></div>
+  </div>
+</section>
+
+<!-- TECH & AI -->
+<section id="tech" class="panel">
+  <h2 class="tabtitle">💻 Tech &amp; AI</h2>
+
+  <div class="sub">AI &amp; Competition</div>
+
+  <div class="card" style="border-left-color:#a78bfa">
+    <div class="meta">Defense One · Aug 25</div>
+    <h3>Lawmaker pushes AI containment language into the FRONTIER Act</h3>
+    <p class="body">Rep. Suhas Subramanyam is pressing for a September markup of the FRONTIER Act with new containment language added, following the OpenAI–Hugging Face incident. Containment provisions would impose obligations on how frontier models are secured and restricted rather than only on how they are evaluated. The FRONTIER Act is the leading vehicle for federal frontier-AI regulation, so what gets attached in markup shapes the compliance regime downstream.</p>
+    <div class="sowhat"><b>So What</b>Federal containment requirements will flow into DoD AI acquisition and authority-to-operate processes for any frontier model your organization wants to use. Track the September markup before committing to AI tooling whose vendor may face new security obligations.</div>
+    <div class="readmore"><a href="https://www.defenseone.com/policy/2026/08/dem-lawmaker-hopes-add-ai-containment-language-frontier-act/415614" target="_blank" rel="noopener">Read full article →</a></div>
+  </div>
+
+  <div class="card" style="border-left-color:#a78bfa">
+    <div class="meta">TLDR · Aug 25</div>
+    <h3>OpenAI regains ground against Anthropic in the US corporate market</h3>
+    <p class="body">Ramp spending data covering more than 70,000 organizations shows OpenAI recovering share among US corporate customers after Anthropic led in May and July, with third-quarter trends pointing to faster OpenAI growth. Overall spending on paid AI services is rising, suggesting both providers can expand simultaneously. Corporate loyalty remains fluid — enterprises are switching rather than settling.</p>
+    <div class="sowhat"><b>So What</b>Frontier-model market share is volatile enough that betting a workflow on a single vendor is a real operational risk. Where your staff uses commercial AI, favor tooling that can be repointed at a different model without rebuilding the process.</div>
+    <div class="readmore"><a href="https://www.techcentral.ie/openai-regains-ground-in-the-corporate-ai-market/" target="_blank" rel="noopener">Read full article →</a></div>
+  </div>
+
+  <div class="card" style="border-left-color:#a78bfa">
+    <div class="meta">TLDR / SiliconANGLE · Aug 25</div>
+    <h3>Nvidia puts Groq 3 LPX inference accelerator into full production</h3>
+    <p class="body">Nvidia's Groq 3 LPX accelerator has entered full production as an extension of the Vera Rubin platform, targeting ultra-fast token generation for agentic AI workloads. Nebius is the first cloud provider committed to deploying it. Purpose-built inference silicon shifts the economics of running agents continuously rather than in bursts, which is the bottleneck for autonomous AI applications at scale.</p>
+    <div class="sowhat"><b>So What</b>Cheaper high-speed inference makes persistent AI agents viable for adversaries as well as for us — including at machine speed in the cyber domain. Assume the tempo of AI-enabled activity you face increases as this hardware fields.</div>
+    <div class="readmore"><a href="https://siliconangle.com/2026/08/24/nvidias-dedicated-inference-accelerator-groq-3-lpx-enters-full-production-to-supercharge-ai-agents/" target="_blank" rel="noopener">Read full article →</a></div>
+  </div>
+
+  <div class="sub">Cyber &amp; Emerging Tech</div>
+
+  <div class="card" style="border-left-color:#a78bfa">
+    <div class="meta">Risky Business Bulletin via TLDR InfoSec · Aug 25</div>
+    <h3>Slovakia finds Russian backdoor in newly installed traffic speed cameras</h3>
+    <p class="body">Slovakia's national security authority (NBU) discovered that recently installed NERO R-ONE traffic cameras contain a backdoor granting shell and network access via SMS commands sent from hardcoded Russian phone numbers. The devices were allegedly purchased through a Cyprus shell company and were identified as rebadged units manufactured by a St. Petersburg-based firm. The NBU technical report also found the cameras shipped with SecureBoot disabled and exposed live video streams without authentication. This is hardware-level access to a national road-monitoring network procured through an intermediary that obscured its origin.</p>
+    <div class="sowhat"><b>So What</b>Adversary hardware reaches allied critical infrastructure through reseller and shell-company layers that standard procurement checks do not pierce — including cameras and sensors around installations. Direct your security and contracting staff to verify actual manufacture, not just the vendor of record, for any surveillance or sensing hardware near your perimeter.</div>
+    <div class="readmore"><a href="https://risky.biz/risky-bulletin-slovakia-finds-russian-backdoor-in-traffic-speed-cameras/" target="_blank" rel="noopener">Read full article →</a></div>
+  </div>
+
+  <div class="card" style="border-left-color:#a78bfa">
+    <div class="meta">Futurum Group via TLDR InfoSec · Aug 25</div>
+    <h3>Why AI learned to attack before it learned to defend</h3>
+    <p class="body">Offensive AI is outpacing defensive AI because of a structural asymmetry: an exploit either lands or it does not, giving reinforcement learning a clean verification signal that defense lacks. The imbalance is already visible — Anthropic's Project Glasswing surfaced over 10,000 high- or critical-severity flaws, far outpacing the roughly two-week average patch time, while OpenAI's Daybreak Red reached about a 95 percent success rate on advanced offensive security tasks. The July Hugging Face breach and the spread of highly capable open-weight models compound the effect. AI substitutes for human effort on offense but only assists on defense.</p>
+    <div class="sowhat"><b>So What</b>Your patch cycle is measured in weeks while machine-generated vulnerability discovery is measured in hours, and that gap is widening rather than closing. Push your cyber defenders toward automating the full loop — detection through patch, deploy and rollback — because manual remediation cadence will not hold.</div>
+    <div class="readmore"><a href="https://futurumgroup.com/insights/why-ai-learned-to-attack-before-it-learned-to-defend/" target="_blank" rel="noopener">Read full article →</a></div>
+  </div>
+</section>
+
+<!-- MIDDLE EAST -->
+<section id="me" class="panel">
+  <h2 class="tabtitle">🏜️ Middle East</h2>
+
+  <div class="card" style="border-left-color:#f59e0b">
+    <div class="meta">International Intrigue / Financial Times · Aug 25</div>
+    <h3>"Operation Economic Outcast": Bessent declares an economic D-Day against Iran</h3>
+    <p class="body">Treasury Secretary Scott Bessent used Sunday's Financial Times to declare an "economic D-Day" against Iran, then laid out the plan Monday: secondary sanctions on anyone still doing business with Tehran, new sectoral determinations hitting the five channels keeping Iran's economy afloat — digital assets, gold, technology, aviation and shipping — designations against 60 entities and individuals, and sanctioning of an unnamed major financial institution by the end of this week. Any entity facilitating money laundering for Iran would be removed from the US dollar system. President Trump is reportedly calling world leaders directly with specific asks and timelines to halt Iran trade. Iran has publicly vowed to retaliate against states that comply. Bessent himself described the package as a warning shot, and analysts note the most obvious targets may remain off-limits.</p>
+    <div class="sowhat"><b>So What</b>Threatening secondary sanctions against China, Turkey, Iraq and the UAE puts pressure on states that host or enable US force posture across CENTCOM. Watch for host-nation friction and force-protection implications if Tehran acts on its retaliation threat against complying partners.</div>
+    <div class="readmore"><a href="https://www.ft.com/content/cb865200-1a06-40be-86a3-10ee2bb05804" target="_blank" rel="noopener">Read full article →</a></div>
+  </div>
+
+  <div class="card" style="border-left-color:#f59e0b">
+    <div class="meta">International Intrigue · Aug 25</div>
+    <h3>US naval blockade at Hormuz has roughly halved Iran's oil exports to China</h3>
+    <p class="body">China remains Iran's largest trade partner, absorbing roughly 90 percent of its discounted oil exports — worth more than $30 billion to Tehran last year. Those volumes have roughly halved in 2026, and the reason is not Beijing distancing itself: tanker-tracking analysis indicates hardly any oil is now exiting Hormuz under the continued US naval blockade. Beijing's official import data claims zero Iranian oil for years, sustained through shadow-fleet transfers, flag-hopping and relabelling as Malaysian or Omani crude, settled in yuan through intermediaries at Shandong "teapot" refineries.</p>
+    <div class="sowhat"><b>So What</b>The blockade — not sanctions paperwork — is what is actually cutting Iranian revenue, which means the pressure campaign depends on sustained naval presence at a chokepoint. Assume Hormuz-related maritime security tasking and the associated force-protection posture continue indefinitely.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#f59e0b">
+    <div class="meta">Le Monde via International Intrigue · Aug 25</div>
+    <h3>US removes Syria from the state sponsors of terrorism list after four decades</h3>
+    <p class="body">Washington has formally removed Syria from the State Department's state sponsors of terrorism list after more than 40 years, lifting a major legal barrier to foreign investment and banking transactions with Damascus. The move follows Syria joining the US-led anti-ISIS coalition, and the United States has also de-listed al-Sharaa's HTS movement. Israel remains uneasy given lingering suspicions about al-Sharaa's jihadist origins.</p>
+    <div class="sowhat"><b>So What</b>Normalizing Damascus reshapes the counter-ISIS coalition's structure and the legal environment for any US military-to-military contact in Syria. If you have CENTCOM equities, expect authorities and partner-force relationships in the Syria file to be revisited.</div>
+    <div class="readmore"><a href="https://www.lemonde.fr/en/international/article/2026/08/24/us-removes-syria-from-list-of-state-terror-sponsors_6756810_4.html" target="_blank" rel="noopener">Read full article →</a></div>
+  </div>
+</section>
+
+<!-- CITIES -->
+<section id="cities" class="panel">
+  <h2 class="tabtitle">🏙️ Cities — Las Vegas</h2>
+
+  <div class="card" style="border-left-color:#38bdf8">
+    <div class="meta">The Nevadan · Aug 24</div>
+    <h3>85 percent of Nevada wildfires are human-caused</h3>
+    <p class="body">The Nevadan reports that roughly 85 percent of wildfires in the state are started by people, not lightning — a figure that puts most of the fire season's risk within human control. The newsletter framed the number alongside its weekly roundup of community events across Nevada as the state moves through peak fire conditions.</p>
+    <div class="sowhat"><b>So What</b>Most of the fire risk around Nellis, Creech and the surrounding valley is behavioral, which means it is preventable through unit-level messaging. Push fire-prevention reminders — vehicles off dry brush, no open burning, trailer chains secured — to your people ahead of the long weekend.</div>
+  </div>
+
+  <div class="events">
+    <h3>🎟️ What To Do</h3>
+    <p class="note">Family-friendly picks for the next three days, filtered for parents with school-age kids. Sourced from City Cast Las Vegas events.</p>
+
+    <h4>Wednesday, Aug. 26</h4>
+    <div class="ev">
+      🤠 <a href="https://www.facebook.com/share/19McuBe6JW/" target="_blank" rel="noopener">4th Annual Country Music Showcase</a> — <span class="venue">Pioneer Saloon, Goodsprings · 12–9pm · Free (through Aug 30)</span>
+      <span class="tip">Insider tip: The drive out to Goodsprings is 45 minutes of open desert and the saloon is a genuine 1913 landmark — go late afternoon so the kids get the historic building tour before the evening sets.</span>
+    </div>
+    <div class="ev">
+      🎵 <a href="https://www.facebook.com/share/19LaxSJrrj/" target="_blank" rel="noopener">Ella, Soul and Swing!</a> — <span class="venue">Starbright Theater, Summerlin · 6pm · Ticketed</span>
+      <span class="tip">Insider tip: Starbright is small enough that every seat is a good seat — an easy first live-jazz outing for kids who have only heard it in cartoons.</span>
+    </div>
+
+    <h4>Thursday, Aug. 27</h4>
+    <div class="ev">
+      🦇 <a href="https://www.redrockcanyonlv.org/events/bat-walk-red-springs-308-27-26-6-8pm/" target="_blank" rel="noopener">Bat Walk at Red Springs</a> — <span class="venue">Red Springs, Red Rock Canyon · 6–8pm · All ages, Free</span>
+      <span class="tip">Insider tip: Best pick of the week. Bring headlamps and long sleeves — the boardwalk cools fast after sunset and the bat detectors are the part kids talk about for weeks.</span>
+    </div>
+    <div class="ev">
+      🎻 <a href="https://events.thelibrarydistrict.org/event/16783272" target="_blank" rel="noopener">Marina Pendleton: Adventures in Songwriting</a> — <span class="venue">Rainbow Library, Buffalo &amp; Cheyenne · 6pm · All ages, Free</span>
+      <span class="tip">Insider tip: Library district events fill their room but never sell out — walk in ten minutes early and you will get seats together.</span>
+    </div>
+    <div class="ev">
+      🚚 <a href="https://www.lasvegasnevada.gov/Residents/Events#/" target="_blank" rel="noopener">Food Truck Thursday</a> — <span class="venue">Goodman Way, Downtown · 11am–1pm · Free entry</span>
+      <span class="tip">Insider tip: A lunch-hour stop, not an evening plan — pair it with the downtown library if you are making a day of it.</span>
+    </div>
+
+    <h4>Friday, Aug. 28</h4>
+    <div class="ev">
+      🍿 <a href="https://cowabungavegas.com/events/bay-family-movie-night/" target="_blank" rel="noopener">Family Movie Night — Shrek Day</a> — <span class="venue">Cowabunga Bay, Henderson · 5pm · All ages, $20</span>
+      <span class="tip">Insider tip: The waterpark stays open before the movie — go early, swim it out, then let them dry off during the film.</span>
+    </div>
+    <div class="ev">
+      🌺 <a href="https://www.eventbrite.com/e/talofa-fest-tickets-1984174032945" target="_blank" rel="noopener">Talofa Fest</a> — <span class="venue">Desert Breeze Events Center, Spring Valley · 5–11:30pm · All ages, from $20 (through Aug 30)</span>
+      <span class="tip">Insider tip: Pacific Islander food, dance and craft vendors — a strong cultural outing for kids old enough to sit through the performances.</span>
+    </div>
+    <div class="ev">
+      🎭 <a href="https://events.thelibrarydistrict.org/event/16493682" target="_blank" rel="noopener">Nevada Shakespeare Festival: Julius Caesar</a> — <span class="venue">Windmill Library, Windmill &amp; Rainbow · 7pm · All ages, Free</span>
+      <span class="tip">Insider tip: Free Shakespeare with an assassination plot is the easiest sell to a middle-schooler you will get all year — read the two-line summary in the car first.</span>
+    </div>
+  </div>
+</section>
+
+<!-- FEEL GOOD -->
+<section id="feel" class="panel">
+  <h2 class="tabtitle">🌟 Feel Good</h2>
+
+  <div class="card" style="border-left-color:#facc15">
+    <div class="meta">Air &amp; Space Forces Magazine · Aug 25</div>
+    <h3>Hurricane Hunters fly into the storm so everyone else can get out of it</h3>
+    <p class="body">The 53rd Weather Reconnaissance Squadron at Keesler Air Force Base — the Hurricane Hunters — has flown multiple missions this season, including three deployments to Hawaii to track Pacific storms. Maj. Sarah Olson said the Hurricane Lala mission required the squadron to operate from an area directly in the storm's path. Their data feeds the forecasts that tell families when to leave. Olson used the interview to press civilians on storm preparation, which is the part of the job that happens on the ground.</p>
+  </div>
+
+  <div class="card" style="border-left-color:#facc15">
+    <div class="meta">Washington Post · Aug 25</div>
+    <h3>Dolly Parton, 1946–2026</h3>
+    <p class="body">Dolly Parton died at 80. She made her mark as a musician, actress, philanthropist, fashion icon and, as the Post put it, a dreamer — carving out a singular place in American life and becoming an unexpected feminist heroine along the way. Hundreds of readers wrote in about what they loved most. The through-line in nearly all of it was generosity: she made people's lives better and the world brighter, and she did it without ever seeming to need credit for it.</p>
+  </div>
+
+  <div class="onthisday">
+    <h3>📜 On This Day</h3>
+    <ul>
+      <li><b>26 August 1944</b> — Charles de Gaulle led a victory procession down the Champs-Élysées through newly liberated Paris, walking the route while sniper fire still cracked around the Place de la Concorde. It was a deliberate act of political theater: France would be restored by Frenchmen, in front of Frenchmen.</li>
+      <li><b>26 August 1346</b> — At Crécy, an outnumbered English army under Edward III destroyed a far larger French force. Massed longbowmen firing from prepared ground broke repeated heavy cavalry charges — an early, brutal lesson that a technological and doctrinal advantage can overturn a decisive disparity in numbers.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="foot">
+  Compiled from newsletter traffic received in the 36 hours to 26 August 2026 · Prepared for operational-level commanders and staff
+</footer>
+
+</div>
+
+<script>
+function showTab(id, btn) {
+  var panels = document.querySelectorAll('.panel');
+  for (var i = 0; i < panels.length; i++) { panels[i].classList.remove('active'); }
+  var target = document.getElementById(id);
+  if (target) { target.classList.add('active'); }
+  var btns = document.querySelectorAll('nav.tabs button');
+  for (var j = 0; j < btns.length; j++) { btns[j].classList.remove('active'); }
+  if (btn) { btn.classList.add('active'); }
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
