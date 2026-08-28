@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Digest — 28 August 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  background: #f1f5f9; color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 12px 48px; }
+header.bar {
+  background: #0f172a; color: #fff;
+  padding: 18px 16px; margin: 0 -12px 0;
+}
+header.bar h1 { margin: 0; font-size: 22px; letter-spacing: -0.4px; }
+header.bar .date { margin-top: 4px; font-size: 13px; color: #94a3b8; }
+.breaking {
+  background: #7f1d1d; color: #fff;
+  padding: 14px 16px; margin: 0 -12px;
+  border-top: 2px solid #b91c1c;
+}
+.breaking h2 {
+  margin: 0 0 8px; font-size: 13px; letter-spacing: 1.2px;
+  text-transform: uppercase; display: flex; align-items: center; gap: 8px;
+}
+.dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: #f87171; display: inline-block;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+@keyframes pulse { 0%,100% { opacity: 1; transform: scale(1);} 50% { opacity: .35; transform: scale(.75);} }
+.breaking ul { margin: 0; padding-left: 18px; }
+.breaking li { margin: 7px 0; font-size: 14px; line-height: 1.5; }
+.breaking li b { color: #fecaca; }
+nav.tabs {
+  display: flex; gap: 6px; overflow-x: auto;
+  background: #fff; padding: 10px 12px; margin: 0 -12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  -webkit-overflow-scrolling: touch;
+}
+nav.tabs button {
+  flex: 0 0 auto; cursor: pointer;
+  border: 1px solid #e2e8f0; background: #f8fafc; color: #475569;
+  border-radius: 999px; padding: 7px 13px; font-size: 13px; font-weight: 600;
+  white-space: nowrap; font-family: inherit;
+}
+nav.tabs button.active { background: #0f172a; color: #fff; border-color: #0f172a; }
+.panel { display: none; }
+.panel.active { display: block; }
+.section-label {
+  font-size: 11px; letter-spacing: 1.3px; text-transform: uppercase;
+  color: #64748b; font-weight: 700; margin: 20px 0 8px;
+}
+.section-label:first-child { margin-top: 0; }
+.card {
+  background: #fff; border-radius: 8px; padding: 14px 16px;
+  margin-bottom: 12px; border-left: 4px solid #94a3b8;
+  box-shadow: 0 1px 2px rgba(15,23,42,.06);
+}
+.card .meta { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: .6px; margin-bottom: 5px; }
+.card h3 { margin: 0 0 8px; font-size: 16px; line-height: 1.35; }
+.card p { margin: 0; font-size: 14.5px; line-height: 1.6; color: #1e293b; }
+.sowhat {
+  margin-top: 11px; background: #f8fafc; border: 1px solid #e2e8f0;
+  border-radius: 6px; padding: 9px 11px; font-size: 13.5px; line-height: 1.55; color: #334155;
+}
+.sowhat b { display: block; font-size: 10.5px; letter-spacing: 1.1px; text-transform: uppercase; color: #64748b; margin-bottom: 3px; }
+.readmore { display: block; text-align: right; margin-top: 10px; }
+.readmore a { color: #2563eb; font-size: 13px; text-decoration: none; font-weight: 600; }
+.events { background: #fff; border-radius: 8px; padding: 14px 16px; border-left: 4px solid #38bdf8; box-shadow: 0 1px 2px rgba(15,23,42,.06); }
+.events h3 { margin: 0 0 4px; font-size: 16px; }
+.events .day { font-size: 12px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: #0369a1; margin: 14px 0 6px; }
+.events .ev { font-size: 14px; line-height: 1.55; margin-bottom: 10px; padding-left: 10px; border-left: 2px solid #e0f2fe; }
+.events .ev a { color: #2563eb; text-decoration: none; font-weight: 600; }
+.events .tip { color: #475569; font-size: 13px; font-style: italic; }
+.onthisday { background: #fff; border-radius: 8px; padding: 14px 16px; border-left: 4px solid #facc15; box-shadow: 0 1px 2px rgba(15,23,42,.06); }
+.onthisday h3 { margin: 0 0 8px; font-size: 16px; }
+.onthisday li { font-size: 14px; line-height: 1.6; margin-bottom: 8px; }
+.note { font-size: 13px; color: #64748b; margin: 0 0 12px; line-height: 1.55; }
+footer { margin-top: 26px; font-size: 11.5px; color: #94a3b8; text-align: center; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="bar">
+  <h1>⚡ Daily Digest</h1>
+  <div class="date">Friday, 28 August 2026 · Operational-level commander's read</div>
+</header>
+
+<div class="breaking">
+  <h2><span class="dot"></span> Breaking</h2>
+  <ul>
+    <li><b>CIA director delivered a direct warning in Moscow.</b> John Ratcliffe flew into Moscow on a C-17 and met SVR chief Sergey Naryshkin to warn Russia against attacking NATO allies — Estonia, Latvia and Lithuania named specifically. The manner of travel suggests US intelligence sees a shorter timeline than the "next few years" language in public assessments.</li>
+    <li><b>US near a "massive" deal for Venezuelan oil fields.</b> Axios reports Washington is close to an arrangement that would give the United States an ownership stake in Venezuela's fields — a significant shift in the SOUTHCOM operating picture.</li>
+    <li><b>SOUTHCOM lethal strike in the Caribbean.</b> The US military struck an alleged drug vessel transiting "established narco-trafficking routes" on 25 August, killing four suspected traffickers.</li>
+  </ul>
+</div>
+
+<nav class="tabs">
+  <button class="active" onclick="showTab('defense',this)">🛡️ Defense</button>
+  <button onclick="showTab('us',this)">🇺🇸 US</button>
+  <button onclick="showTab('pacific',this)">🌏 Pacific</button>
+  <button onclick="showTab('europe',this)">🇪🇺 Europe</button>
+  <button onclick="showTab('tech',this)">💻 Tech &amp; AI</button>
+  <button onclick="showTab('me',this)">🏜️ Middle East</button>
+  <button onclick="showTab('cities',this)">🏙️ Cities</button>
+  <button onclick="showTab('feelgood',this)">🌟 Feel Good</button>
+</nav>
+
+<!-- DEFENSE -->
+<section id="defense" class="panel active">
+
+  <div class="card" style="border-left-color:#ef4444">
+    <div class="meta">Air &amp; Space Forces Magazine / Breaking Defense · 27 Aug 2026</div>
+    <h3>Boeing lands F-15 contract worth up to $131.2 billion</h3>
+    <p>The Air Force has awarded Boeing a broad indefinite-delivery contract for the F-15 line valued at up to $131.2 billion, per a Defense Department announcement — one of the largest fighter awards ever placed. The ceiling covers production, sustainment and likely foreign military sales over the life of the vehicle, effectively locking the F-15EX into the force structure well past 2040. Separately, the Pentagon announced $766 million in Raytheon and Boeing contracts on 25 August for advance work on new radars for the B-52H. Together the awards signal continued investment in fourth-generation-plus and legacy platforms alongside, not instead of, fifth- and sixth-generation programs.</p>
+    <div class="sowhat"><b>So What</b>The high-low fighter mix is now contractually durable, which stabilizes long-range basing, manpower and maintenance-training assumptions. Check whether your unit's fleet-transition and MOS/AFSC manning plans still assume an F-15 sundown date — several do, and they are now wrong.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#ef4444">
+    <div class="meta">Defense One · 27 Aug 2026</div>
+    <h3>Army picks five firms to build nuclear microreactors on bases under $2B program</h3>
+    <p>The Army selected five companies to build on-base nuclear microreactors, working toward roughly 20 installations, in a bid to decouple critical installation power from the commercial grid. The program advances despite a domestic uranium enrichment shortage that leaves the US heavily dependent on imported enriched fuel. Installation-level generation is intended to keep C2 nodes, sustainment and power-projection functions running through grid attack or long-duration outage. Siting, NRC licensing and host-community engagement will drive the actual timelines more than the contracts will.</p>
+    <div class="sowhat"><b>So What</b>Energy resilience is moving from a facilities line item to a mission-assurance requirement. If your installation is a candidate site, start the community-engagement and emergency-response coordination now rather than after the announcement.</div>
+    <span class="readmore"><a href="https://www.defenseone.com/business/2026/08/army-selects-5-companies-build-nuclear-microreactors-bases-under-new-2-billion-deal/415653" target="_blank" rel="noopener">Read full article →</a></span>
+  </div>
+
+  <div class="card" style="border-left-color:#ef4444">
+    <div class="meta">Defense One · 27 Aug 2026</div>
+    <h3>Senior officers advised keeping the civilian-harm program; Hegseth cut it anyway</h3>
+    <p>Senior military officers formally recommended retaining the Civilian Harm Mitigation and Response mission, and the Defense Secretary eliminated it regardless. Since the office was gutted, US forces have killed hundreds of noncombatants, and the resulting blowback may now force a partial restoration of the capability. The office had supplied the doctrine, training and post-strike assessment machinery that turned civilian-casualty policy into targeting practice. Its absence pushes that burden down to operational and tactical staffs without the reachback that used to backstop them.</p>
+    <div class="sowhat"><b>So What</b>Civilian-harm assessment responsibility has effectively devolved to your staff without the manning or reachback that came with it. Confirm who in your J/G-3 and legal shop actually owns post-strike assessment today, and assume you will be asked to reconstitute it on short notice.</div>
+    <span class="readmore"><a href="https://www.defenseone.com/policy/2026/08/hegseth-civilian-protection-axed/415621" target="_blank" rel="noopener">Read full article →</a></span>
+  </div>
+
+  <div class="card" style="border-left-color:#ef4444">
+    <div class="meta">Air &amp; Space Forces Magazine · 27 Aug 2026</div>
+    <h3>Airmen and Guardians face gas-mask seal testing under facial-hair crackdown</h3>
+    <p>The Department of the Air Force has given Airmen and Guardians until the end of the calendar year to demonstrate a proper protective-mask seal, tying the requirement directly to the Defense Secretary's crackdown on unauthorized facial hair. The move converts a grooming-standards debate into a measurable CBRN readiness gate with a hard suspense. Units will need mask-fit testing throughput, documentation, and a path for personnel with medical shaving waivers — a population that skews heavily toward Black Airmen. Expect the medical waiver and separation-risk questions to arrive together.</p>
+    <div class="sowhat"><b>So What</b>This is a year-end compliance deadline with real personnel-action consequences, and the fit-test capacity to meet it does not exist at most installations today. Get your mask-fit testing throughput, waiver population and documentation plan on the commander's board this month, not in November.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#ef4444">
+    <div class="meta">Washington Post · 27 Aug 2026</div>
+    <h3>Stars and Stripes staff sue the Pentagon over firings</h3>
+    <p>The publisher, editor in chief and a reporter at Stars and Stripes have sued the Pentagon over their firings, alleging the government violated their First Amendment rights to free speech. Stars and Stripes occupies an unusual position as a DoD-funded outlet with statutory editorial independence, and the case will test how far that independence extends. A ruling either way will shape what the force can expect to read about itself and how public-affairs guidance is written across the department.</p>
+    <div class="sowhat"><b>So What</b>Command information channels your formations rely on may be unsettled while this litigates, and PAO guidance will likely tighten in the interim. Assume anything said to Stars and Stripes reporters is now operating in a contested legal environment and coordinate through PAO deliberately.</div>
+  </div>
+
+</section>
+
+<!-- US -->
+<section id="us" class="panel">
+
+  <div class="card" style="border-left-color:#3b82f6">
+    <div class="meta">Washington Post · 27 Aug 2026</div>
+    <h3>NTSB: White House construction contributed to Marine One safety incident</h3>
+    <p>The NTSB found that White House construction forced Marine One to launch from a temporary location earlier this month, producing communication problems and a safety incident involving Reagan National airport traffic. The finding points at the airspace-deconfliction and comms-coordination seams that open whenever a habitual departure point moves. The National Capital Region already runs one of the most congested and procedurally rigid airspace regimes in the country, and temporary changes there propagate quickly.</p>
+    <div class="sowhat"><b>So What</b>Temporary field or ramp changes are a recurring, under-briefed source of aviation risk — the same failure mode applies to any unit moving a habitual launch point during construction or exercise. Direct your aviation safety officer to review temporary-airfield-change procedures and comms handoffs before your next ramp or airspace change.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#3b82f6">
+    <div class="meta">Axios / Washington Post · 27 Aug 2026</div>
+    <h3>Executive order renames Lake Ontario "Lake America" after Canada trade talks stall</h3>
+    <p>An executive order directs the Interior Department to update federal geographic information systems to rename Lake Ontario as "Lake America," following through on a threat made after trade negotiations with Canada broke down. The order affects federal GIS data products but not Canadian or international naming conventions, guaranteeing divergence between US and allied charts and datasets. NORAD, Northern Command and every binational planning forum run on shared geographic reference data.</p>
+    <div class="sowhat"><b>So What</b>Divergent place names in federal GIS will create real friction in binational products, mapping and messaging with a NORAD partner already strained by the trade dispute. If you work Canadian or NORAD equities, expect naming inconsistencies in datasets and have a deconfliction convention ready before it shows up in a product.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#3b82f6">
+    <div class="meta">WSJ Politics · 27 Aug 2026</div>
+    <h3>Lawmakers sound the alarm on Flock and the "surveillance state"</h3>
+    <p>Members of Congress are raising concerns about Flock Safety's automated license-plate-reader network and the broader private-surveillance ecosystem feeding law enforcement databases. The systems have proliferated across municipalities, including in communities adjacent to military installations, largely outside federal oversight frameworks. Any legislation that follows would likely touch data retention, third-party access and the terms under which federal agencies can query commercial networks.</p>
+    <div class="sowhat"><b>So What</b>Commercial ALPR networks around your installation create a persistent pattern-of-life record of your formation's movements that you neither control nor can query. Raise it with your antiterrorism/force protection officer as an OPSEC exposure, particularly for units with deployment-signature concerns.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#3b82f6">
+    <div class="meta">Air &amp; Space Forces Magazine · 27 Aug 2026</div>
+    <h3>Cellebrite fields a backpack-sized military data-extraction kit</h3>
+    <p>Digital forensics firm Cellebrite has unveiled a portable field kit purpose-built for military and intelligence users, designed to pull data from phones, SIM cards, drones and tablets at the point of capture rather than at a rear exploitation node. The pitch is turning "every device into a source" by compressing the sensitive-site-exploitation timeline from days to minutes. Point-of-capture extraction raises immediate questions about chain of custody, authorities, and who is trained and certified to operate the kit.</p>
+    <div class="sowhat"><b>So What</b>Tactical-level document and media exploitation capability is arriving faster than the training, authorities and evidentiary standards to govern it. If this capability is inbound to your formation, settle the authorities and operator-certification question before the equipment arrives, not after the first extraction.</div>
+  </div>
+
+</section>
+
+<!-- PACIFIC -->
+<section id="pacific" class="panel">
+
+  <div class="card" style="border-left-color:#14b8a6">
+    <div class="meta">Air &amp; Space Forces Magazine / WSJ · 27 Aug 2026</div>
+    <h3>Munitions drawdown from the Iran war is alarming Indo-Pacific allies</h3>
+    <p>Heavy US munitions expenditure in the Middle East is increasingly worrying Asian allies and frustrating Pentagon officials responsible for the Indo-Pacific, who fear the prolonged Iran war is eroding readiness for a China contingency. The concern is not only inventory depth but production rate: precision munitions lines cannot be surged quickly, and every round expended over CENTCOM is one not pre-positioned west of the international date line. Allied planners read US stockpile posture as a proxy for US commitment, so the signaling effect compounds the material one.</p>
+    <div class="sowhat"><b>So What</b>Your munitions authorizations and pre-positioned stocks may be materially different from what your operational plans assume. Have your logistics officer reconcile actual on-hand and allocated precision munitions against your OPLAN requirement now, and brief the delta up.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#14b8a6">
+    <div class="meta">Air &amp; Space Forces Magazine · 27 Aug 2026</div>
+    <h3>Misawa's 13th Fighter Squadron takes new F-35As to Red Flag-Alaska</h3>
+    <p>The 13th Fighter Squadron deployed its newly received F-35As from Misawa Air Base, Japan, to Red Flag-Alaska for the first time — the squadron's debut at Pacific Air Forces' premier large-force employment exercise. The deployment validates that a forward-based Japan unit can generate, move and sustain fifth-generation sorties into the high-end training environment rather than only operating from home station. Red Flag-Alaska specifically exercises the contested, degraded, long-range profile that a Western Pacific fight would demand.</p>
+    <div class="sowhat"><b>So What</b>Forward-based fifth-generation squadrons are proving they can flow into large-force exercises, which raises the baseline expectation for what forward units can generate on short notice. Review whether your own deployment-readiness timelines assume the older, slower generation model.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#14b8a6">
+    <div class="meta">Air &amp; Space Forces Magazine / Defense News · 27 Aug 2026</div>
+    <h3>First North Korea–Russia road bridge nears completion across the Tumen</h3>
+    <p>Satellite imagery indicates the first-ever road bridge linking North Korea and Russia across the Tumen River is close to complete, though construction on the Russian approach lags the finished North Korean side. Until now the two countries have been connected only by a single rail link, which sharply constrained throughput. A road crossing adds redundant, higher-tempo, harder-to-interdict surface capacity for the munitions-and-manpower-for-technology trade that has developed since 2024. It also makes the relationship physically durable in a way a rail spur was not.</p>
+    <div class="sowhat"><b>So What</b>The DPRK–Russia logistics relationship is being hardened into permanent infrastructure, which raises the sustained volume of North Korean materiel available to Russia and of Russian technology flowing the other way. Assume DPRK conventional and missile capability improves faster than legacy timelines predict when you build your threat picture.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#14b8a6">
+    <div class="meta">ASPI Strategist / International Intrigue · 27 Aug 2026</div>
+    <h3>Beijing squeezes Taiwan's remaining diplomatic space — now targeting representative offices</h3>
+    <p>Having stripped Taiwan of most formal diplomatic partners, China has shifted its pressure campaign to Taipei's quasi-embassies, the representative offices that carry the practical weight of Taiwan's foreign relations. In parallel, Beijing issued an urgent advisory telling Chinese nationals to leave Eswatini "as soon as possible" — Taiwan's last African partner, which hosted Taiwan's leader in May — while a pro-Beijing lawmaker in Kiribati pushes a constitutional amendment restricting diplomatic ties to UN members only. The cumulative effect is to shrink Taiwan's map until reunification is framed as administrative housekeeping rather than conquest.</p>
+    <div class="sowhat"><b>So What</b>Political warfare against Taiwan is accelerating on a track independent of military indicators, and it shapes how partners will behave in a crisis. Watch representative-office closures and Pacific Island diplomatic shifts as a separate warning stream from PLA activity — they will move first.</div>
+    <span class="readmore"><a href="https://www.aspistrategist.org.au/with-many-taiwanese-embassies-closed-china-shifts-target-to-representative-offices/" target="_blank" rel="noopener">Read full article →</a></span>
+  </div>
+
+  <div class="card" style="border-left-color:#14b8a6">
+    <div class="meta">ASPI Strategist · 27 Aug 2026</div>
+    <h3>Australia and Indonesia convert the Jakarta Treaty into practical cooperation</h3>
+    <p>The Australia–Indonesia Foreign and Defence Ministers' Meeting in Melbourne on 26 August turned the two countries' expanding treaty architecture into concrete cooperation on shared resilience. Indonesia's archipelagic geography sits astride the sea lanes any Western Pacific contingency would depend on, and Jakarta has historically guarded its non-aligned posture carefully. Movement from treaty text to practical activity — exercises, interoperability, resilience planning — is the meaningful indicator here, not the communiqué language.</p>
+    <div class="sowhat"><b>So What</b>Access and overflight assumptions in the maritime Southeast Asian approaches are improving at the margin, which affects routing and basing options. If your plans touch the Indonesian archipelago, track this bilateral closely — it is where practical access will be negotiated.</div>
+    <span class="readmore"><a href="https://www.aspistrategist.org.au/after-meeting-in-melbourne-australia-and-indonesia-further-strengthen-security-cooperation/" target="_blank" rel="noopener">Read full article →</a></span>
+  </div>
+
+</section>
+
+<!-- EUROPE -->
+<section id="europe" class="panel">
+
+  <div class="card" style="border-left-color:#6366f1">
+    <div class="meta">Institute for the Study of War · 27 Aug 2026</div>
+    <h3>ISW: Ratcliffe's Moscow trip suggests Russia may be preparing a near-term act of aggression against NATO</h3>
+    <p>ISW assesses that CIA Director Ratcliffe's visit to Moscow indicates Russia may be preparing an act of aggression against a NATO member in the relatively near term, specifically designed to invalidate Article 5 rather than to seize territory. A full-scale conventional invasion of a NATO state is judged highly unlikely — ISW has observed no Russian force buildup on the Baltic borders, and Estonian and Latvian officials say their own threat assessments are unchanged. The more plausible option is an air, missile or drone strike, or a limited incursion with a small force, none of which requires the visible mobilization that telegraphed the 2021–22 Ukraine buildup. Ratcliffe's arrival on a C-17 with an American motorcade, and the presence of two FSB department heads alongside SVR chief Naryshkin, point to urgency rather than a distant warning. Separately, unidentified drones entered Moldovan airspace overnight on 26–27 August.</p>
+    <div class="sowhat"><b>So What</b>The warning problem has inverted: the attack profile Russia is most likely to use generates almost no classical indicators and could arrive with days, not months, of warning. Review your alert and force-protection posture against a no-warning limited-strike scenario rather than a mobilization-driven one, and confirm your Article 5 consultation and reporting chain is exercised, not just documented.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#6366f1">
+    <div class="meta">Washington Post (Exclusive) · 27 Aug 2026</div>
+    <h3>Classified assessment: Putin sees the US as weakened by the Iran war</h3>
+    <p>A classified intelligence assessment of Kremlin thinking — completed before Ratcliffe's secret Moscow trip — concludes that Putin views the United States as materially weakened by the Iran war. That judgment is the connective tissue between two otherwise separate theaters: Russian risk calculus in Europe is being set partly by what Moscow observes about US munitions expenditure, force posture and political bandwidth in CENTCOM. It also explains the timing and seniority of the Ratcliffe mission better than any single tactical indicator would.</p>
+    <div class="sowhat"><b>So What</b>Adversary risk-taking in EUCOM is now indexed to perceived US overextension elsewhere, so Middle East consumption rates are a direct input to European deterrence. Expect probing behavior calibrated to what Moscow believes the US cannot simultaneously answer, and factor that into your readiness reporting.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#6366f1">
+    <div class="meta">Air &amp; Space Forces Magazine / WSJ · 27 Aug 2026</div>
+    <h3>The Russia–Ukraine air war has entered a deadlier phase</h3>
+    <p>Both sides have expanded their aerial arsenals faster than their air defenses have kept pace, producing a bare-knuckle exchange with a widening destruction footprint and a rising civilian toll. Russia launched two Onyx anti-ship missiles, an unspecified number of Iskander-M and KN-23 ballistic missiles, and 258 drones against Ukraine overnight; Ukraine continued deep strikes against Russian military assets and logistics facilities. The defining feature is mass — interceptor inventories and magazine depth, not detection, are now the limiting factor on both sides.</p>
+    <div class="sowhat"><b>So What</b>Magazine depth, not sensor coverage, is the binding constraint in a modern air defense fight, and that lesson transfers directly to installation defense. Pressure-test your own interceptor and counter-UAS magazine assumptions against a saturation profile rather than a single-raid one.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#6366f1">
+    <div class="meta">ASPI Strategist · 27 Aug 2026</div>
+    <h3>Storm Shadow tech transfer to Ukraine is less than it looks</h3>
+    <p>Britain and France have agreed to hand missile-manufacturing know-how for the Storm Shadow / SCALP cruise missile to Ukraine, but the analysis argues Kyiv may be unable to fully exploit it. The weapon is powerful, yet the transfer moves design and production knowledge rather than the industrial base, supply chains, precision components and testing infrastructure needed to actually build at rate under wartime conditions. Headline technology transfers routinely outrun the manufacturing capacity to convert them into fielded rounds.</p>
+    <div class="sowhat"><b>So What</b>Announced capability transfers should be scored on time-to-fielded-round, not on the announcement — the gap is typically years. Apply the same discipline when assessing partner capability claims in your own theater estimate.</div>
+    <span class="readmore"><a href="https://www.aspistrategist.org.au/less-than-meets-the-eye-britain-france-let-ukraine-make-storm-shadows/" target="_blank" rel="noopener">Read full article →</a></span>
+  </div>
+
+  <div class="card" style="border-left-color:#6366f1">
+    <div class="meta">International Intrigue · 27 Aug 2026</div>
+    <h3>Iceland votes Saturday on resuming EU accession talks</h3>
+    <p>Icelanders go to the polls on Saturday to decide whether to restart European Union membership negotiations, frozen for over a decade by disputes over fishing rights, with polling showing a slight edge for "Yes." Supporters cite economic and security benefits, arguing that Iceland — which maintains no military of its own — needs additional guarantees at a moment when NATO's credibility feels less certain to them. Critics point to sovereignty losses over fisheries, central to Icelandic economic and cultural life. Iceland sits astride the GIUK gap and hosts rotational NATO air policing and ASW operations at Keflavík.</p>
+    <div class="sowhat"><b>So What</b>A Yes vote signals allied hedging toward EU structures where NATO guarantees are perceived as softening, with second-order effects on North Atlantic basing politics. Watch the result as a barometer of small-ally confidence in US commitments, which is the same variable driving several EUCOM host-nation relationships.</div>
+    <span class="readmore"><a href="https://www.arctictoday.com/narrow-yes-lead-holds-as-icelands-eu-referendum-enters-final-week/" target="_blank" rel="noopener">Read full article →</a></span>
+  </div>
+
+</section>
+
+<!-- TECH & AI -->
+<section id="tech" class="panel">
+
+  <div class="section-label">AI &amp; Competition</div>
+
+  <div class="card" style="border-left-color:#a78bfa">
+    <div class="meta">Breaking Defense · 27 Aug 2026</div>
+    <h3>NSA deputy: Chinese firms gave Iran the GEOINT used to hit US bases</h3>
+    <p>NSA Deputy Director Tim Kosiba said Beijing is playing "spoiler" globally and alleged directly that "Chinese companies provided GEOINT to the Iranians to help hit our bases and our allies." He framed the AI competition as a "hot" one rather than a long-horizon race. The claim, made publicly by a sitting senior intelligence official, converts a suspected pattern of Chinese commercial-intelligence support into an attributed one — and puts commercial satellite imagery firms squarely inside the targeting chain against US installations.</p>
+    <div class="sowhat"><b>So What</b>Commercial imagery is now an attributed adversary targeting input against fixed US bases, which makes pattern-of-life and dispersal at your installation an active, not theoretical, concern. Have your force protection and OPSEC officers reassess what commercial overhead reveals about your ramp, motor pool and dispersal posture.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#a78bfa">
+    <div class="meta">Defense One · 27 Aug 2026</div>
+    <h3>SOCOM leader: AI-enabled deception raises the odds of large-scale conflict</h3>
+    <p>A senior Special Operations leader warned that AI-enabled deception threatens future operations and increases the probability of major conflict, noting that "the information environment itself is much less transparent" now than in the past and that AI will degrade it further. The concern is less about propaganda than about decision integrity — synthetic imagery, fabricated signals and manipulated reporting corrupting the inputs commanders and national leaders use in a crisis. Compressed decision timelines make verification the first thing to be sacrificed.</p>
+    <div class="sowhat"><b>So What</b>Your crisis decision cycle assumes the reporting reaching you is authentic, and that assumption is now contested at machine speed. Build a verification step and a named authority for adjudicating suspect reporting into your battle drills before you need it.</div>
+    <span class="readmore"><a href="https://www.defenseone.com/threats/2026/08/ai-enabled-deception-threatens-future-operations-raises-chances-large-conflict-says-special-operations-leader/415582" target="_blank" rel="noopener">Read full article →</a></span>
+  </div>
+
+  <div class="card" style="border-left-color:#a78bfa">
+    <div class="meta">Breaking Defense · 27 Aug 2026</div>
+    <h3>New White House S&amp;T strategy names undersea, space and AI as top priorities</h3>
+    <p>The National Security Science &amp; Technology Strategy (NSSTS) designates undersea capability, outer space and artificial intelligence as the administration's leading military technology priorities, with quantum and biotechnology identified as second-tier or longer-horizon areas to watch. The document sets the frame that budget submissions, S&amp;T portfolios and program justifications will be measured against for the next several cycles. Programs that map cleanly onto the three named domains will find funding arguments considerably easier to make.</p>
+    <div class="sowhat"><b>So What</b>Your unit's modernization and experimentation requests will compete on how well they align to undersea, space and AI language. Reframe pending requirements documents against the NSSTS priority set before the next POM cycle closes.</div>
+  </div>
+
+  <div class="section-label">Cyber &amp; Emerging Tech</div>
+
+  <div class="card" style="border-left-color:#a78bfa">
+    <div class="meta">Breaking Defense · 27 Aug 2026</div>
+    <h3>Army cyber needs dedicated AI funding, principal cyber advisor warns</h3>
+    <p>The Army's principal cyber advisor says AI work for cyber defense requires its own funding line because Army Cyber Command cannot resource it out of an operational budget already committed to defending the network. Army Cyber's AI efforts are consolidated under Task Force Lexington, which includes an AI "red team," and the service is training AI agents to work in defined cyber "work roles" alongside human operators. The funding gap, not the technical concept, is the stated obstacle.</p>
+    <div class="sowhat"><b>So What</b>AI-augmented cyber defense will arrive unevenly and late where it is funded out of hide, which means your network defense posture may lag the threat regardless of policy intent. Ask your G-6/A-6 explicitly whether any AI-enabled defensive capability is actually resourced for your formation this fiscal year.</div>
+  </div>
+
+  <div class="card" style="border-left-color:#a78bfa">
+    <div class="meta">TLDR Cybersecurity · 27 Aug 2026</div>
+    <h3>Ubiquiti patches three CVSS 10 vulnerabilities in UniFi products</h3>
+    <p>Ubiquiti has patched three critical vulnerabilities rated CVSS 10 — the maximum severity — across its UniFi Protect Application, UniFi Talk Application and UniFi OS Server products. A CVSS 10 rating generally indicates unauthenticated remote code execution with no user interaction required. UniFi gear is widely deployed in small-office, MWR, lodging, contractor and off-post environments precisely because it is inexpensive and easy to administer, which is also why it is frequently outside formal patch-management coverage.</p>
+    <div class="sowhat"><b>So What</b>The highest-risk instances of this gear are the ones nobody has inventoried — MWR facilities, lodging, contractor spaces and family housing networks adjacent to your installation. Task a sweep for UniFi devices outside your formal patch program and get them updated this week.</div>
+  </div>
+
+</section>
+
+<!-- MIDDLE EAST -->
+<section id="me" class="panel">
+
+  <div class="card" style="border-left-color:#f59e0b">
+    <div class="meta">International Intrigue / NBC · 27 Aug 2026</div>
+    <h3>Oman–Iran talks lift hopes of reopening the Strait of Hormuz</h3>
+    <p>Brent crude has fallen to as low as $85 a barrel on expectations that ongoing Oman–Iran talks could finally reopen the Strait of Hormuz, while Qatar's prime minister travelled to Tehran on Thursday to press for a new round of US–Iran negotiations. The optimism is not universal: the chief executive of Danish tanker group Torm warns the Iran war is trending toward a Ukraine-style stalemate rather than a negotiated off-ramp. Tanker operators have an interest in talking their own book — the wartime status quo has been lucrative — but the caution is worth weighting. A reopening would relieve pressure on global energy flows without resolving the underlying conflict.</p>
+    <div class="sowhat"><b>So What</b>A Hormuz reopening would change escort, convoy and maritime-security tasking quickly, but it would not reduce the underlying threat or the munitions consumption rate. Plan for a scenario in which commercial traffic normalizes while force protection requirements stay high — the resourcing argument gets harder, not easier.</div>
+    <span class="readmore"><a href="https://www.nbcnews.com/business/energy/oil-prices-inflation-trump-strait-hormuz-rcna594477" target="_blank" rel="noopener">Read full article →</a></span>
+  </div>
+
+  <div class="card" style="border-left-color:#f59e0b">
+    <div class="meta">Defense One · 27 Aug 2026</div>
+    <h3>Treasury sanctions Iranian hackers tied to critical-infrastructure breaches</h3>
+    <p>Treasury has sanctioned five individuals over Iranian intrusions into critical infrastructure, four of whom were also charged last week in the Justice Department's expanded Mabna Institute case. Mabna has a long history of state-linked intellectual property theft, and its expansion into operational-technology and critical-infrastructure targeting marks a shift from espionage toward pre-positioning. The parallel sanctions-and-indictment approach signals that Washington is treating this as a sustained campaign rather than isolated incidents.</p>
+    <div class="sowhat"><b>So What</b>Iranian actors are pre-positioning in the utility and industrial-control systems that installations depend on, and sanctions will not deter access already gained. Confirm your installation's utility and ICS dependencies are covered by an incident response plan you have actually rehearsed with the local provider.</div>
+    <span class="readmore"><a href="https://www.defenseone.com/threats/2026/08/treasury-sanctions-iranian-hackers-tied-critical-infrastructure-breaches/415622" target="_blank" rel="noopener">Read full article →</a></span>
+  </div>
+
+</section>
+
+<!-- CITIES -->
+<section id="cities" class="panel">
+
+  <p class="note">No City Cast Las Vegas newsletter arrived in the last 36 hours. Events below are drawn directly from the City Cast Las Vegas events listing, filtered for families with school-age children.</p>
+
+  <div class="events">
+    <h3>🏙️ What To Do — Las Vegas</h3>
+
+    <div class="day">Friday, Aug. 28</div>
+    <div class="ev">🌺 <a href="https://www.eventbrite.com/e/talofa-fest-tickets-1984174032945" target="_blank" rel="noopener">Talofa Fest</a> — Desert Breeze Events Center, Spring Valley · 5–11:30pm · All Ages, from $20 (runs through Aug 30)<br>Pacific Islander culture festival with food, dance and music across three days.<br><span class="tip">Insider tip: go early in the evening — the family programming front-loads and parking at Desert Breeze fills fast after 7pm.</span></div>
+    <div class="ev">🍿 <a href="https://cowabungavegas.com/events/bay-family-movie-night/" target="_blank" rel="noopener">Family Movie Night – Shrek Day</a> — Cowabunga Bay, Henderson · 5pm · All Ages, $20<br>Poolside movie night at the waterpark with the film screened after swim hours.<br><span class="tip">Insider tip: admission includes the park, so arrive mid-afternoon and treat the movie as the closer.</span></div>
+    <div class="ev">🎭 <a href="https://events.thelibrarydistrict.org/event/16493682" target="_blank" rel="noopener">Nevada Shakespeare Festival: Julius Caesar</a> — Windmill Library, Windmill &amp; Rainbow · 7pm · All Ages, Free<br>Free outdoor-style staging of Julius Caesar at the library amphitheater.<br><span class="tip">Insider tip: free and unticketed — bring folding chairs and get there 20 minutes early for seats.</span></div>
+
+    <div class="day">Saturday, Aug. 29</div>
+    <div class="ev">🦴 <a href="https://parks.nv.gov/events/pop-up-paleo-lab-10" target="_blank" rel="noopener">Pop-Up Paleo Lab</a> — Ice Age Fossils State Park, Tule Springs · 1–3pm · All Ages, $3<br>Hands-on fossil lab where kids handle real Ice Age specimens with park staff.<br><span class="tip">Insider tip: $3 a head is the best value in the valley for this age group — but it is exposed desert, so bring more water than you think.</span></div>
+    <div class="ev">🌿 <a href="https://www.instagram.com/p/DcROw37REtg/" target="_blank" rel="noopener">Arts District Neighborhood Cleanup</a> — 1042 S. Main St · 7am · Free<br>Community cleanup with supplies provided.<br><span class="tip">Insider tip: an easy, genuinely useful volunteer hour for older kids — and it beats the heat by starting at seven.</span></div>
+    <div class="ev">💃 <a href="https://www.eventbrite.com/e/move-and-groove-with-vegas-swing-tickets-1995155450661" target="_blank" rel="noopener">Move and Groove with Vegas Swing</a> — St. Andrew Church, Summerlin · 6:30pm · All Ages, $20<br>Beginner-friendly swing dance lesson followed by open dancing.<br><span class="tip">Insider tip: no partner or experience needed, and the beginner lesson runs first — walk in cold.</span></div>
+
+    <div class="day">Sunday, Aug. 30</div>
+    <div class="ev">✍️ <a href="https://www.redrockcanyonlv.org/events/the-nature-of-poetry-night-08-30-26-630pm-8pm/" target="_blank" rel="noopener">The Nature of Poetry Night</a> — Red Rock Canyon Visitor Center · 6:30pm · All Ages, Free<br>Evening poetry and nature program at the visitor center as the canyon cools.<br><span class="tip">Insider tip: pair it with the scenic drive beforehand — late-day light on the escarpment is the actual draw.</span></div>
+    <div class="ev">🧘 <a href="https://downtowncontainerpark.com/events/yoga-in-the-park-6/" target="_blank" rel="noopener">Yoga in the Park</a> — the Lawn, Downtown Container Park, Fremont East · 10am · Free<br>Free all-levels outdoor yoga on the Container Park lawn.<br><span class="tip">Insider tip: the playground and treehouse are right there, so kids can peel off when they lose interest.</span></div>
+    <div class="ev">🀄 <a href="https://thespacelv.com/event/mahjong-social-4/" target="_blank" rel="noopener">Mahjong Social</a> — The Space, Polaris &amp; Harmon · 3pm · All Ages, Free with RSVP<br>Open mahjong social with instruction for newcomers.<br><span class="tip">Insider tip: free but RSVP-gated, and it does fill — reserve before Saturday.</span></div>
+  </div>
+
+</section>
+
+<!-- FEEL GOOD -->
+<section id="feelgood" class="panel">
+
+  <div class="card" style="border-left-color:#facc15">
+    <div class="meta">Air &amp; Space Forces Magazine · 27 Aug 2026</div>
+    <h3>The Air Force museum takes custody of 9,300 works of service art</h3>
+    <p>For 102 years the National Museum of the U.S. Air Force has been the custodian of Air Force aircraft and artifacts, from B-17s to rockets. Since last fall it has also carried responsibility for the Air Force art collection — more than 9,300 pieces, most of which are not physically at the museum but scattered across offices, headquarters and installations worldwide. Much of the collection was donated by artists who flew with or embedded alongside operational units, capturing work that no camera was present for.</p>
+  </div>
+
+  <div class="card" style="border-left-color:#facc15">
+    <div class="meta">International Intrigue / UNESCO · 27 Aug 2026</div>
+    <h3>Sarajevo breaks ground on the museum built from wartime solidarity</h3>
+    <p>Three decades after artists around the world donated works to support Sarajevo during the siege, construction has finally begun on the city's permanent Renzo Piano-designed Ars Aevi museum. The collection was assembled while the city was under fire, as a deliberate act of cultural solidarity by artists who had no other way to help. The building gives that gesture a permanent home in a city that many of the donors never visited.</p>
+    <span class="readmore"><a href="https://www.unesco.org/en/articles/ars-aevi-new-chapter-sarajevos-contemporary-art-and-culture" target="_blank" rel="noopener">Read full article →</a></span>
+  </div>
+
+  <div class="card" style="border-left-color:#facc15">
+    <div class="meta">Air &amp; Space Forces Magazine · 27 Aug 2026</div>
+    <h3>Air Force Academy football will wear B-21 Raider uniforms against Navy</h3>
+    <p>The Air Force Academy football team's latest airpower-heritage uniform breaks with tradition by honoring a future aircraft rather than a historic one: the B-21 Raider. Previous editions have commemorated the Tuskegee Airmen, the Flying Tigers and the space mission. The Navy game is the one every cadet circles on the calendar.</p>
+  </div>
+
+  <div class="onthisday">
+    <h3>📅 On This Day — 28 August</h3>
+    <ul>
+      <li><b>1945</b> — An advance party of roughly 150 US personnel landed at Atsugi airfield outside Tokyo, the first American forces to arrive in Japan, beginning the occupation two weeks after the surrender announcement and four days before the formal signing aboard USS Missouri.</li>
+      <li><b>1990</b> — Iraq declared occupied Kuwait its "19th province," hardening Baghdad's annexation claim as the Operation Desert Shield buildup accelerated and effectively closing off a negotiated withdrawal.</li>
+    </ul>
+  </div>
+
+</section>
+
+<footer>
+  Compiled from newsletters received in the 36 hours ending 28 Aug 2026.<br>
+  Sources: ISW · Defense One · Breaking Defense · Air &amp; Space Forces Magazine · Washington Post · Axios · WSJ · ASPI Strategist · International Intrigue · TLDR Cybersecurity · City Cast Las Vegas
+</footer>
+
+</div>
+
+<script>
+function showTab(id, btn) {
+  var panels = document.querySelectorAll('.panel');
+  for (var i = 0; i < panels.length; i++) { panels[i].classList.remove('active'); }
+  var target = document.getElementById(id);
+  if (target) { target.classList.add('active'); }
+  var buttons = document.querySelectorAll('nav.tabs button');
+  for (var j = 0; j < buttons.length; j++) { buttons[j].classList.remove('active'); }
+  if (btn) { btn.classList.add('active'); }
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
