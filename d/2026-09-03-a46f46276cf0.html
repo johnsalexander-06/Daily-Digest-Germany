@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Digest — September 3, 2026</title>
+<style>
+:root{color-scheme:light;
+--defense:#ef4444;--us:#3b82f6;--europe:#6366f1;--me:#f59e0b;--tech:#a78bfa;--pacific:#14b8a6;--cities:#38bdf8;--feel:#facc15;}
+*{box-sizing:border-box}
+body{margin:0;background:#f1f5f9;color:#0f172a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;}
+.wrap{max-width:760px;margin:0 auto;padding:0 14px 48px;}
+header.bar{background:#0f172a;color:#fff;padding:18px 14px;margin-bottom:0;}
+header.bar .inner{max-width:760px;margin:0 auto;display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+header.bar h1{margin:0;font-size:22px;letter-spacing:-.02em;}
+header.bar .date{font-size:13px;color:#cbd5e1;font-weight:600;}
+header.bar .sub{width:100%;font-size:12px;color:#94a3b8;margin-top:4px;}
+.breaking{background:#7f1d1d;color:#fee2e2;padding:14px 16px;border-radius:10px;margin:16px 0 18px;}
+.breaking h2{margin:0 0 8px;font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:#fecaca;}
+.breaking ul{margin:0;padding-left:0;list-style:none;}
+.breaking li{margin:0 0 9px;padding-left:20px;position:relative;font-size:14.5px;}
+.breaking li:last-child{margin-bottom:0;}
+.breaking li::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:50%;background:#f87171;animation:pulse 1.6s infinite;}
+@keyframes pulse{0%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(1.35)}100%{opacity:1;transform:scale(1)}}
+.breaking .src{color:#fca5a5;font-size:12px;}
+nav.tabs{display:flex;gap:6px;overflow-x:auto;padding:12px 0 10px;-webkit-overflow-scrolling:touch;}
+nav.tabs button{flex:0 0 auto;border:1px solid #cbd5e1;background:#fff;color:#334155;font-size:13.5px;font-weight:600;padding:8px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;}
+nav.tabs button.active{color:#fff;border-color:transparent;}
+nav.tabs button[data-t="defense"].active{background:var(--defense)}
+nav.tabs button[data-t="us"].active{background:var(--us)}
+nav.tabs button[data-t="europe"].active{background:var(--europe)}
+nav.tabs button[data-t="me"].active{background:var(--me)}
+nav.tabs button[data-t="tech"].active{background:var(--tech)}
+nav.tabs button[data-t="pacific"].active{background:var(--pacific)}
+nav.tabs button[data-t="cities"].active{background:var(--cities)}
+nav.tabs button[data-t="feel"].active{background:var(--feel);color:#422006}
+.panel{display:none}
+.panel.active{display:block}
+.card{background:#fff;border-radius:10px;padding:15px 17px;margin:0 0 14px;border-left:5px solid #94a3b8;box-shadow:0 1px 2px rgba(15,23,42,.06);}
+#defense .card{border-left-color:var(--defense)}
+#us .card{border-left-color:var(--us)}
+#europe .card{border-left-color:var(--europe)}
+#me .card{border-left-color:var(--me)}
+#tech .card{border-left-color:var(--tech)}
+#pacific .card{border-left-color:var(--pacific)}
+#cities .card{border-left-color:var(--cities)}
+#feel .card{border-left-color:var(--feel)}
+.meta{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:#64748b;font-weight:700;margin-bottom:5px;}
+.card h3{margin:0 0 8px;font-size:17px;line-height:1.3;letter-spacing:-.01em;}
+.card p{margin:0 0 10px;font-size:14.5px;}
+.sowhat{background:#f8fafc;border:1px solid #e2e8f0;border-radius:7px;padding:10px 12px;font-size:13.5px;}
+.sowhat b{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#475569;margin-bottom:3px;}
+.readmore{text-align:right;margin-top:9px;}
+.readmore a{color:#2563eb;text-decoration:none;font-size:13px;font-weight:600;}
+h2.sec{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#475569;margin:18px 0 10px;}
+.note{font-size:13px;color:#475569;background:#fff;border-radius:10px;padding:12px 14px;margin-bottom:14px;border-left:5px solid var(--cities);}
+.bin{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:#0369a1;font-weight:700;margin:18px 0 8px;}
+.ev{background:#fff;border-radius:10px;padding:14px 16px;margin-bottom:12px;border-left:5px solid var(--cities);}
+.ev h3{margin:0 0 4px;font-size:16px;}
+.ev h3 a{color:#0f172a;text-decoration:none;}
+.ev .where{font-size:12.5px;color:#64748b;font-weight:600;margin-bottom:7px;}
+.ev p{margin:0 0 8px;font-size:14px;}
+.tip{font-style:italic;font-size:13.5px;color:#334155;}
+.otd{background:#fff;border-radius:10px;padding:14px 16px;border-left:5px solid var(--feel);}
+.otd h3{margin:0 0 8px;font-size:16px;}
+.otd li{font-size:14px;margin-bottom:7px;}
+footer{margin-top:26px;font-size:12px;color:#64748b;text-align:center;}
+@media(max-width:520px){header.bar h1{font-size:19px}.card h3{font-size:16px}}
+</style>
+</head>
+<body>
+<header class="bar"><div class="inner">
+<h1>⚡ Daily Digest</h1><div class="date">Thursday, September 3, 2026</div>
+<div class="sub">HQ USEUCOM · Stuttgart, Germany — compiled from the last 36 hours of newsletter traffic</div>
+</div></header>
+
+<div class="wrap">
+
+<div class="breaking">
+<h2>🔴 Breaking</h2>
+<ul>
+<li>Iran launched retaliatory strikes overnight against U.S. personnel in Bahrain, Jordan, Kuwait and Iraq, after U.S. strikes since Sunday hit Iranian air defenses, radars, mine-laying capability and communications sites near the Strait of Hormuz. Iranian officials say U.S. strikes killed civilians, including a wedding party in southern Iran. <span class="src">— POLITICO NatSec Daily, Sept. 2</span></li>
+<li>Germany blamed Russia for a thwarted drone attack on Leipzig/Halle Airport — a key logistics hub for military aid to Ukraine — and the EU and NATO issued a rare joint condemnation of a string of Russia-linked attacks across Europe. <span class="src">— Washington Post / POLITICO, Sept. 1–2</span></li>
+<li>Congress passed a continuing resolution on Sept. 1 funding the government through Dec. 11, averting a shutdown and holding the Pentagon at FY26 spending levels. <span class="src">— Air &amp; Space Forces Magazine, Sept. 2</span></li>
+</ul>
+</div>
+
+<nav class="tabs">
+<button data-t="defense" class="active" onclick="showTab('defense',this)">🛡️ Defense</button>
+<button data-t="us" onclick="showTab('us',this)">🇺🇸 US</button>
+<button data-t="europe" onclick="showTab('europe',this)">🇪🇺 Europe</button>
+<button data-t="me" onclick="showTab('me',this)">🏜️ Middle East</button>
+<button data-t="tech" onclick="showTab('tech',this)">💻 Tech &amp; AI</button>
+<button data-t="pacific" onclick="showTab('pacific',this)">🌏 Pacific</button>
+<button data-t="cities" onclick="showTab('cities',this)">🏙️ Cities</button>
+<button data-t="feel" onclick="showTab('feel',this)">🌟 Feel Good</button>
+</nav>
+
+<section id="defense" class="panel active">
+
+<div class="card">
+<div class="meta">Defense One · Sept. 2, 2026</div>
+<h3>Army Secretary Dan Driscoll resigns as Hegseth purges transformation-minded generals</h3>
+<p>Driscoll, a former soldier who came to the job from finance and was billed as the Army's "change agent," has resigned after what a source describes as Defense Secretary Pete Hegseth's removal of general officers associated with the Army's transformation agenda. He and Hegseth reportedly had a strained relationship. The Pentagon is simultaneously trying to lock in Lt. Gen. LaNeve's nomination as the next Army Chief of Staff amid reported hesitation from lawmakers, meaning the service could face a vacancy at the top of both its civilian and uniformed leadership at once.</p>
+<div class="sowhat"><b>So What</b>Army modernization initiatives that depend on secretary-level top cover — transformation-in-contact units, counter-UAS fielding, force structure changes — just lost their sponsor. Battalion and brigade leaders should assume near-term Army guidance will be conservative and slow to arrive, and should not build training plans around programs that have no confirmed advocate at HQDA.</div>
+<div class="readmore"><a href="https://www.defenseone.com/policy/2026/09/change-agent-army-secretary-resigns/415747" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+<div class="card">
+<div class="meta">Air &amp; Space Forces Magazine · Sept. 2, 2026</div>
+<h3>Continuing resolution freezes DoD at FY26 levels, parking a $1.5T budget request</h3>
+<p>With 30 days left in fiscal 2026, Congress passed a CR on Sept. 1 extending current spending through Dec. 11 and putting the Pentagon's $1.5 trillion FY27 spending authority request on hold. Under a CR, new-start programs cannot begin and production rates cannot increase without specific anomalies. The measure also temporarily extends the lapsed cyber information-sharing statute to the same Dec. 11 date, pushing two significant deadlines onto the same week in December.</p>
+<div class="sowhat"><b>So What</b>Anything in the FY27 request — new starts, ramp-ups, MILCON at European installations — is frozen for at least 100 days, and a December cliff now stacks appropriations and cyber authorities together. Staff should re-baseline execution plans to FY26 rates now and identify which requirements will break if the CR is extended past Dec. 11.</div>
+</div>
+
+<div class="card">
+<div class="meta">Washington Post (exclusive) · Sept. 2, 2026</div>
+<h3>Pentagon cuts internal access to classified documents after reporting on Iran war concerns</h3>
+<p>Decades of documents associated with the Secretary of Defense Orders Book were removed from an internal Pentagon web portal, according to three people familiar with the matter, following Post reporting on military misgivings about the Iran campaign. The Orders Book is the standing record of SecDef-level direction, and its removal narrows the set of officers who can independently trace how current orders relate to prior guidance.</p>
+<div class="sowhat"><b>So What</b>Staffs that routinely reference historical SecDef orders for authorities, ROE lineage, and precedent should expect those references to go dark and should verify what their sections still hold locally. Where an ongoing planning effort depends on an order you can no longer pull, raise it through the J-staff now rather than discovering the gap during execution.</div>
+</div>
+
+<div class="card">
+<div class="meta">Defense One · Sept. 2, 2026</div>
+<h3>GAO: U.S. attack submarines lost 41 ship-years idle waiting on shipyard work</h3>
+<p>Over the past decade U.S. attack submarines spent a cumulative 41 ship-years sitting idle waiting for maintenance availabilities, at a cost of billions of dollars, GAO found. The finding lands while the Navy is running a record-length carrier deployment cycle in CENTCOM and the submarine force is being asked to cover both the Atlantic and Indo-Pacific. Idle boats are not merely a budget problem: they are combat power that exists on paper but is not available to a combatant commander.</p>
+<div class="sowhat"><b>So What</b>Undersea coverage assumptions in EUCOM plans should be treated as optimistic until validated against actual availability, not authorized hull counts. Planners should ask component commands for real readiness figures rather than programmed ones before committing to any maritime scheme of maneuver.</div>
+<div class="readmore"><a href="https://www.defenseone.com/defense-systems/2026/09/some-navy-subs-are-waiting-years-shipyard-work-and-s-costing-billions-dollars/415761" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+<div class="card">
+<div class="meta">Defense One (Ideas) · Todd Harrison</div>
+<h3>"We can buy more weapons. We can't buy more time."</h3>
+<p>The argument: the United States is treating a closing window of vulnerability as a procurement problem when it is fundamentally a schedule problem, and Congress should focus on three actions that shorten timelines rather than expand buy quantities. Money added late in a program does not compress the years required to field capability; authorities, contracting mechanisms and stable appropriations do. The piece lands the same week a CR froze new starts through December.</p>
+<div class="sowhat"><b>So What</b>The practical read for commanders is that capability arriving in 2030 does not deter in 2027, so units should plan around what they will actually hold in the next 24 months. Identify the two or three capability gaps you cannot wait out and pursue theater-level workarounds — allied capability, contracted solutions, TTP changes — instead of waiting on a program of record.</div>
+<div class="readmore"><a href="https://www.defenseone.com/ideas/2026/08/we-can-buy-more-weapons-we-cant-buy-more-time/415740" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+</section>
+
+<section id="us" class="panel">
+
+<div class="card">
+<div class="meta">POLITICO NatSec Daily / AFA · Sept. 1–2, 2026</div>
+<h3>Hung Cao's Navy secretary nomination sets up a partisan confirmation fight</h3>
+<p>Trump will formally nominate Hung Cao — a Navy combat veteran who has served as acting secretary since Secretary John Phelan was fired in April — to lead the Navy permanently. Cao was confirmed as under secretary last October by a narrow 52-45 vote, and Sen. Andy Kim (D-N.J.) has already attacked comments Cao made about the military needing "alpha males and alpha females." Sen. Todd Young (R-Ind.) and other Republicans have rallied behind him.</p>
+<div class="sowhat"><b>So What</b>A contested confirmation keeps the Navy in acting-secretary status during an active Middle East campaign and a submarine readiness crisis, extending the same leadership vacuum now opening in the Army. Expect slower civilian decisions on Navy force posture requests through the fall.</div>
+</div>
+
+<div class="card">
+<div class="meta">Axios / Washington Post · Sept. 1, 2026</div>
+<h3>House votes overwhelmingly to censure Rep. Chuck Edwards over conduct toward staffers</h3>
+<p>The House censured Rep. Chuck Edwards (R-N.C.) in a bipartisan vote after the Ethics Committee found last month that he engaged in "persistent unprofessional and inappropriate conduct" toward two female staffers. Censure is the chamber's second-most-severe sanction and required members of Edwards' own party to vote against him. The case followed reporting by Axios.</p>
+<div class="sowhat"><b>So What</b>Congress is enforcing conduct standards on its own members in an election year, which raises the political cost of any parallel failure inside DoD. Commanders should read this as a reminder that command climate and harassment cases will get external scrutiny rather than internal disposition.</div>
+</div>
+
+<div class="card">
+<div class="meta">Washington Post / Axios Alerts · Sept. 2, 2026</div>
+<h3>Utah judge rules Charlie Kirk's accused killer can stand trial on capital charges</h3>
+<p>A Utah judge ruled that Tyler James Robinson, 23, can stand trial for aggravated murder charges that could carry the death penalty in the killing of conservative activist Charlie Kirk at Utah Valley University last September. The case shocked the country and deepened fears of politically motivated violence, and a capital trial guarantees it stays in the national conversation through the midterm cycle.</p>
+<div class="sowhat"><b>So What</b>A high-profile political violence trial sustains domestic threat conditions that shape force protection posture even at overseas installations, particularly around public American-affiliated events. Antiterrorism officers should keep this on the watch list for demonstration and lone-actor indicators near U.S. facilities in Germany.</div>
+</div>
+
+</section>
+
+<section id="europe" class="panel">
+
+<div class="card">
+<div class="meta">EURACTIV / POLITICO · Sept. 2, 2026</div>
+<h3>Leipzig airport drone attack draws EU–NATO joint condemnation — but no agreed response</h3>
+<p>Germany blamed Russia for an August drone attack on Leipzig/Halle Airport, a key logistics hub for military aid flowing to Ukraine, and announced countermeasures. Commission President Ursula von der Leyen called it "an attack using military-grade material carried out by Russian operatives on European Union soil," and NATO Secretary-General Mark Rutte tied it to a wider pattern of drone and missile incursions into NATO airspace. European leaders nonetheless struggled to agree on any response beyond the sanctions track, which is already 21 packages deep; restrictions on Russian tourist visas were the concrete step announced.</p>
+<div class="sowhat"><b>So What</b>Sabotage against logistics nodes inside Germany is now an acknowledged Russian line of effort, and the alliance response is rhetorical rather than material — meaning the burden falls on installation-level defense. Review counter-UAS coverage, perimeter reporting and host-nation police liaison for every airfield, rail head and APOD your unit depends on, not just the ones you own.</div>
+</div>
+
+<div class="card">
+<div class="meta">Institute for the Study of War · Sept. 2, 2026</div>
+<h3>ISW measures Putin's August claims at roughly a third of the reality</h3>
+<p>Putin claimed on Sept. 1 that Russian forces seized 15 settlements totaling 270 square kilometers in Donetsk Oblast in August and stand one-and-a-half to four kilometers from Slovyansk, Kramatorsk and Druzhkivka. ISW assesses Russian forces actually consolidated or seized 90.35 square kilometers across the entire theater in August. Putin's claim that Russian forces took Svyatohirsk is unsupported — ISW places the line at least 13 kilometers away — and Ukrainian officials refuted the claimed capture of Kozacha Lopan, where ISW assesses Russian presence in 13.39 percent of the settlement. A source reporting on the Northern Grouping says Russian units are falsely reporting the seizure up their own chain.</p>
+<div class="sowhat"><b>So What</b>Russian formations are lying to Moscow about ground taken, which means Russian strategic decisions are being made on corrupted battlefield data — a source of miscalculation risk, not reassurance. Intelligence sections should flag Russian official claims as an information operation and a possible indicator of internal reporting failure, and avoid letting Kremlin figures anchor friendly assessments.</div>
+</div>
+
+<div class="card">
+<div class="meta">Institute for the Study of War · Sept. 2, 2026</div>
+<h3>Ukrainian command churn: ground forces commander fired, GUR and SBU exchange fire in Kyiv</h3>
+<p>President Zelensky dismissed Commander of Ukrainian Ground Forces Maj. Gen. Gennady Shapovalov on Sept. 2 and appointed Brig. Gen. Svyatoslav Zaitsya to replace him. Separately, elements of Ukraine's Main Military Intelligence Directorate (GUR) and Security Service (SBU) engaged in a small arms firefight in Kyiv the same day. Commander-in-Chief Mykhailo Drapatyi released a statement of priorities emphasizing unified operational planning to contest Russian initiative and build long-term defensive capability.</p>
+<div class="sowhat"><b>So What</b>An armed clash between two Ukrainian security services in the capital is an institutional stress signal that matters more than the personnel change accompanying it. Anyone with Ukrainian counterpart relationships should verify who currently holds authority before relying on prior points of contact, and expect coordination timelines to lengthen.</div>
+</div>
+
+<div class="card">
+<div class="meta">POLITICO / Reuters · Sept. 2, 2026</div>
+<h3>Denmark deploys troops to Greenland for the first time in modern history</h3>
+<p>A company of more than 100 conscripts will serve about a month in Greenland as part of Denmark's mandatory service program, conducting cold-weather combat training. The deployment is folded into NATO's Arctic Sentry initiative, launched this year, and comes as President Trump continues to press for U.S. control of the territory. Russian officials have described the alliance's growing Arctic presence as threatening.</p>
+<div class="sowhat"><b>So What</b>An ally is physically marking sovereignty in a place a U.S. administration has claimed interest in — an unusual intra-alliance friction point running underneath a genuine Russia deterrence mission. Officers working Arctic or Nordic engagement should assume Danish counterparts will read every U.S. Arctic activity through that lens and calibrate messaging accordingly.</div>
+</div>
+
+<div class="card">
+<div class="meta">EURACTIV · Sept. 2, 2026</div>
+<h3>Ukraine asks the EU for Patriot money as Estonia's shell purchase falls apart</h3>
+<p>Ukraine submitted a request to finance air defense — including U.S.-made PAC-3 Patriot systems — through the EU's Support Loan, of which roughly €60 billion of a €90 billion facility is earmarked for military equipment this year and in 2027; only €22.1 billion has been approved by member states and €8.35 billion actually disbursed. Kyiv's ambassador to the EU says Ukraine needs an additional $27 billion in 2026 alone to close a budget shortfall. Meanwhile an Estonian effort to buy €70 million of large-calibre artillery shells for Ukraine using Russian windfall profits collapsed after inspectors judged the ammunition substandard; the manufacturer now faces a lawsuit.</p>
+<div class="sowhat"><b>So What</b>The gap between pledged and disbursed European support is where Ukrainian air defense capacity will actually be decided this winter, and the Estonian failure shows that even funded procurement can produce nothing usable. Treat announced European contributions as unfunded until disbursed, and build coalition support estimates from delivery data rather than pledge totals.</div>
+</div>
+
+</section>
+
+<section id="me" class="panel">
+
+<div class="card">
+<div class="meta">POLITICO NatSec Daily · Sept. 2, 2026</div>
+<h3>Iran strikes U.S. personnel in four countries as the exchange escalates past a month-long lull</h3>
+<p>Tehran's overnight strikes targeted U.S. personnel in Bahrain, Jordan, Kuwait and Iraq, in retaliation for U.S. strikes that began Sunday against Iranian air defenses, radar systems, mine-laying capabilities and communications sites. The cycle started when Tehran targeted commercial shipping in the Strait of Hormuz and U.S. service members in the region. This is the most intense fighting in nearly a month, following a period in which Washington had shifted toward economic pressure; Treasury Secretary Scott Bessent warned Tuesday that additional sanctions on Iranian assets are coming. Iranian officials claim U.S. strikes this week killed civilians, including people at a wedding in southern Iran.</p>
+<div class="sowhat"><b>So What</b>Iran is deliberately striking U.S. personnel across multiple partner nations rather than confining retaliation to one location, which puts every base-hosting relationship in CENTCOM under simultaneous political strain. EUCOM units with rotational or enabling ties to CENTCOM should confirm force protection condition changes and expect short-notice sourcing requests for air defense and ISR.</div>
+</div>
+
+<div class="card">
+<div class="meta">NBC News via AFA Daily Report · Sept. 2, 2026</div>
+<h3>Iran's new "Castle Breaker" missiles are beating U.S. air defenses in the Gulf</h3>
+<p>Iran has fielded a new generation of ballistic missiles that can evade American air defenses and strike with significantly greater precision, a leap that military experts say has damaged the ring of U.S. bases across the Persian Gulf and left them more vulnerable than at any point in decades. The systems are being used against the same fixed installations that underwrite U.S. regional presence and the current campaign's basing scheme.</p>
+<div class="sowhat"><b>So What</b>Fixed-base survivability against precision ballistic attack can no longer be assumed anywhere within Iranian reach, and the same interceptor inventory shortfall would apply in a European contingency. Commanders should revisit dispersal, hardening and passive defense assumptions rather than relying on interceptor density that is now being consumed in CENTCOM.</div>
+</div>
+
+<div class="card">
+<div class="meta">POLITICO NatSec Daily / Reuters · Sept. 2, 2026</div>
+<h3>Xi lands in Cairo pitching a Middle East security order without Washington</h3>
+<p>Xi Jinping arrived in Egypt on his first regional visit in four years and called on Middle Eastern nations to be "masters of their own destiny" and chart their own security order — an explicit bid to capitalize on regional doubts about the U.S. role during its war with Iran. Xi also offered assurances that Beijing will help safeguard shipping routes through the Strait of Hormuz and Bab al-Mandab. China and Egypt agreed to deepen security and counterterrorism cooperation and to expand collaboration on data centers, semiconductors and critical metals supply chains.</p>
+<div class="sowhat"><b>So What</b>China is offering maritime security guarantees in the exact waterways the U.S. is currently fighting over, converting an American military campaign into a Chinese political opening. Watch for partner nations hedging on access, basing and overflight — those decisions will show up as friction in EUCOM-to-CENTCOM transit and logistics routing.</div>
+</div>
+
+<div class="card">
+<div class="meta">ISW Briefing Room · Sept. 1, 2026</div>
+<h3>Hezbollah's FPV drone program is an acute and near-term problem for Israel</h3>
+<p>Hezbollah is learning from its past military failures and building out first-person-view drone capability for current and future campaigns against Israel, according to ISW's assessment. FPV drones give a non-state actor precision effects at a fraction of the cost of guided munitions and are extremely difficult to counter at scale with conventional air defense. The development mirrors the tactical evolution seen in Ukraine, now transferred into the Levant.</p>
+<div class="sowhat"><b>So What</b>Cheap precision drone capability is diffusing from Ukraine into non-state actors faster than counter-UAS fielding, and the same TTPs will reach any adversary proxy operating near U.S. installations. Force protection planners should assume FPV attack is a current threat rather than an emerging one, and prioritize detection and passive defense over interceptor-based solutions.</div>
+</div>
+
+</section>
+
+<section id="tech" class="panel">
+
+<h2 class="sec">AI &amp; Competition</h2>
+
+<div class="card">
+<div class="meta">TLDR AI / The Rundown AI · Sept. 2, 2026</div>
+<h3>Anthropic ships Claude Fable 5.1 and gates Mythos 5.1 behind vetted cyber access</h3>
+<p>Claude Fable 5.1 is now generally available with stronger coding and research capability and lower effective pricing, while Mythos 5.1 is being released only through restricted-access programs for vetted cybersecurity users. The split release is the notable part: a frontier lab is treating its most capable model as a controlled-access item rather than a general product, on cyber grounds. It sets a precedent other labs will be pressed to match or reject publicly.</p>
+<div class="sowhat"><b>So What</b>Gated model tiers mean the capability gap between publicly available and restricted AI is now an explicit policy variable rather than an accident of pricing. Staffs evaluating AI tooling should ask which tier a vendor is actually offering DoD, because commercially available does not mean most capable.</div>
+</div>
+
+<div class="card">
+<div class="meta">Axios AI+ / Washington Post AI &amp; Tech Brief · Sept. 2, 2026</div>
+<h3>Frontier labs are trimming model chain-of-thought — and not fixing known safety failures</h3>
+<p>Reporting this week describes a race to the bottom in cutting how much of a model's chain of thought is exposed, alongside a broader disconnect between what frontier labs say about safety and what they are actually correcting. Reduced reasoning transparency makes it harder for any downstream user — including government customers — to audit why a model produced a given output. The commercial incentive is cost and latency; the cost is verifiability.</p>
+<div class="sowhat"><b>So What</b>If reasoning traces disappear, AI-assisted analytic products become harder to defend in a decision brief and harder to reconstruct after the fact. Insist that any AI tool used in staff work retains an auditable trail, and do not let model output enter an assessment without a named human owner.</div>
+</div>
+
+<h2 class="sec">Cyber &amp; Emerging Tech</h2>
+
+<div class="card">
+<div class="meta">NBC News via POLITICO NatSec Daily · Sept. 2, 2026</div>
+<h3>Iranian hackers moved from water systems to telecom and energy infrastructure</h3>
+<p>Hackers suspected of working for Iran, already linked to attacks on U.S. water systems in at least a dozen states, have in recent weeks also targeted telecommunications, energy and other critical infrastructure, primarily via internet-connected automated control systems. Those attempts were not successful, according to people familiar with the operations. A Telegram channel calling itself APT IRAN announced Sunday that it will target American energy, water and telecommunications sectors, warning of "unexpected and critical events." The White House referred questions to the FBI, which declined to comment.</p>
+<div class="sowhat"><b>So What</b>Iran is running a cyber retaliation line of effort in parallel with kinetic strikes, and industrial control systems supporting installations are inside the target set — including host-nation utilities that U.S. bases depend on. Confirm with your DPW and host-nation providers what ICS exposure exists at your installation and what the manual fallback is for water and power.</div>
+</div>
+
+<div class="card">
+<div class="meta">Defense One · Sept. 2, 2026</div>
+<h3>Stopgap bill buys the cyber information-sharing law a reprieve until Dec. 11</h3>
+<p>The continuing resolution temporarily extends the bedrock cyber information-sharing legislation, pushing its sunset date to Dec. 11 — the same day government funding runs out. The statute provides the liability protections that make private-sector threat sharing with the federal government workable; without it, companies materially reduce what they report. Stacking both deadlines on one date means a December funding fight would take cyber threat sharing hostage alongside appropriations.</p>
+<div class="sowhat"><b>So What</b>The private-sector threat reporting that feeds government cyber warning is now on a 100-day clock running concurrently with Iranian infrastructure targeting. Cyber and intelligence staffs should plan for a possible degradation in commercial indicator flow in December and identify which of their warning feeds depend on it.</div>
+<div class="readmore"><a href="https://www.defenseone.com/policy/2026/09/stopgap-funding-bill-temporarily-extends-key-cyber-info-sharing-law/415768" target="_blank" rel="noopener">Read full article →</a></div>
+</div>
+
+</section>
+
+<section id="pacific" class="panel">
+
+<div class="card">
+<div class="meta">POLITICO NatSec Daily · Sept. 2, 2026</div>
+<h3>Beijing empties the chairs at the Pacific Islands Forum, gutting a U.S. diplomatic push</h3>
+<p>Leaders of Kiribati, Fiji, Vanuatu and Samoa skipped the Pacific Islands Forum leaders' meeting in Palau after Beijing objected to Taiwan's Foreign Minister Lin Chia-lung attending; Solomon Islands PM Matthew Wale left hours after arriving to face a no-confidence motion. China's Pacific envoy Qian Bo warned of unspecified "consequences" over Lin's presence. The absences hollowed out Deputy Secretary of State Christopher Landau's 12-day regional trip and its $150 million infrastructure and energy assistance pledge. New Zealand's Winston Peters said denying foreign interference would be "defying gravity and logic."</p>
+<div class="sowhat"><b>So What</b>Beijing demonstrated it can veto attendance at a sovereign regional summit — coercion that costs it nothing and costs Washington an entire engagement strategy. Officers working partner engagement anywhere should note the model: pressure applied to third parties, not to the United States, is now the preferred Chinese tool and is equally available in Europe and Africa.</div>
+</div>
+
+<div class="card">
+<div class="meta">ASPI The Strategist · Sept. 2, 2026</div>
+<h3>Australian read: China backed down at Palau once Pacific leaders pushed back</h3>
+<p>John Hennessey-Niland's account from the Forum opening ceremony in Palau is that China retreated from its threat after Pacific leaders reacted collectively — a materially different reading from the Washington narrative of a clean Chinese win. ASPI's companion analysis this week frames the broader problem as Washington's competing military commitments, China's next major South China Sea base, and the empty chairs at the summit as three faces of the same balancing act.</p>
+<div class="sowhat"><b>So What</b>Two credible sources are reading the same summit as a Chinese victory and a Chinese climbdown, which is a warning against building assessments on a single national perspective. Intelligence consumers should insist on at least one regional source before accepting a Washington-sourced judgment about partner behavior.</div>
+</div>
+
+<div class="card">
+<div class="meta">Institute for the Study of War · Sept. 1, 2026</div>
+<h3>PRC normalizes "law enforcement" patrols and surveys east of Taiwan</h3>
+<p>ISW assesses the PRC has very likely established a permanent "law enforcement" presence and regularized scientific surveys in the waters east of Taiwan — the side of the island that any U.S. relief or intervention force would have to come through. Framing the activity as constabulary rather than military lets Beijing build persistent presence without triggering a military response, while the surveys generate the hydrographic and environmental data a blockade or amphibious operation would require. ISW separately notes Taiwan is incorporating tactical lessons from Ukraine into its exercises.</p>
+<div class="sowhat"><b>So What</b>Beijing is establishing the legal and physical conditions for a blockade east of Taiwan under a non-military label, which is the same gray-zone template Russia used before 2014. The relevant lesson for EUCOM staffs is the method — persistent constabulary presence as a precursor to fait accompli — not the geography.</div>
+</div>
+
+<div class="card">
+<div class="meta">Breaking Defense · Sept. 1, 2026</div>
+<h3>Japan's record defense budget request goes heavy on missiles, drones and AI</h3>
+<p>Tokyo has submitted a record-setting defense budget request weighted toward standoff missiles, uncrewed systems and AI-enabled capability. The composition matters as much as the topline: Japan is buying reach and mass rather than platform prestige, which is the same conclusion European militaries have drawn from Ukraine. It is also a signal that Japan expects to contribute to deterrence rather than only host it.</p>
+<div class="sowhat"><b>So What</b>Two theaters are now converging on the same shopping list — long-range fires, cheap mass, autonomy — which will strain the same production lines EUCOM depends on. Expect competition for munitions and drone industrial capacity, and factor Indo-Pacific demand into European sustainment forecasts.</div>
+</div>
+
+</section>
+
+<section id="cities" class="panel">
+
+<div class="note"><b>What To Do — Stuttgart &amp; Baden-Württemberg.</b> Events verified for Sept. 3–24, 2026 from Stripes Europe's Stuttgart weekend guide and the Moving to Stuttgart regional calendar. Always confirm times and prices on the event site before you drive; base access is required for MWR and USO events.</div>
+
+<div class="bin">Friday 4 – Sunday 6 September</div>
+
+<div class="ev">
+<h3>🎭 <a href="https://europe.stripes.com/your-community/visit-venetian-fair-ludwigsburg.html" target="_blank" rel="noopener">Venetianische Messe — Venetian Fair, Ludwigsburg</a></h3>
+<div class="where">Ludwigsburg city center · Fri 4 – Sun 6 Sept · free to walk the fair</div>
+<p>Ludwigsburg's baroque old town is taken over by costumed Venetian carnival figures, street performers, masked processions and stalls, all set against the palace district. <b>This one is biennial — it only runs every two years</b>, so if you skip it you are waiting until 2028. It is a genuinely visual event that works for kids who would be bored by a normal town fest.</p>
+<p class="tip">Insider tip: about 20 minutes north of Stuttgart; take S4 or S5 to Ludwigsburg and walk rather than fighting for parking near the Marktplatz. Late afternoon is the sweet spot — costumes are out in force and the light is good for photos, before the evening crowd thickens.</p>
+</div>
+
+<div class="ev">
+<h3>🍷 <a href="https://stuttgarter-weindorf.de/" target="_blank" rel="noopener">Stuttgarter Weindorf — Wine Village</a></h3>
+<div class="where">Marktplatz, Schillerplatz &amp; Kirchstraße, downtown Stuttgart · through Sat 5 Sept · free entry</div>
+<p>Around 125 regional vineyards set up wooden arbors through the city center pouring more than 500 Württemberg wines alongside proper Swabian cooking — Maultaschen, Zwiebelrostbraten, Käsespätzle. <b>Closing this weekend</b>, so this is the last chance until next August.</p>
+<p class="tip">Insider tip: go for lunch or early evening with children — the arbors function as outdoor restaurants and are family-friendly until roughly 20:00, after which it becomes a drinking crowd. S-Bahn to Stuttgart Hauptbahnhof or Schlossplatz; do not drive downtown.</p>
+</div>
+
+<div class="bin">Running now — through 13 September</div>
+
+<div class="ev">
+<h3>🍝 <a href="https://www.facebook.com/events/1589616886028655/" target="_blank" rel="noopener">Stuttgart Sicilian Fest</a></h3>
+<div class="where">Pariser Platz, Stuttgart · through Sun 13 Sept · free entry</div>
+<p>Sicilian street food, cannoli, arancini, craft beer and live entertainment in an open square near the city center. Smaller and less crowded than the Weindorf, and an easy evening if you want the fest atmosphere without the scale.</p>
+<p class="tip">Insider tip: Pariser Platz sits by the Feuersee/Stadtmitte area — reachable on the U-Bahn in minutes from the Hauptbahnhof. Weeknights are noticeably calmer than weekends if you are bringing younger children.</p>
+</div>
+
+<div class="ev">
+<h3>💡 <a href="https://www.karlsruhe-erleben.de/en/veranstaltungen/schlosslichtspiele-light-festival" target="_blank" rel="noopener">Schlosslichtspiele — Palace Light Festival, Karlsruhe</a></h3>
+<div class="where">Karlsruhe Palace façade · nightly through Sun 13 Sept · free</div>
+<p>Large-scale projection mapping turns the entire baroque palace front into a moving canvas, this year under the motto "Lightyard Stories: Visions of Urban Living Spaces." It is free, outdoors, and genuinely spectacular — one of the better no-cost family outings in the region, and it ends in ten days.</p>
+<p class="tip">Insider tip: roughly one hour by car or ICE from Stuttgart. Shows start at dusk, so around 20:30 in early September; arrive 30 minutes early for a spot on the lawn and bring a blanket — the grass is cold by the second show.</p>
+</div>
+
+<div class="ev">
+<h3>🦕 <a href="https://www.dinoinfo.de/ausstellungstermine/" target="_blank" rel="noopener">Dinosaurs — In the Realm of Prehistory, Karlsruhe</a></h3>
+<div class="where">Karlsruhe · check site for daily hours · ticketed</div>
+<p>Fifty life-sized animatronic and model dinosaurs in a walk-through exhibition built squarely for kids, with the usual mix of skeletons, sound and scale models. Pairs naturally with the Schlosslichtspiele if you make Karlsruhe a single day trip — exhibition in the afternoon, projections after dark.</p>
+<p class="tip">Insider tip: best for roughly ages 4–12; older teens will burn through it in 45 minutes. Confirm the exact venue and hours on the tour date page before setting out, since this is a traveling exhibition.</p>
+</div>
+
+<div class="bin">All month — through 1 November</div>
+
+<div class="ev">
+<h3>🎃 <a href="https://movingtostuttgart.com/event/kurbisausstellung-pumpkin-festival-ludwigsburg/" target="_blank" rel="noopener">Kürbisausstellung — Ludwigsburg Pumpkin Festival</a></h3>
+<div class="where">Blühendes Barock gardens, Ludwigsburg Residential Palace · through Sun 1 Nov · garden admission</div>
+<p>The largest pumpkin exhibition in the world, staged in the palace gardens: enormous themed sculptures built from pumpkins, a carving program, pumpkin soup and Maultaschen stands, and a giant-pumpkin weigh-off later in the season. Ticket includes the Blühendes Barock gardens and the adjacent fairy-tale garden, which is what actually holds younger children for an afternoon.</p>
+<p class="tip">Insider tip: go on a weekday morning — weekends in October are genuinely packed. Same S4/S5 run to Ludwigsburg; the gardens are a 10-minute walk from the station and the palace ticket is good for the whole day, so you can leave for lunch and come back.</p>
+</div>
+
+<div class="bin">Every Sunday — through 11 October</div>
+
+<div class="ev">
+<h3>🚗 <a href="https://www.mercedes-benz.com/en/art-and-culture/museum/events/classics-coffee/" target="_blank" rel="noopener">Classics &amp; Coffee at the Mercedes-Benz Museum</a></h3>
+<div class="where">Mercedes-Benz Museum, Bad Cannstatt · Sundays through 11 Oct · free to attend the meet</div>
+<p>Owners bring classic Mercedes and other collector cars to the museum forecourt on Sunday mornings; you can walk the rows, talk to owners and get coffee without paying museum admission. A low-commitment Sunday that works for teenagers who have run out of patience for castles.</p>
+<p class="tip">Insider tip: S1 to Neckarpark (Mercedes-Benz) puts you at the door. Show up by 10:00 — the best cars arrive early and start leaving by midday. Pair it with paid museum entry if the weather turns.</p>
+</div>
+
+</section>
+
+<section id="feel" class="panel">
+
+<div class="card">
+<div class="meta">POLITICO NatSec Daily / Reuters · Sept. 2, 2026</div>
+<h3>USS Abraham Lincoln's crew steps ashore in Thailand after more than nine months at sea</h3>
+<p>The Lincoln pulled into Laem Chabang Port on Sept. 2, disembarking for the first time in over nine months after a record-length deployment that included the bombing campaign against Iran and the blockade of Iranian ports. The ship showed it — peeling paint and rust visible in photos as she came in. Sailors and Marines were seen smiling and waving as they arrived in Pattaya for five days of rest before the transit home to San Diego. The deployment's length drew reporting about conditions and morale aboard, which makes the moment the crew finally got liberty worth marking rather than glossing over.</p>
+</div>
+
+<div class="otd">
+<h3>📅 On This Day — September 3</h3>
+<ul>
+<li><b>1783 — Treaty of Paris signed.</b> Britain and the United States signed the treaty in Paris formally ending the Revolutionary War and recognizing American independence.</li>
+<li><b>1939 — Britain and France declare war on Germany.</b> Two days after the invasion of Poland, the declarations brought the Second World War to Western Europe — a reminder, from the ground U.S. forces now occupy, of how quickly a regional invasion became a continental war.</li>
+</ul>
+</div>
+
+</section>
+
+<footer>Compiled 03 Sept 2026 · Europe/Berlin · sources as attributed on each card</footer>
+
+</div>
+
+<script>
+function showTab(id, btn){
+  var panels = document.querySelectorAll('.panel');
+  for (var i=0;i<panels.length;i++){ panels[i].classList.remove('active'); }
+  document.getElementById(id).classList.add('active');
+  var btns = document.querySelectorAll('nav.tabs button');
+  for (var j=0;j<btns.length;j++){ btns[j].classList.remove('active'); }
+  btn.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
