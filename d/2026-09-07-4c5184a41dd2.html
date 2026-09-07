@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Digest — September 7, 2026</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0;
+    background: #f1f5f9;
+    color: #0f172a;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px; line-height: 1.55;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 14px 48px; }
+  header.bar {
+    background: #0f172a; color: #f8fafc;
+    padding: 18px 14px; margin-bottom: 0;
+  }
+  header.bar .inner { max-width: 760px; margin: 0 auto; }
+  header.bar h1 { margin: 0; font-size: 24px; letter-spacing: -0.4px; }
+  header.bar .date { margin-top: 4px; font-size: 13px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+  header.bar .aud { margin-top: 6px; font-size: 12px; color: #64748b; }
+
+  .breaking {
+    background: #7f1d1d; color: #fee2e2;
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.15);
+  }
+  .breaking h2 { margin: 0 0 10px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #fecaca; }
+  .breaking ul { margin: 0; padding-left: 0; list-style: none; }
+  .breaking li { position: relative; padding-left: 20px; margin-bottom: 9px; font-size: 14.5px; }
+  .breaking li:last-child { margin-bottom: 0; }
+  .breaking li::before {
+    content: "\25CF"; position: absolute; left: 0; top: 0;
+    color: #f87171; font-size: 11px; line-height: 1.9;
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+
+  nav.tabs {
+    display: flex; gap: 6px; overflow-x: auto; -webkit-overflow-scrolling: touch;
+    padding: 4px 0 10px; margin-bottom: 14px; border-bottom: 1px solid #cbd5e1;
+  }
+  nav.tabs button {
+    flex: 0 0 auto; cursor: pointer;
+    background: #ffffff; border: 1px solid #cbd5e1; border-radius: 999px;
+    padding: 7px 14px; font-size: 13.5px; font-weight: 600; color: #334155;
+    font-family: inherit; white-space: nowrap;
+  }
+  nav.tabs button:hover { background: #e2e8f0; }
+  nav.tabs button.on { background: #0f172a; border-color: #0f172a; color: #f8fafc; }
+
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .panel > h2.tabhead {
+    margin: 4px 0 12px; font-size: 19px; letter-spacing: -0.3px;
+  }
+  .subhead {
+    margin: 20px 0 10px; font-size: 12px; font-weight: 700;
+    letter-spacing: 1.3px; text-transform: uppercase; color: #64748b;
+    border-bottom: 1px solid #e2e8f0; padding-bottom: 5px;
+  }
+  .note {
+    background: #ffffff; border: 1px dashed #cbd5e1; border-radius: 8px;
+    padding: 10px 12px; font-size: 13px; color: #475569; margin-bottom: 14px;
+  }
+
+  .card {
+    background: #ffffff; border-radius: 8px; border: 1px solid #e2e8f0;
+    border-left-width: 5px; border-left-style: solid;
+    padding: 14px 16px; margin-bottom: 14px;
+    box-shadow: 0 1px 2px rgba(15,23,42,.05);
+  }
+  .card .src { font-size: 11.5px; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 5px; }
+  .card h3 { margin: 0 0 8px; font-size: 17px; line-height: 1.3; letter-spacing: -0.2px; }
+  .card p { margin: 0 0 10px; font-size: 15px; }
+  .sowhat {
+    background: #f8fafc; border-left: 3px solid #94a3b8; border-radius: 4px;
+    padding: 9px 12px; font-size: 14px; color: #1e293b; margin-top: 10px;
+  }
+  .sowhat b { display: block; font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; color: #475569; margin-bottom: 3px; }
+  .readmore { text-align: right; margin-top: 10px; }
+  .readmore a { color: #2563eb; text-decoration: none; font-size: 13.5px; font-weight: 600; }
+  .readmore a:hover { text-decoration: underline; }
+
+  .datebin { margin: 18px 0 8px; font-size: 13px; font-weight: 700; color: #0f172a; letter-spacing: .3px; }
+  .ev { background: #ffffff; border: 1px solid #e2e8f0; border-left: 5px solid #38bdf8; border-radius: 8px; padding: 13px 15px; margin-bottom: 12px; }
+  .ev h3 { margin: 0 0 4px; font-size: 16.5px; }
+  .ev h3 a { color: #0f172a; text-decoration: none; }
+  .ev h3 a:hover { color: #2563eb; text-decoration: underline; }
+  .ev .meta { font-size: 12.5px; color: #64748b; margin-bottom: 7px; }
+  .ev p { margin: 0 0 8px; font-size: 14.5px; }
+  .ev .tip { font-style: italic; font-size: 13.5px; color: #334155; }
+
+  .otd { background: #ffffff; border: 1px solid #e2e8f0; border-left: 5px solid #facc15; border-radius: 8px; padding: 14px 16px; }
+  .otd h3 { margin: 0 0 8px; font-size: 16px; }
+  .otd ul { margin: 0; padding-left: 18px; font-size: 14.5px; }
+  .otd li { margin-bottom: 7px; }
+
+  footer.foot { margin-top: 26px; font-size: 12px; color: #64748b; text-align: center; }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="inner">
+    <h1>&#9889; Daily Digest</h1>
+    <div class="date">Monday, September 7, 2026</div>
+    <div class="aud">HQ USEUCOM &middot; Stuttgart, Germany &middot; rolling 36-hour window</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="breaking">
+    <h2>Breaking</h2>
+    <ul>
+      <li>CENTCOM says US forces struck three Iranian oil tankers &mdash; disabling one off Kharg Island, Iran's main crude export terminal &mdash; after Iran fired missiles toward two US Navy warships. Overnight Iran claimed to have hit a US ship in the Strait of Hormuz; the US called that "a total lie."</li>
+      <li>The far-right Alternative for Germany won the Saxony-Anhalt state election outright but short of a majority, with Chancellor Friedrich Merz's CDU slumping to a disastrous result. AfD's candidate for governor claimed a mandate to govern: "we have written history."</li>
+      <li>US envoys Steve Witkoff and Jared Kushner met Putin in Moscow on 5 September and Zelensky in Kyiv on 6 September. No breakthrough on the war; the Kremlin restated its maximalist demands.</li>
+    </ul>
+  </div>
+
+  <nav class="tabs" id="tabnav">
+    <button class="on" onclick="showTab('defense', this)">&#128737;&#65039; Defense</button>
+    <button onclick="showTab('us', this)">&#127482;&#127480; US</button>
+    <button onclick="showTab('europe', this)">&#127466;&#127482; Europe</button>
+    <button onclick="showTab('me', this)">&#127964; Middle East</button>
+    <button onclick="showTab('tech', this)">&#128187; Tech &amp; AI</button>
+    <button onclick="showTab('pacific', this)">&#127759; Pacific</button>
+    <button onclick="showTab('cities', this)">&#127961;&#65039; Cities</button>
+    <button onclick="showTab('feelgood', this)">&#127775; Feel Good</button>
+  </nav>
+
+  <!-- ================= DEFENSE ================= -->
+  <section id="defense" class="panel active">
+    <h2 class="tabhead">&#128737;&#65039; Defense</h2>
+
+    <div class="card" style="border-left-color:#ef4444">
+      <div class="src">Washington Post &middot; POLITICO Playbook &middot; 5&ndash;6 Sep 2026</div>
+      <h3>Iran conflict crosses into direct attacks on US warships, and CENTCOM answers at sea</h3>
+      <p>Iran launched missiles toward two US Navy warships, and CENTCOM retaliated by striking three Iranian oil tankers, disabling one off Kharg Island. Defense Secretary Pete Hegseth and CENTCOM both issued public warnings to Tehran not to target US forces again. One analyst characterized the shift bluntly &mdash; "this is just wildly dangerous" &mdash; as Iran moves from proxy and infrastructure targets to US naval platforms. Iran then claimed overnight to have struck a US ship in the Strait of Hormuz, a claim the US flatly denied.</p>
+      <div class="sowhat"><b>So What</b>Targeting US warships is a deliberate escalation of the threshold, and striking Iran's export terminal puts crude flow and Hormuz shipping in play. Review force protection and FPCON posture for EUCOM personnel and facilities with CENTCOM adjacency, and assume increased tempo of theater-transiting airlift, tanker and ISR support out of European bases.</div>
+      <div class="readmore"><a href="https://www.washingtonpost.com/world/2026/09/05/us-says-it-hit-3-iranian-oil-tankers-including-one-near-kharg-island/" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+    </div>
+
+    <div class="card" style="border-left-color:#ef4444">
+      <div class="src">The Wire China &middot; 6 Sep 2026</div>
+      <h3>Xi has purged five of the six PLA generals on the Central Military Commission</h3>
+      <p>Ahead of an expected fourth term in 2027, Xi Jinping has removed five of the six People's Liberation Army generals who sat on the Central Military Commission &mdash; the Party body that commands the armed forces. The scale is without precedent in the post-Deng era and points either to a loyalty problem Xi believes he has, or to corruption deep enough to compromise the modernization program. Either reading matters more than the individual names.</p>
+      <div class="sowhat"><b>So What</b>Sustained churn at the top of the PLA cuts against the readiness assumptions underpinning most Taiwan-timeline estimates, in both directions &mdash; degraded near-term competence, but also a commission staffed entirely by officers who owe Xi their seats. Treat any brief that assumes a fixed 2027 PLA capability baseline as needing a caveat.</div>
+      <div class="readmore"><a href="https://thewirechina.substack.com/p/the-wire-china-issue-no-300" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+    </div>
+
+    <div class="card" style="border-left-color:#ef4444">
+      <div class="src">Institute for the Study of War &middot; 6 Sep 2026</div>
+      <h3>Russia's culture of "beautiful reports" is corrupting Putin's own picture of the war</h3>
+      <p>Kremlin aide Yuriy Ushakov said Putin gave US envoys a comprehensive assessment of "significant advances" along the front &mdash; a characterization that does not match conditions on the ground. ISW attributes this to the pervasive practice within the Russian armed forces that milbloggers call "beautiful reports," compounded by senior commanders overstating gains as part of a deliberate cognitive-warfare effort. The result is a leader hardening his belief that he can take the rest of Donetsk Oblast by the end of 2026 and therefore need concede nothing.</p>
+      <div class="sowhat"><b>So What</b>An adversary who is misinformed about his own battlefield position is harder to deter than one who is merely aggressive, because the signals we send are being filtered through a false baseline. Build indications-and-warning products around what Russian forces can actually do, not around what Russian leadership says it is doing, and expect negotiation timelines to slip accordingly.</div>
+    </div>
+  </section>
+
+  <!-- ================= US ================= -->
+  <section id="us" class="panel">
+    <h2 class="tabhead">&#127482;&#127480; US</h2>
+
+    <div class="card" style="border-left-color:#3b82f6">
+      <div class="src">POLITICO Playbook &middot; 6 Sep 2026</div>
+      <h3>General-election season opens with the House trending Democratic and the Senate a tossup</h3>
+      <p>Labor Day weekend marks the point at which Congress largely stops legislating and goes home to campaign. Polling two months out shows backlash against the administration positioning Democrats to retake the House, with Senate control now closer to a tossup than the reach it once looked. Cost of living dominates as the top voter issue, and Playbook notes that a change in the war &mdash; escalation or a peace deal &mdash; is among the plausible October surprises.</p>
+      <div class="sowhat"><b>So What</b>A chamber flip rewrites Armed Services and Intelligence committee leadership and reshapes the FY28 NDAA and any supplemental funding lines, while a campaign-season Congress means fewer legislative days for anything requiring the Hill. Expect authorities, MILCON and force-posture decisions to slow between now and the new year, and build schedule assumptions that do not depend on near-term congressional action.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#3b82f6">
+      <div class="src">New York Times, via POLITICO Playbook &middot; 6 Sep 2026</div>
+      <h3>Administration drafts plan to pay stay-at-home parents from working-parent child care funds</h3>
+      <p>The administration is moving to let married couples with a stay-at-home spouse collect child care subsidies, drawing on a federal program written to assist working parents. It would create the only federal subsidy paying parents to stay home and raise children &mdash; a policy championed by the Vice President and among the more significant efforts so far to direct federal funds toward a traditional model of family life. The change is at the draft stage and would face implementation and legal questions.</p>
+      <div class="sowhat"><b>So What</b>Military families overseas are disproportionately single-income households with a spouse whose career is constrained by PCS cycles, so a shift in eligibility rules cuts directly across your formations. Have the family readiness and legal assistance teams track the rulemaking so you can answer the questions before they arrive at the CDC waitlist.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#3b82f6">
+      <div class="src">Associated Press &middot; Washington Post &middot; 6 Sep 2026</div>
+      <h3>Amazon cargo aircraft overruns Miami runway, killing at least five</h3>
+      <p>An Amazon cargo aircraft failed to stop at the end of a diagonal runway at Miami International, ran off the northwest side of the airport and struck multiple vehicles. At least five people were killed and five injured. Miami-Dade Fire Rescue found heavy flames and smoke on arrival, and the FAA has opened an investigation. Video of the landing shows the aircraft striking the ground on approach.</p>
+      <div class="sowhat"><b>So What</b>Commercial air cargo is a load-bearing element of the sustainment chain that supports overseas installations, and a high-profile overrun at a major hub tends to be followed by regulatory scrutiny and carrier-side schedule friction. No immediate action, but flag it for logistics planners tracking contracted airlift resilience.</div>
+    </div>
+  </section>
+
+  <!-- ================= EUROPE ================= -->
+  <section id="europe" class="panel">
+    <h2 class="tabhead">&#127466;&#127482; Europe</h2>
+
+    <div class="card" style="border-left-color:#6366f1">
+      <div class="src">Associated Press &middot; The Japan Times &middot; 6 Sep 2026</div>
+      <h3>AfD wins Saxony-Anhalt outright as Merz's CDU collapses in the east</h3>
+      <p>The anti-migration, Russia-friendly Alternative for Germany won the eastern state of Saxony-Anhalt by a clear margin while falling short of an outright majority, and the party's candidate for governor claimed a mandate to govern. Chancellor Friedrich Merz's CDU slumped to what AP characterized as a disastrous result; Merz is polling at record lows for a postwar chancellor, and the AfD is approaching 30 percent nationally. Coalition arithmetic in Magdeburg is now the immediate question.</p>
+      <div class="sowhat"><b>So What</b>A governing-strength AfD in a German state normalizes a party that opposes both military aid to Ukraine and, in parts of its platform, the US troop presence &mdash; this is host-nation politics that bears directly on basing, Bundeswehr contributions and public sentiment around Stuttgart-area installations. Track the coalition talks, and expect host-nation engagement to get harder before it gets easier.</div>
+      <div class="readmore"><a href="https://apnews.com/article/germany-saxony-anhalt-election-far-right-afd-c538060710a2495c72425b6468df0d40" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+    </div>
+
+    <div class="card" style="border-left-color:#6366f1">
+      <div class="src">Institute for the Study of War &middot; POLITICO Playbook &middot; 5&ndash;6 Sep 2026</div>
+      <h3>Putin restates maximalist demands to Witkoff and Kushner; no movement on the war</h3>
+      <p>After the US delegation's Moscow talks on 5 September, Kremlin aide Ushakov said Putin reasserted his commitment to achieving all Russian war aims by military means and to addressing the "root causes" of the war. Those terms remain the June 2024 formulation: Ukrainian withdrawal from all of Luhansk, Donetsk, Zaporizhia and Kherson oblasts including unoccupied ground, replacement of the Ukrainian government, and permanent exclusion from NATO. A person close to the Kremlin said there would be no agreement until Russian forces take the remainder of Donetsk Oblast. Discussions of US-Russian economic cooperation reportedly went further than the war talks.</p>
+      <div class="sowhat"><b>So What</b>Envoy-level shuttle diplomacy is producing motion without convergence, so plan on the current force posture and support requirements persisting through the winter rather than tapering. Where the talks could move fast is sanctions and economic normalization &mdash; watch that track separately from the ceasefire track, because they may not move together.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#6366f1">
+      <div class="src">Institute for the Study of War &middot; 5&ndash;6 Sep 2026</div>
+      <h3>ISW: at current rates Russia does not finish Donetsk until 2032 &mdash; if ever</h3>
+      <p>Against Putin's end-of-2026 deadline, ISW assesses that Russian forces at their present rate of advance would not seize the remainder of Donetsk Oblast until 2032, and declines to assess that they can take it on any timeline. Zelensky met Witkoff and Kushner in Kyiv on 6 September and agreed on fundamental principles for ending the war, including security and economic guarantees for a post-war Ukraine. Separately, Ukraine and Russia reached a temporary agreement to halt long-range strikes against Kyiv and Moscow proper, even as Ukrainian long-range strikes against Russian oil infrastructure and Rostov-area air defenses continued and Russia launched 108 drones overnight.</p>
+      <div class="sowhat"><b>So What</b>The gap between Putin's stated timeline and the arithmetic of advance is the single most useful planning number in this file &mdash; it means the war outlasts the current negotiation cycle. Note also that the capital-cities strike pause does not extend to energy infrastructure or the wider deep-strike campaign, so a lull in headlines is not a lull in operations.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#6366f1">
+      <div class="src">The Wire China &middot; 6 Sep 2026</div>
+      <h3>McFaul: trying to peel Putin away from Xi is "completely nuts"</h3>
+      <p>Former US ambassador to Moscow Michael McFaul argues the recurring Washington hope of splitting Putin from Xi misreads both men. "First, Putin relies on China and we're not going to provide what he needs overnight. Second, Putin fundamentally hates the West," he says, describing a Moscow-Beijing relationship that has limits but is not brittle. The same issue carries analysis arguing Xi is out-competing Putin for influence in Central Asia &mdash; friction inside a partnership that is nonetheless holding.</p>
+      <div class="sowhat"><b>So What</b>Any campaign plan resting on a near-term Sino-Russian split is resting on an assumption a serious Kremlin watcher rates as implausible. Plan for a two-theater problem in which Russian and Chinese timelines interact, and treat Central Asian competition as friction to exploit rather than a fracture to expect.</div>
+      <div class="readmore"><a href="https://thewirechina.substack.com/p/the-wire-china-issue-no-300" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+    </div>
+  </section>
+
+  <!-- ================= MIDDLE EAST ================= -->
+  <section id="me" class="panel">
+    <h2 class="tabhead">&#127964; Middle East</h2>
+
+    <div class="card" style="border-left-color:#f59e0b">
+      <div class="src">Washington Post &middot; 6 Sep 2026</div>
+      <h3>Deadly Iranian wedding strike traced to a US weapon missing its target</h3>
+      <p>Six weapons dropped by US Navy aircraft last week targeted a communications complex in the coastal town of Kuhestak. One missed, and the resulting casualties at a nearby wedding appear to be the consequence. The account attributes the deaths to weapon error against a legitimate military objective rather than targeting intent &mdash; a distinction that will carry very little weight in regional coverage of the incident.</p>
+      <div class="sowhat"><b>So What</b>Civilian-casualty incidents of this kind drive partner-government hedging and shape the domestic politics of every state hosting US forces, including in Europe. Expect the story to be amplified in host-nation and regional media, and make sure public affairs and host-nation liaison teams are postured with accurate facts before they are asked.</div>
+      <div class="readmore"><a href="https://www.washingtonpost.com/world/2026/09/06/deadly-iran-wedding-strike-likely-due-us-weapon-missing-nearby-target/" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+    </div>
+
+    <div class="card" style="border-left-color:#f59e0b">
+      <div class="src">ABC "This Week," via POLITICO Playbook &middot; 6 Sep 2026</div>
+      <h3>Energy Secretary: destroying Iran's nuclear capability may replace a negotiated deal</h3>
+      <p>Asked whether an agreement with Tehran remains the objective, Energy Secretary Chris Wright said military action may be the route to constraining Iran's nuclear ambitions: "There may not be a nuclear agreement. It may be simply destroying their capabilities to do it. An agreement may await the next administration in Iran." Asked whether the US is still at war with Iran, he answered that "we're still in a conflict, for sure." The framing points to an open-ended degradation campaign rather than a bounded strike package with a diplomatic off-ramp.</p>
+      <div class="sowhat"><b>So What</b>An open-ended campaign means sustained demand on ISR, tanker, munitions and force-protection resources with no scheduled culmination, and much of that flows through or over EUCOM. Assume the requirement persists past the current planning horizon rather than treating it as a surge to be absorbed.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#f59e0b">
+      <div class="src">POLITICO Playbook &middot; 6 Sep 2026</div>
+      <h3>Tehran claims a hit in the Strait of Hormuz; Washington calls it a "total lie"</h3>
+      <p>Overnight, Iran claimed to have struck a US ship in the Strait of Hormuz. The US rejected the claim outright, calling it a total lie. Whether or not the claim is true is almost secondary &mdash; it tells you Tehran now sees value in advertising attacks on US naval vessels, which is a change in what the regime is willing to be seen doing. With Kharg Island terminal capacity now degraded, the strait is the pressure point both sides understand best.</p>
+      <div class="sowhat"><b>So What</b>Iranian claims made for domestic and regional audiences can drive escalation independently of ground truth, because they create expectations Tehran then has to meet. Watch tanker traffic, war-risk insurance rates and Hormuz transit patterns as the leading indicator, and treat unverified Iranian claims as an information-environment problem in their own right.</div>
+    </div>
+  </section>
+
+  <!-- ================= TECH & AI ================= -->
+  <section id="tech" class="panel">
+    <h2 class="tabhead">&#128187; Tech &amp; AI</h2>
+
+    <div class="subhead">AI &amp; Competition</div>
+
+    <div class="card" style="border-left-color:#a78bfa">
+      <div class="src">Axios, via POLITICO Playbook &middot; 6 Sep 2026</div>
+      <h3>OpenAI builds a bipartisan state-level policy team as regulation shifts to the states</h3>
+      <p>OpenAI is adding Jessica Schumer, Caulder Harvill-Childs and Thomas MacLellan to work state-level policy, a group deliberately assembled to span Democratic, Republican and industry experience. The hiring signals that with federal AI legislation stalled, the operative rulemaking is migrating to state capitals &mdash; and that the largest labs intend to shape it directly rather than react to it.</p>
+      <div class="sowhat"><b>So What</b>State-level AI rules will fragment the compliance picture for the vendors and contractors the department buys from, which eventually shows up as delivery risk on AI-enabled programs. Ask program offices whether their AI vendors' obligations are federal, state or both before assuming a single regulatory baseline.</div>
+    </div>
+
+    <div class="subhead">Cyber &amp; Emerging Tech</div>
+
+    <div class="card" style="border-left-color:#a78bfa">
+      <div class="src">POLITICO &middot; 6 Sep 2026</div>
+      <h3>Data centers and grid pressure become a midterm attack line in eleven battleground races</h3>
+      <p>After months of message-testing, Democrats have settled on costs and corruption as the two themes for attacking data-center construction, with explicit guidance to frame the facilities as local burdens. The House campaign arm updated the page it uses to signal super PACs, flagging data centers in eleven battleground races, and an internal memo advises language aimed at the "conspiratorial nerve" running through voter discourse on the subject. POLITICO has launched a dedicated newsletter tracking how AI, data centers and grid pressure reshape energy and infrastructure policy.</p>
+      <div class="sowhat"><b>So What</b>Compute capacity and the power to run it are becoming politically contested infrastructure, which is a supply-side risk for every AI-enabled defense capability that depends on commercial data centers. Where programs assume commercial compute will simply scale, ask what the siting and permitting assumptions actually are.</div>
+    </div>
+  </section>
+
+  <!-- ================= PACIFIC ================= -->
+  <section id="pacific" class="panel">
+    <h2 class="tabhead">&#127759; Pacific</h2>
+
+    <div class="card" style="border-left-color:#14b8a6">
+      <div class="src">The Japan Times &middot; 6 Sep 2026</div>
+      <h3>Japan moves into warship export markets South Korea spent decades building</h3>
+      <p>Tokyo's growing appetite for overseas sales of defense equipment is pulling it into naval export markets that Seoul has cultivated for years, setting up competition between two US treaty allies for the same customers. Japan's entry is a direct consequence of the loosening of its arms-export restrictions, and warships are the highest-value segment. The commercial contest is real, but so is the industrial-base capacity it creates in the theater.</p>
+      <div class="sowhat"><b>So What</b>Allied shipbuilding capacity in the Indo-Pacific is a strategic asset the US does not have enough of at home, and two allies competing for the same hulls can either expand that capacity or split it inefficiently. Watch whether Washington treats this as duplication to be managed or as capacity to be underwritten &mdash; the answer shapes coalition sustainment options.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#14b8a6">
+      <div class="src">The Japan Times &middot; 6 Sep 2026</div>
+      <h3>Okinawa's governor's race turns on the prefecture's relationship with Tokyo</h3>
+      <p>More than fifty years after the US returned Okinawa to Japanese administration, the prefecture's complicated feelings toward mainland Japan and the central government remain deeply rooted, and the governor's race has shifted to focus on exactly that relationship rather than on any single base issue. Okinawa hosts the bulk of US forces in Japan, so prefectural politics translate fairly directly into basing friction.</p>
+      <div class="sowhat"><b>So What</b>Okinawa is the closest Indo-Pacific analogue to the host-nation dynamic USEUCOM manages in Germany, and the same lesson applies: local political outcomes set the practical ceiling on what basing arrangements can absorb. Useful comparison if you are briefing host-nation risk in a European context.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#14b8a6">
+      <div class="src">The Wire China &middot; 6 Sep 2026</div>
+      <h3>Hong Kong corporate shells at one Kwun Tong address show how sanctions evasion works</h3>
+      <p>The disappearing and reappearing companies registered at 16 Shing Yip Street in Kwun Tong illustrate the mechanics by which Hong Kong helps mainland firms evade US sanctions. Hong Kong was once the base from which Western services ran operations against China; the 1997 handover and the 2020 National Security Law reversed that, and the territory now functions in the opposite direction &mdash; as the jurisdictional seam through which restricted goods and money move.</p>
+      <div class="sowhat"><b>So What</b>Export controls only bind if the corporate layers can be seen through, and a single address hosting rotating shells is a reminder of how thin the enforcement layer is. Relevant to anyone tracking component sourcing in defense supply chains or Russian procurement routed through third jurisdictions.</div>
+      <div class="readmore"><a href="https://thewirechina.substack.com/p/the-wire-china-issue-no-300" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+    </div>
+
+    <div class="card" style="border-left-color:#14b8a6">
+      <div class="src">The Wire China &middot; 6 Sep 2026</div>
+      <h3>China-Japan trade holds steady despite a year of threats over Taiwan</h3>
+      <p>Since Prime Minister Sanae Takaichi's pointed comments on Taiwan in November 2025, Chinese officials have been threatening Tokyo continuously. Yet China accounted for roughly 20 percent of Japan's total trade then and accounts for roughly 20 percent now. The coercive rhetoric has not translated into economic decoupling in either direction, which says something about how much pain Beijing is actually willing to absorb to make a political point.</p>
+      <div class="sowhat"><b>So What</b>The gap between Beijing's rhetoric and its commercial behavior is a useful calibration tool: economic threats from China are not automatically predictive of economic action. Apply the same discount when assessing Chinese economic pressure directed at European states.</div>
+      <div class="readmore"><a href="https://thewirechina.substack.com/p/the-wire-china-issue-no-300" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+    </div>
+  </section>
+
+  <!-- ================= CITIES ================= -->
+  <section id="cities" class="panel">
+    <h2 class="tabhead">&#127961;&#65039; Cities &mdash; Stuttgart &amp; Baden-W&uuml;rttemberg</h2>
+
+    <div class="note">
+      What to do over the next three weeks (7&ndash;28 September), for USEUCOM families around Panzer, Patch, Kelley and Robinson. Sources: Stripes Europe "What's up this weekend in Stuttgart" and Moving to Stuttgart. Always confirm dates and hours on the event site before you drive.
+    </div>
+
+    <div class="datebin">Running now &mdash; through 13 September</div>
+
+    <div class="ev">
+      <h3>&#127837; <a href="https://www.facebook.com/events/1589616886028655/" target="_blank" rel="noopener">Stuttgart Sicilian Fest</a></h3>
+      <div class="meta">Pariser Platz, Stuttgart &middot; through 13 September &middot; Free entry, pay per item</div>
+      <p>A Sicilian street-food festival in the middle of the city, with craft beer, live entertainment and stalls running through the second week of September. It is small enough to do in ninety minutes and central enough that you can pair it with something else downtown. Arancini and cannoli do most of the heavy lifting.</p>
+      <p class="tip"><em>Insider tip: Pariser Platz is directly on the S-Bahn at Stuttgart Nord/Feuerbach side of the city &mdash; take the train rather than fight for parking. Go before 18:00 with children; it turns into an adult evening crowd after dark.</em></p>
+    </div>
+
+    <div class="ev">
+      <h3>&#10024; <a href="https://www.karlsruhe-erleben.de/en/veranstaltungen/schlosslichtspiele-light-festival" target="_blank" rel="noopener">Schlosslichtspiele &mdash; Karlsruhe Palace Light Festival</a></h3>
+      <div class="meta">Karlsruhe Palace &middot; nightly through 13 September &middot; Free</div>
+      <p>Large-scale projection mapping onto the whole facade of Karlsruhe Palace, this year themed "Lightyard Stories: Visions of Urban Living Spaces." The show runs in a loop across the evening, the lawn in front is open and free, and people bring blankets and picnics. Closing for the year on 13 September &mdash; this is the last week.</p>
+      <p class="tip"><em>Insider tip: about an hour by car from Stuttgart, or an hour by train to Karlsruhe Hbf plus a short tram ride. Shows start once it is properly dark, around 20:30 in mid-September, so plan on a late night home with kids.</em></p>
+    </div>
+
+    <div class="datebin">Weekends through the autumn</div>
+
+    <div class="ev">
+      <h3>&#129430; <a href="https://movingtostuttgart.com/event/kurbisausstellung-pumpkin-festival-ludwigsburg/" target="_blank" rel="noopener">K&uuml;rbisausstellung &mdash; Ludwigsburg Pumpkin Festival</a></h3>
+      <div class="meta">Bl&uuml;hendes Barock, Ludwigsburg &middot; through 1 November &middot; Palace gardens admission</div>
+      <p>The largest pumpkin festival in the world, held on the grounds of the Ludwigsburg Residential Palace. Enormous carved displays built to an annual theme, pumpkin soup and pumpkin sp&auml;tzle everywhere, and a full children's playground in the Bl&uuml;hendes Barock gardens that makes the ticket worth it on its own. The pumpkin weigh-off and regatta events land later in the season.</p>
+      <p class="tip"><em>Insider tip: S4/S5 to Ludwigsburg then a fifteen-minute walk, or twenty-five minutes by car from Panzer. Go on a weekday afternoon if you can &mdash; September weekends here are genuinely crowded, and the garden ticket covers the whole afternoon.</em></p>
+    </div>
+
+    <div class="ev">
+      <h3>&#128663; <a href="https://www.mercedes-benz.com/en/art-and-culture/museum/events/classics-coffee/" target="_blank" rel="noopener">Classics &amp; Coffee at the Mercedes-Benz Museum</a></h3>
+      <div class="meta">Mercedes-Benz Museum, Bad Cannstatt &middot; Sundays through 11 October &middot; Free to attend the meet</div>
+      <p>Every Sunday morning through mid-October, classic car owners gather on the museum plaza and the public wanders through with coffee. You do not need a museum ticket to walk the meet, which makes it one of the better free mornings in the city for anyone with a car-obsessed ten-year-old. The museum itself is worth the separate admission if you have not done it yet.</p>
+      <p class="tip"><em>Insider tip: U-Bahn to Neckarpark or park in the museum garage. Arrive by 09:30 &mdash; the best cars come early and the plaza thins out by late morning.</em></p>
+    </div>
+
+    <div class="ev">
+      <h3>&#129429; <a href="https://www.dinoinfo.de/ausstellungstermine/" target="_blank" rel="noopener">Dinosaurs &mdash; In the Realm of Prehistory</a></h3>
+      <div class="meta">Karlsruhe &middot; check current dates on site &middot; Ticketed</div>
+      <p>A travelling exhibition of roughly fifty life-sized animatronic dinosaurs, aimed squarely at elementary and middle-school children. It pairs naturally with the Palace Light Festival if you are already making the Karlsruhe drive this week &mdash; exhibition in the afternoon, projections after dark.</p>
+      <p class="tip"><em>Insider tip: confirm the current Karlsruhe dates on the tour schedule page before you go, since this show moves between cities. Roughly an hour from Stuttgart on the A8/A5.</em></p>
+    </div>
+
+    <div class="ev">
+      <h3>&#128694; <a href="https://www.cyhitours.com/stuttgart-free-walking-tour/" target="_blank" rel="noopener">Free Walking Tour of Stuttgart, in English</a></h3>
+      <div class="meta">K&ouml;nigstrasse 1a &middot; Saturdays and Sundays, 11:00 &middot; Free, tip-based</div>
+      <p>A two-hour English-language walking tour of the city centre, departing from K&ouml;nigstrasse and led by a guide carrying a yellow umbrella. It is the single best orientation to Stuttgart for a newly arrived family, and it costs whatever you decide to tip at the end. Good for teenagers, long for anyone under about eight.</p>
+      <p class="tip"><em>Insider tip: no booking required &mdash; just show up at the meeting point a few minutes early. Pair it with the Markthalle a few blocks away for lunch afterwards.</em></p>
+    </div>
+
+    <div class="datebin">Opens 25 September &mdash; plan ahead</div>
+
+    <div class="ev">
+      <h3>&#127866; <a href="https://movingtostuttgart.com/event/cannstatter-volksfest/" target="_blank" rel="noopener">Cannstatter Volksfest</a></h3>
+      <div class="meta">Cannstatter Wasen, Bad Cannstatt &middot; 25 September &ndash; 11 October &middot; Free entry, pay for rides and food</div>
+      <p>The second-largest beer festival in Europe after Munich's Oktoberfest, and the defining Stuttgart event of the year. Alongside the tents there is a full fairground &mdash; a large Ferris wheel, roller coasters and the traditional stalls &mdash; plus the opening parade and a fireworks programme. It is a genuinely different event by time of day: an afternoon fairground for families, a very different scene in the tents after dark.</p>
+      <p class="tip"><em>Insider tip: go in the afternoon with children and use the family discount days early in the run. Take the U-Bahn to Cannstatter Wasen &mdash; parking is effectively impossible &mdash; and if you want a tent table on a weekend, reserve now rather than in October.</em></p>
+    </div>
+  </section>
+
+  <!-- ================= FEEL GOOD ================= -->
+  <section id="feelgood" class="panel">
+    <h2 class="tabhead">&#127775; Feel Good</h2>
+
+    <div class="card" style="border-left-color:#facc15">
+      <div class="src">History Facts &middot; 6 Sep 2026</div>
+      <h3>The ration line that ended up in everyone's pantry</h3>
+      <p>A number of foods now firmly civilian started life as a quartermaster's problem to solve. M&amp;Ms were developed with a hard candy shell so troops could carry chocolate through heat without it melting in their pockets &mdash; a packaging fix that outlived the war and became a household brand. The same story repeats across the shelf: things invented to keep soldiers fed in bad conditions turned out to be things everyone wanted.</p>
+    </div>
+
+    <div class="otd">
+      <h3>&#128220; On This Day &mdash; 7 September</h3>
+      <ul>
+        <li><b>1776</b> &mdash; The <i>Turtle</i>, a one-man submersible built by David Bushnell, attempted to attach an explosive charge to HMS <i>Eagle</i> in New York Harbor. The attack failed, but it was the first use of a submarine in combat.</li>
+        <li><b>1940</b> &mdash; The Blitz began. The Luftwaffe shifted from attacking RAF airfields to bombing London, starting fifty-seven consecutive nights of raids &mdash; a change of targeting that relieved pressure on Fighter Command at the decisive moment of the Battle of Britain.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="foot">
+    Compiled from newsletter traffic received in the 36 hours to 07 September 2026, 04:40 CEST.<br>
+    Weekend cycle &mdash; aggregator volume was light and no regional Middle East or host-nation European sources published in window.
+  </footer>
+
+</div>
+
+<script>
+  function showTab(id, btn) {
+    var panels = document.querySelectorAll('.panel');
+    for (var i = 0; i < panels.length; i++) {
+      panels[i].classList.remove('active');
+    }
+    var target = document.getElementById(id);
+    if (target) { target.classList.add('active'); }
+    var buttons = document.querySelectorAll('#tabnav button');
+    for (var j = 0; j < buttons.length; j++) {
+      buttons[j].classList.remove('on');
+    }
+    if (btn) { btn.classList.add('on'); }
+    window.scrollTo(0, 0);
+  }
+</script>
+
+</body>
+</html>
