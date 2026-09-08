@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Digest — September 8, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin:0; padding:0; background:#f1f5f9; color:#0f172a;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px; line-height:1.55; }
+.wrap { max-width:760px; margin:0 auto; padding:0 14px 56px; }
+header.bar { background:#0f172a; color:#fff; padding:18px 14px; }
+header.bar .inner { max-width:760px; margin:0 auto; display:flex; align-items:baseline;
+  justify-content:space-between; flex-wrap:wrap; gap:6px; }
+header.bar h1 { margin:0; font-size:22px; letter-spacing:-.3px; }
+header.bar .date { font-size:13px; color:#cbd5e1; font-weight:600; }
+header.bar .sub { max-width:760px; margin:6px auto 0; font-size:12px; color:#94a3b8; }
+
+.breaking { background:#450a0a; color:#fee2e2; border-left:6px solid #dc2626;
+  margin:14px 0 18px; padding:12px 14px; border-radius:8px; }
+.breaking h2 { margin:0 0 8px; font-size:13px; letter-spacing:1.2px; text-transform:uppercase; color:#fca5a5; }
+.breaking li { margin:0 0 8px; list-style:none; padding-left:20px; position:relative; font-size:14.5px; }
+.breaking li:last-child { margin-bottom:0; }
+.breaking li::before { content:"\25CF"; position:absolute; left:0; top:0; color:#ef4444;
+  animation:pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.25} }
+.breaking .src { color:#fca5a5; font-size:12px; font-weight:700; }
+
+nav.tabs { display:flex; gap:6px; overflow-x:auto; padding:12px 0 10px; -webkit-overflow-scrolling:touch; }
+nav.tabs button { flex:0 0 auto; cursor:pointer; border:1px solid #cbd5e1; background:#fff;
+  color:#334155; font-size:13.5px; font-weight:600; padding:8px 13px; border-radius:999px;
+  font-family:inherit; white-space:nowrap; }
+nav.tabs button.on { background:#0f172a; color:#fff; border-color:#0f172a; }
+
+.panel { display:none; }
+.panel.active { display:block; }
+.panel > h2.tabhead { font-size:19px; margin:6px 0 4px; }
+.panel > p.note { margin:0 0 14px; font-size:13px; color:#64748b; }
+h3.sub { font-size:13px; text-transform:uppercase; letter-spacing:1px; color:#475569;
+  margin:22px 0 10px; border-bottom:1px solid #cbd5e1; padding-bottom:5px; }
+
+.card { background:#fff; border-radius:10px; padding:14px 16px; margin:0 0 14px;
+  border-left:5px solid #94a3b8; box-shadow:0 1px 3px rgba(15,23,42,.08); }
+.card .meta { font-size:11.5px; text-transform:uppercase; letter-spacing:.7px;
+  color:#64748b; font-weight:700; margin-bottom:5px; }
+.card h4 { margin:0 0 8px; font-size:17px; line-height:1.3; }
+.card p.body { margin:0; font-size:15px; color:#1e293b; }
+.sowhat { margin:12px 0 0; padding:10px 12px; background:#f8fafc; border:1px solid #e2e8f0;
+  border-radius:7px; font-size:14px; }
+.sowhat b { display:block; font-size:11px; letter-spacing:1px; text-transform:uppercase;
+  color:#475569; margin-bottom:4px; }
+.readmore { text-align:right; margin-top:10px; }
+.readmore a { color:#2563eb; font-size:13.5px; font-weight:600; text-decoration:none; }
+.readmore a:hover { text-decoration:underline; }
+
+.ev { background:#fff; border-radius:10px; padding:13px 15px; margin:0 0 12px;
+  border-left:5px solid #38bdf8; box-shadow:0 1px 3px rgba(15,23,42,.08); }
+.ev h4 { margin:0 0 4px; font-size:16.5px; }
+.ev h4 a { color:#0f172a; text-decoration:none; }
+.ev h4 a:hover { color:#2563eb; text-decoration:underline; }
+.ev .when { font-size:13px; color:#475569; font-weight:600; margin:0 0 7px; }
+.ev p { margin:0; font-size:14.5px; }
+.ev .tip { margin-top:8px; font-style:italic; font-size:13.5px; color:#475569; }
+.datebin { font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.8px;
+  color:#0369a1; margin:20px 0 9px; }
+.otd { background:#fff; border-radius:10px; padding:13px 15px; border-left:5px solid #facc15;
+  box-shadow:0 1px 3px rgba(15,23,42,.08); }
+.otd h4 { margin:0 0 8px; font-size:16px; }
+.otd li { font-size:14.5px; margin-bottom:8px; }
+.otd ul { margin:0; padding-left:20px; }
+footer { text-align:center; font-size:11.5px; color:#94a3b8; padding:26px 10px 8px; }
+@media (max-width:520px){ .card h4 { font-size:16px; } body { font-size:15px; } }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="inner">
+    <h1>&#9889; Daily Digest</h1>
+    <span class="date">Tuesday, September 8, 2026</span>
+  </div>
+  <div class="sub">HQ USEUCOM &middot; Stuttgart, Germany &middot; Newsletter synthesis, rolling 36-hour window</div>
+</header>
+
+<div class="wrap">
+
+  <div class="breaking">
+    <h2>&#128308; Breaking</h2>
+    <ul>
+      <li><span class="src">AXIOS &middot; 7 Sep:</span> The United States is exploring whether Ukraine and Russia could take steps to de-escalate the war over the winter while restarting negotiations toward a broader peace agreement, President Volodymyr Zelensky told Axios.</li>
+      <li><span class="src">AXIOS &middot; 7 Sep:</span> The Iran war has now cost US consumers $100 billion in higher energy prices, per a Brown University real-time estimate; the national average gasoline price hit $4.15/gal on Labor Day, a record.</li>
+      <li><span class="src">EURACTIV &middot; 7 Sep:</span> The AfD won Sunday's Saxony-Anhalt state election outright, collapsing the CDU-led "firewall" and prompting Chancellor Friedrich Merz to concede the heaviest CDU defeat "in decades."</li>
+    </ul>
+  </div>
+
+  <nav class="tabs">
+    <button class="on" onclick="showTab('defense',this)">&#128737; Defense</button>
+    <button onclick="showTab('us',this)">&#127482;&#127480; US</button>
+    <button onclick="showTab('europe',this)">&#127466;&#127482; Europe</button>
+    <button onclick="showTab('me',this)">&#127964; Middle East</button>
+    <button onclick="showTab('tech',this)">&#128187; Tech &amp; AI</button>
+    <button onclick="showTab('pacific',this)">&#127759; Pacific</button>
+    <button onclick="showTab('cities',this)">&#127961; Cities</button>
+    <button onclick="showTab('feel',this)">&#127775; Feel Good</button>
+  </nav>
+
+  <!-- ================= DEFENSE ================= -->
+  <section id="defense" class="panel active">
+    <h2 class="tabhead">&#128737; Defense</h2>
+    <p class="note">Force structure, budget and acquisition signals from the past 36 hours.</p>
+
+    <div class="card" style="border-left-color:#ef4444">
+      <div class="meta">Breaking Defense &middot; 7 Sep 2026</div>
+      <h4>Air Force moves to replace the MQ-9 faster after "concerning" Reaper losses in the Iran conflict</h4>
+      <p class="body">Combat attrition of MQ-9 Reapers during the Iran campaign has pushed the Air Force to accelerate a successor rather than run a conventional program of record. Lt. Gen. Christopher Niemi framed the core problem as cost structure, not capability: "There's no doubt if we try and pursue the exact same approach that we had with things like the MQ-9, we're going to get something that costs about the same as an MQ-9." The service is signalling it will trade exquisite survivability for attritable mass and a shorter fielding timeline. The Reaper has carried the bulk of persistent ISR in permissive and semi-permissive airspace for two decades, including over EUCOM's southern approaches.</p>
+      <div class="sowhat"><b>So What</b>A cheaper, attritable ISR fleet changes the ISR allocation math theater-wide — but not for two to three years. Plan on constrained MQ-9 availability through FY27 and build collection plans that assume competition with CENTCOM for every sortie rather than assured organic coverage.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#ef4444">
+      <div class="meta">Breaking Defense &middot; 7 Sep 2026</div>
+      <h4>F-35 unit costs jump sharply in the latest production lots</h4>
+      <p class="body">Average flyaway cost of the F-35A and F-35B rose more than 11 percent against recent contracts, and the F-35C climbed over 8 percent, according to figures from the F-35 Joint Program Office. The increases land while European partners are still expanding their F-35 buys and while several allied air forces are sequencing deliveries against national budget ceilings. Rising unit cost with flat program funding translates directly into fewer tails per lot. Partner nations negotiating follow-on tranches now face a materially different price point than the one used in their original business cases.</p>
+      <div class="sowhat"><b>So What</b>Allied fighter delivery schedules across the theater are more likely to slip or shrink than to hold. Check whether any exercise, basing or interoperability plan in your lane assumes a partner nation's F-35 fielding date that was locked in before this cost revision.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#ef4444">
+      <div class="meta">Breaking Defense &middot; 7 Sep 2026</div>
+      <h4>Pentagon faces mounting FY26 operational costs under a stopgap that restricts new starts</h4>
+      <p class="body">The department is carrying operational costs from the Iran campaign that were never budgeted, and the newly passed continuing resolution funds the government only to 11 December while imposing the customary restrictions on new starts and production-rate increases. One former official's assessment to Breaking Defense was blunt: "If I were still in the building, I would say, 'I'm probably screwed now.'" The combination — unplanned operational bills plus a CR that forbids reprogramming into new lines — squeezes O&amp;M accounts first. Historically that pressure surfaces as deferred maintenance, trimmed exercises and reduced flying hours before it touches anything visible.</p>
+      <div class="sowhat"><b>So What</b>Expect O&amp;M turbulence in the second quarter regardless of what your current execution plan says. Identify now which of your FY26 exercises, TDY lines and depot inputs you would protect and which you would surrender, so the decision is yours rather than the comptroller's.</div>
+    </div>
+  </section>
+
+  <!-- ================= US ================= -->
+  <section id="us" class="panel">
+    <h2 class="tabhead">&#127482;&#127480; United States</h2>
+    <p class="note">Washington developments with direct bearing on the force.</p>
+
+    <div class="card" style="border-left-color:#3b82f6">
+      <div class="meta">Breaking Defense / Politico &middot; 7 Sep 2026</div>
+      <h4>House passes stopgap funding bill, averting an October shutdown and setting an 11 December cliff</h4>
+      <p class="body">The continuing resolution has cleared the House and heads to the president's desk, giving Congress until 11 December to pass full-year appropriations. The bill keeps the government open but carries the standard CR constraints on the Defense Department: no new starts, no production-rate increases, and spending pegged to prior-year levels regardless of what the FY26 request contained. That means the department enters the first quarter of the fiscal year unable to begin any initiative that was justified on new-start authority. A December deadline also places the next funding fight squarely in the holiday leave period.</p>
+      <div class="sowhat"><b>So What</b>You have roughly 90 days of predictable funding and a plausible shutdown fight in mid-December. Sequence anything requiring new obligation authority ahead of Thanksgiving, and pre-brief your civilians on furlough planning now rather than in the second week of December.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#3b82f6">
+      <div class="meta">Washington Post &middot; 8 Sep 2026</div>
+      <h4>Bipartisan proposal to lift the Social Security payroll tax cap as the trust fund nears depletion</h4>
+      <p class="body">Sen. Bernie Moreno (R-Ohio) has joined Sen. Elizabeth Warren (D-Mass.) in proposing to raise the payroll tax cap so higher earners contribute more to Social Security, as the trust fund approaches depletion. The notable element is the Republican concession on taxes, which breaks a long-standing party position and suggests the depletion date has become politically unavoidable. Any Social Security package moves adjacent to the broader entitlement-versus-discretionary spending argument that ultimately constrains the defense topline. Nothing is enacted, but the coalition is new.</p>
+      <div class="sowhat"><b>So What</b>Entitlement reform that raises revenue slightly loosens the mandatory-spending squeeze on discretionary accounts, including defense. Watch whether this coalition holds — it is an early indicator of whether the FY28 defense topline debate starts from a better or worse baseline.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#3b82f6">
+      <div class="meta">Washington Post &middot; 7 Sep 2026</div>
+      <h4>Arlington National Cemetery signage revised to remove critical language on Confederate memorial</h4>
+      <p class="body">A new sign at Arlington National Cemetery omits previous wording stating that the Reconciliation Memorial "mythologized" the Confederacy and offered "sanitized" depictions of slavery. The revision reverses interpretive language added during the memorial's earlier review. Arlington remains the most visible symbolic space in the American military estate, and changes to how it explains itself are read by soldiers, families and foreign audiences alike. The change is likely to generate questions in formation and in the press.</p>
+      <div class="sowhat"><b>So What</b>Junior leaders will be asked about this and there is no approved talking point. Decide now whether your policy is to refer queries to the Army Public Affairs line or to permit commanders to address it, and communicate that choice before someone improvises on camera.</div>
+    </div>
+  </section>
+
+  <!-- ================= EUROPE ================= -->
+  <section id="europe" class="panel">
+    <h2 class="tabhead">&#127466;&#127482; Europe</h2>
+    <p class="note">Host-nation politics, the Russia-Ukraine war and alliance structure.</p>
+
+    <div class="card" style="border-left-color:#6366f1">
+      <div class="meta">EURACTIV &middot; 7 Sep 2026</div>
+      <h4>AfD wins Saxony-Anhalt outright; the "firewall" collapses and Merz's chancellorship is in question</h4>
+      <p class="body">The Alternative for Germany — designated a suspected right-wing extremist organisation by the Saxony-Anhalt Office for the Protection of the Constitution — won Sunday's state election at the ballot box, ending the cross-party <em>Brandmauer</em> strategy of excluding it from power. Friedrich Merz called it "the heaviest electoral defeat [the CDU] has suffered in years, in decades" and conceded that "naturally, this will have to have consequences." The generational split is the decisive datum: the CDU took 31 percent among voters aged 70 and over but just 5 percent among 18-24s and 6 percent among 25-34s, against AfD shares of 42 and 44 percent in those brackets. The AfD will now attempt to form a regional government, and Merz's own position is under open discussion within his party.</p>
+      <div class="sowhat"><b>So What</b>The host nation's governing coalition may not be stable through the year, and a party sceptical of US basing and Ukraine support now has a governing foothold in an eastern state. Assume German positions on burden-sharing, Ukraine aid and stationing agreements become harder to predict, and avoid staffing anything that depends on a specific Berlin coalition surviving into 2027.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#6366f1">
+      <div class="meta">Institute for the Study of War &middot; 7 Sep 2026</div>
+      <h4>Ukraine publicly disproves Putin's claim to have taken Svyatohirsk; Russian milbloggers concede the falsification</h4>
+      <p class="body">Ukrainian 3rd Army Corps commander Brig. Gen. Andriy Biletskyi filmed himself speaking calmly in Svyatohirsk on 7 September, demonstrating uncontested Ukrainian control of a settlement Putin claimed Russian forces had seized on 1 September. ISW assesses the nearest Russian forces were 13km away as of late spring, and current reporting places the line further back still amid Ukrainian counteroffensive operations. A Kremlin-affiliated milblogger acknowledged the video and warned that false capture claims create real operational risk — units cannot call fires onto ground they claim to hold, and adjacent formations plan against a fictional picture. ISW's judgement is that the Kremlin's tolerance of "beautiful reports" simultaneously degrades Russian combat effectiveness and feeds Putin's maximalist negotiating demands for all of Luhansk, Donetsk, Zaporizhia and Kherson including territory never occupied.</p>
+      <div class="sowhat"><b>So What</b>Russian territorial claims entering any negotiation this winter are not a reliable description of the front and should not anchor your planning maps. Treat Russian-declared control as an information operation input, and require your intelligence sections to source line-of-contact estimates independently of Russian claims.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#6366f1">
+      <div class="meta">Axios &middot; 7 Sep 2026</div>
+      <h4>Washington probes a winter de-escalation in Ukraine paired with restarted peace talks</h4>
+      <p class="body">Zelensky told Axios that the United States is exploring whether Ukraine and Russia might take reciprocal steps to de-escalate over the winter while negotiations toward a broader settlement resume. The framing is a seasonal pause rather than a ceasefire, which is a materially lower bar and consistent with previous winter reductions in tempo driven by weather and ammunition cycles. It arrives alongside ISW's assessment that the Kremlin's stated terms remain full Ukrainian capitulation across four oblasts. A de-escalation that Russia treats as reconstitution time and Ukraine treats as a negotiating step produces very different force-posture implications.</p>
+      <div class="sowhat"><b>So What</b>Any winter pause is a reconstitution window for both sides, not a de-escalation of risk. Do not let a negotiation headline drive down your readiness assumptions for spring, and flag to staff that force-posture questions will accelerate — not slow — if talks appear to progress.</div>
+      <div class="readmore"><a href="https://www.axios.com/2026/09/07/zelensky-ukraine-russia-war-witkoff-kushner-putin-trump" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+    </div>
+
+    <div class="card" style="border-left-color:#6366f1">
+      <div class="meta">IISS Strategic Comments &middot; 7 Sep 2026</div>
+      <h4>NATO's eastern members are rebuilding physical fortifications along the alliance's frontier</h4>
+      <p class="body">IISS reports the return of fixed fortification to NATO's eastern flank, with eastern member states investing in the kind of engineered defensive works largely abandoned in Europe after the Cold War. The shift reflects lessons from Ukraine, where prepared positions, obstacle belts and dug-in defence have repeatedly proven more decisive than manoeuvre in contested sectors. Fortification also represents a national hedge — physical works remain useful regardless of what any given ally decides about reinforcement timelines. The trend has engineering, basing and interoperability implications well beyond the states building them.</p>
+      <div class="sowhat"><b>So What</b>Eastern allies are visibly hedging against reinforcement uncertainty, and their obstacle plans will shape any reinforcement route you are responsible for. Confirm that your movement and RSOM planning accounts for allied obstacle belts as friendly constraints, not just as enemy problems.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#6366f1">
+      <div class="meta">EURACTIV &middot; 7 Sep 2026</div>
+      <h4>Berlin and Paris push a fundamental overhaul of the EU's diplomatic service</h4>
+      <p class="body">A joint German-French proposal, seen by EURACTIV, diagnoses the European External Action Service as "sidelined," with declining influence and persistent "friction" with the European Commission that the two capitals say must stop. The paper seeks to restructure how the EU conducts foreign policy and to clarify the standing of the High Representative. Separately, the Commission will this week urge member states to reduce "strategic dependence" in public procurement — a draft law aimed at China without naming it. Both moves point to Franco-German attempts to reassert direction over EU external action at a moment when Berlin's domestic authority is weakening.</p>
+      <div class="sowhat"><b>So What</b>EU foreign-policy machinery is in flux while the German government is politically weakened, which makes EU positions slower and less predictable this autumn. For anything requiring EU-level coordination, work bilateral capitals in parallel rather than waiting on Brussels consensus.</div>
+    </div>
+  </section>
+
+  <!-- ================= MIDDLE EAST ================= -->
+  <section id="me" class="panel">
+    <h2 class="tabhead">&#127964; Middle East</h2>
+    <p class="note">Post-conflict accounting from the Iran campaign.</p>
+
+    <div class="card" style="border-left-color:#f59e0b">
+      <div class="meta">Axios &middot; 7 Sep 2026</div>
+      <h4>Iran war's energy bill passes $100 billion for US consumers and keeps climbing</h4>
+      <p class="body">A real-time Brown University Watson School tracker puts the cost of the Iran war to US consumers in higher energy prices at $100 billion, rising by roughly $1 million every two minutes. Higher gasoline and diesel prices have cost the average American household more than $760 since the war began on 28 February, with the diesel share growing fastest — the component that most directly transmits into freight, logistics and food costs. The national average price of regular gasoline reached $4.15 on Labor Day, nearly a dollar above last year and well past the prior Labor Day record of $3.82 set in 2012. The president maintains Americans will accept higher prices to keep Iran from a nuclear weapon, while polling continues to rank inflation as voters' top concern.</p>
+      <div class="sowhat"><b>So What</b>Sustained diesel prices raise the real cost of every convoy, exercise and contracted movement in your FY26 plan, and a domestic-cost narrative this visible is what eventually constrains theater operational funding. Reprice fuel-dependent lines against current rates rather than the rates in your approved budget.</div>
+      <div class="readmore"><a href="https://www.axios.com/2026/09/07/iran-gas-prices-diesel-100-billion" target="_blank" rel="noopener">Read full article &rarr;</a></div>
+    </div>
+
+    <div class="card" style="border-left-color:#f59e0b">
+      <div class="meta">Washington Post &middot; 6 Sep 2026</div>
+      <h4>Deadly Iran wedding strike assessed as a US weapon missing its intended target</h4>
+      <p class="body">Six weapons released by US Navy jets last week targeted a communications complex in the coastal town of Kuhestak; one missed and struck a nearby wedding, causing multiple deaths. The account attributes the civilian toll to weapons effects failure rather than targeting error, which is a distinct and narrower finding but no less consequential for the information environment. Incidents of this kind become the durable, repeatable element of the adversary and partner narrative long after the operational phase closes. Expect the episode to be raised in European parliaments and partner-nation press well beyond the region.</p>
+      <div class="sowhat"><b>So What</b>Civilian-casualty incidents from the Iran campaign will be raised with you by host-nation and partner counterparts, likely without warning. Get the current approved US position from your public affairs and legal advisors before your next partner engagement rather than after it.</div>
+    </div>
+  </section>
+
+  <!-- ================= TECH & AI ================= -->
+  <section id="tech" class="panel">
+    <h2 class="tabhead">&#128187; Tech &amp; AI</h2>
+    <p class="note">Model capability, cyber exposure and the field employment of commercial technology.</p>
+
+    <h3 class="sub">AI &amp; Competition</h3>
+
+    <div class="card" style="border-left-color:#a78bfa">
+      <div class="meta">TLDR AI &middot; 7 Sep 2026</div>
+      <h4>OpenAI launches GPT-6 "Astra," built for long-running work across browsers, spreadsheets and desktop applications</h4>
+      <p class="body">Astra is positioned as an agentic model that sustains extended tasks across a user's existing software rather than answering discrete prompts — operating browsers, spreadsheets, websites and desktop applications end to end. The capability jump that matters is duration and tool use, not fluency: a model that holds a multi-hour task across applications is a different security and workflow object than a chatbot. Enterprises are simultaneously reported to be diversifying inference hardware away from Nvidia, and the same model reportedly scores 100 percent on ExploitBench (see Cyber below). Commercial agentic tooling is arriving in staff workflows faster than governance for it.</p>
+      <div class="sowhat"><b>So What</b>Staff will begin using agentic tools that drive applications on their own machines, which is a data-handling problem before it is a productivity gain. Confirm with your G6/A6 what is actually authorised on your networks and issue explicit guidance before shadow adoption sets the de facto policy.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#a78bfa">
+      <div class="meta">TLDR &middot; 7 Sep 2026</div>
+      <h4>Claude produces the first complete computer-verified proof of Fermat's Last Theorem in eleven days</h4>
+      <p class="body">Anthropic's Claude generated a complete machine-checked proof of Fermat's Last Theorem in the Lean theorem prover in eleven days, automating formalisation work that had been expected to occupy human mathematicians for years. The significance for defense is not the mathematics but the demonstration of sustained, verifiable, multi-step reasoning in a domain where every step is mechanically checked. Formal verification is the same technique used to prove correctness of flight control software, cryptographic implementations and safety-critical firmware. A model that can drive a proof assistant at this scale is a model that can, in principle, be pointed at code assurance.</p>
+      <div class="sowhat"><b>So What</b>Machine-assisted formal verification is moving from research to practical scale, which cuts both ways — it accelerates assurance of our own safety-critical software and accelerates adversary discovery of flaws in it. Ask your program offices whether any software assurance timeline in your portfolio should now be re-baselined.</div>
+    </div>
+
+    <h3 class="sub">Cyber &amp; Emerging Tech</h3>
+
+    <div class="card" style="border-left-color:#a78bfa">
+      <div class="meta">TLDR Cybersecurity &middot; 7 Sep 2026</div>
+      <h4>JetBrains breach forces credential rotation; PaperCut flaws hit schools and universities</h4>
+      <p class="body">JetBrains is urging all users of Cadence, its hosted cloud compute service, to revoke and rotate every credential after an intrusion by unidentified actors — a developer-tooling compromise, which is the supply-chain position with the widest downstream blast radius. Separately, newly disclosed PaperCut print-management vulnerabilities are being exploited against K-12 schools and universities, a sector that overlaps directly with DoDEA and host-nation schools used by military families. The same edition reports GPT-6 Astra scoring 100 percent on ExploitBench, an automated exploit-generation benchmark. Taken together the pattern is faster exploitation of commodity enterprise software by less-skilled actors.</p>
+      <div class="sowhat"><b>So What</b>Developer platforms and print servers are both inside your perimeter and both are being actively exploited right now. Task your cyber defense element to confirm JetBrains credential rotation and PaperCut patch status this week, and specifically include school and MWR-adjacent networks in that sweep.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#a78bfa">
+      <div class="meta">Breaking Defense &middot; 7 Sep 2026</div>
+      <h4>Army desert trial of Starlink exposes both the limits and the value of commercial SATCOM</h4>
+      <p class="body">An Army field trial of Starlink in desert conditions surfaced practical shortfalls — including terminals degraded by moisture management and environmental exposure — alongside clear performance advantages over bespoke military alternatives. Brig. Gen. Shane Taylor's framing was that adaptation should be attempted before replacement: "Before we go spend quadruple the cost" on bespoke tech, "there are some things that we can do" to make a commercial option work. The finding matters most for units that already depend on commercial LEO connectivity as a primary rather than backup path. Environmental hardening, not bandwidth, is emerging as the binding constraint.</p>
+      <div class="sowhat"><b>So What</b>If any element in your organisation is using commercial LEO terminals as primary communications, environmental failure is a more likely outage cause than jamming. Require a tested PACE plan that assumes terminal loss to weather, and confirm it during the next field problem rather than on paper.</div>
+    </div>
+  </section>
+
+  <!-- ================= PACIFIC ================= -->
+  <section id="pacific" class="panel">
+    <h2 class="tabhead">&#127759; Pacific</h2>
+    <p class="note">Allied capability, burden-sharing and the contest over institutional language.</p>
+
+    <div class="card" style="border-left-color:#14b8a6">
+      <div class="meta">Breaking Defense / The Japan Times &middot; 7 Sep 2026</div>
+      <h4>Japan requests a record $55B defense budget with extended-range strike — still short of the US target</h4>
+      <p class="body">Tokyo's record request seeks new extended-range missiles, submarine-launched weapons and missile modules for underwater drones, pushing further into counterstrike capability that Japan foreswore for decades. The Japan Times notes that while the defense budget is likely to exceed &yen;10 trillion this year, that remains far below the 3.5 percent of GDP Washington is pressing for, and that Tokyo may resort to creative accounting — folding coast guard, infrastructure and research spending into the defense figure — to close the gap on paper. The structural obstacle is fiscal, not political will. Japan is buying meaningful capability while quietly signalling it will not reach the American number honestly.</p>
+      <div class="sowhat"><b>So What</b>The US demand for allied GDP percentages is producing definitional creativity in Tokyo, and the same argument is running in European capitals with the same likely outcome. When assessing an ally's contribution, insist on capability delivered rather than percentage declared — the two are diverging.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#14b8a6">
+      <div class="meta">ASPI The Strategist &middot; 7 Sep 2026</div>
+      <h4>UN Resolution 2758: how Beijing turned an ambiguous text into institutional power</h4>
+      <p class="body">ASPI examines how the People's Republic has converted UN General Assembly Resolution 2758 — which addressed China's UN seat and says nothing about Taiwan's sovereignty — into a de facto bar on Taiwanese participation across the UN system through sustained reinterpretation. The piece is framed around the Pacific Islands Forum in Palau, where Australian Prime Minister Anthony Albanese faced the practical consequences of that reinterpretation in a regional setting. The mechanism is incremental: each unchallenged citation of 2758 as settling Taiwan's status becomes precedent for the next. It is legal ground taken without a shot.</p>
+      <div class="sowhat"><b>So What</b>Interpretive drift in multilateral texts is a live form of Chinese competition, and the same technique is applicable to NATO and EU documents in your own theater. Treat unchallenged language in communiqués as a contested space, and ensure someone on your staff is reading them for precedent rather than for tasking.</div>
+    </div>
+
+    <div class="card" style="border-left-color:#14b8a6">
+      <div class="meta">EURACTIV &middot; 7 Sep 2026</div>
+      <h4>Brussels floats procurement rules to cut member-state "strategic dependence" — with China the unnamed target</h4>
+      <p class="body">The European Commission will press national capitals this week to reduce strategic dependence when awarding public contracts, in a draft law that does not name China but leaves no ambiguity about the target. The measure would extend European de-risking from export controls and investment screening into the far larger domain of routine public purchasing. Defense-adjacent procurement — infrastructure, communications, logistics, port and rail equipment — is where the practical effect would land. For a theater that runs on host-nation contracted support, procurement rules are force-posture rules.</p>
+      <div class="sowhat"><b>So What</b>European procurement restrictions on Chinese-origin equipment will eventually reach the host-nation contracts and infrastructure your operations depend on. Have your contracting officers identify where you currently rely on vendors likely to fall inside the new scope, before compliance becomes a schedule problem.</div>
+    </div>
+  </section>
+
+  <!-- ================= CITIES ================= -->
+  <section id="cities" class="panel">
+    <h2 class="tabhead">&#127961; Cities — Stuttgart &amp; Baden-W&uuml;rttemberg</h2>
+    <p class="note">What to do, 8 &ndash; 29 September 2026. Sources: Stripes Europe "What's up this weekend in Stuttgart," Moving to Stuttgart. State-wide calendar (visit-bw) not queried this run.</p>
+
+    <div class="datebin">Running now &mdash; through 13 September</div>
+
+    <div class="ev">
+      <h4>&#127837; <a href="https://www.facebook.com/events/1589616886028655/" target="_blank" rel="noopener">Stuttgart Sicilian Fest</a></h4>
+      <p class="when">Pariser Platz, Stuttgart &middot; through 13 September &middot; Free entry</p>
+      <p>A Sicilian street-food festival in the middle of the city with arancini, cannoli, grilled specialities, craft beer and live entertainment across the run. It is compact enough to do in an hour or make an evening of, and the food stalls are the main event rather than a beer tent with food attached. Good for families who want the fest atmosphere without committing to a full Volksfest day.</p>
+      <p class="tip">Insider tip: Pariser Platz is directly at the Stadtbibliothek stop on the U12 — no parking required. Go before 18:00 with children; the crowd shifts markedly toward drinking after dark.</p>
+    </div>
+
+    <div class="ev">
+      <h4>&#10024; <a href="https://www.karlsruhe-erleben.de/en/veranstaltungen/schlosslichtspiele-light-festival" target="_blank" rel="noopener">Schlosslichtspiele &mdash; Palace Light Festival Karlsruhe</a></h4>
+      <p class="when">Karlsruhe Palace &middot; through 13 September &middot; Free</p>
+      <p>Large-scale projection mapping across the entire facade of Karlsruhe Palace, this year under the motto "Lightyard Stories: Visions of Urban Living Spaces." The show runs in a loop after dark on the palace lawn, and the whole audience sits outside on the grass for free. It is one of the largest projection festivals in Europe and it closes at the end of this week.</p>
+      <p class="tip">Insider tip: About 70 minutes' drive from Stuttgart, or roughly an hour by regional train to Karlsruhe Hbf then tram. Closing week, so expect crowds — arrive before the first show to get lawn space, and bring a blanket.</p>
+    </div>
+
+    <div class="ev">
+      <h4>&#129412; <a href="https://www.dinoinfo.de/ausstellungstermine/" target="_blank" rel="noopener">Dinosaurs &mdash; In the Realm of Prehistory</a></h4>
+      <p class="when">Karlsruhe &middot; check dates on site &middot; Ticketed</p>
+      <p>A touring exhibition of around fifty life-sized dinosaur models, several of them animatronic, presented as a walk-through prehistoric landscape. It is aimed squarely at the primary and middle-school bracket and takes about ninety minutes to work through properly. Pairs naturally with the Palace Light Festival for a single full day in Karlsruhe.</p>
+      <p class="tip">Insider tip: Verify current dates on the organiser's page before driving — this is a touring show and the Karlsruhe run is finite. Combine with the light festival: exhibition in the afternoon, projections after dark.</p>
+    </div>
+
+    <div class="datebin">Running now &mdash; through autumn</div>
+
+    <div class="ev">
+      <h4>&#127875; <a href="https://movingtostuttgart.com/event/kurbisausstellung-pumpkin-festival-ludwigsburg/" target="_blank" rel="noopener">K&uuml;rbisausstellung &mdash; Ludwigsburg Pumpkin Festival</a></h4>
+      <p class="when">Bl&uuml;hendes Barock, Ludwigsburg &middot; through 1 November &middot; Ticketed (palace gardens entry)</p>
+      <p>The largest pumpkin festival in the world, staged in the baroque gardens of Ludwigsburg Residential Palace, with enormous carved sculptures built to an annual theme, a giant-pumpkin weigh-off, pumpkin soup and Sp&auml;tzle stands, and a full children's play area inside the same ticket. It is the single most reliable family day out in the Stuttgart area each autumn and easily fills four hours. The garden ticket also covers the fairytale garden, which is the part children under ten remember.</p>
+      <p class="tip">Insider tip: S4/S5 to Ludwigsburg then a ten-minute walk or the bus to Bl&uuml;hendes Barock. Go on a weekday if you can — weekend crowds in October are heavy — and bring cash for the food stands.</p>
+    </div>
+
+    <div class="ev">
+      <h4>&#128663; <a href="https://www.mercedes-benz.com/en/art-and-culture/museum/events/classics-coffee/" target="_blank" rel="noopener">Classics &amp; Coffee at the Mercedes-Benz Museum</a></h4>
+      <p class="when">Mercedes-Benz Museum, Bad Cannstatt &middot; every Sunday through 11 October &middot; Free (outdoor area)</p>
+      <p>Classic car owners gather on the museum forecourt every Sunday morning through mid-October, with coffee and an informal, walk-around atmosphere. The outdoor meet is free even if you do not buy a museum ticket, which makes it a low-commitment Sunday morning with older kids. Attendance thins sharply once the weather turns, so the remaining Sundays this month are the good ones.</p>
+      <p class="tip">Insider tip: S1 to Neckarpark (Mercedes-Benz) puts you at the door. Arrive by 10:00 — the best cars leave before noon.</p>
+    </div>
+
+    <div class="ev">
+      <h4>&#129474; <a href="https://www.cyhitours.com/stuttgart-free-walking-tour/" target="_blank" rel="noopener">Free Walking Tour of Stuttgart (in English)</a></h4>
+      <p class="when">K&ouml;nigstrasse 1a &middot; Saturdays &amp; Sundays, 11:00 &middot; Free (tip-based)</p>
+      <p>A two-hour English-language walking tour of the city centre, meeting under a yellow umbrella at the top of K&ouml;nigstrasse. It covers the Schlossplatz, the Stiftskirche and the city's wartime and reconstruction history, which is genuinely useful orientation for anyone recently arrived. Tip-based rather than free in practice, but there is no booking barrier.</p>
+      <p class="tip">Insider tip: The best possible first weekend activity for a newly PCS'd family — do this before you try to navigate the city on your own. Two hours on foot; not ideal for under-sevens.</p>
+    </div>
+
+    <div class="datebin">Friday 25 September &mdash; Sunday 11 October</div>
+
+    <div class="ev">
+      <h4>&#127866; <a href="https://movingtostuttgart.com/event/cannstatter-volksfest/" target="_blank" rel="noopener">Cannstatter Volksfest</a></h4>
+      <p class="when">Cannstatter Wasen, Stuttgart &middot; 25 September &ndash; 11 October &middot; Free entry; rides and tents priced individually</p>
+      <p>The second-largest folk festival in Europe after Munich's Oktoberfest, and the defining local event of the autumn. Alongside the beer tents there is a full fairground of rides, a market of regional producers, the Fruchts&auml;ule centrepiece and a fireworks programme. The character of the Wasen changes completely by time of day: daytime and early evening are family fairground, while the tents after roughly 19:00 are an adult drinking environment. Families who go in the afternoon get the good version.</p>
+      <p class="tip">Insider tip: Opens in just over two weeks — tent reservations for the first weekend are already scarce, so book now or plan to go on a weekday afternoon. Take the S1/S2/S3 to Bad Cannstatt and walk; do not attempt to drive and park.</p>
+    </div>
+  </section>
+
+  <!-- ================= FEEL GOOD ================= -->
+  <section id="feel" class="panel">
+    <h2 class="tabhead">&#127775; Feel Good</h2>
+    <p class="note">One good thing, and a look back.</p>
+
+    <div class="card" style="border-left-color:#facc15">
+      <div class="meta">Washington Post &middot; 6 Sep 2026</div>
+      <h4>A daring transplant restores a young woman's sight using cells from her own leg</h4>
+      <p class="body">Surgeons transferred cell structures from the leg of a 26-year-old woman to her eyes in an effort to restore vision she had lost, in what the Post describes as a first of its kind. The procedure was pursued after conventional options were exhausted, with her family backing an experimental route that had no established track record. Autologous techniques of this kind — rebuilding tissue from a patient's own cells — are among the most promising lines in regenerative medicine precisely because they sidestep rejection. Cases like this are how a technique moves from theoretical to available.</p>
+    </div>
+
+    <div class="otd">
+      <h4>&#128220; On This Day &mdash; 8 September</h4>
+      <ul>
+        <li><b>1943 &mdash;</b> General Eisenhower publicly announced Italy's armistice with the Allies, five days after it was secretly signed at Cassibile. German forces launched Operation Achse within hours to disarm the Italian army and seize the peninsula, turning a hoped-for quick capitulation into twenty more months of hard fighting up the Italian boot.</li>
+        <li><b>1954 &mdash;</b> The Manila Pact was signed, creating the Southeast Asia Treaty Organization (SEATO). Intended as an Asian counterpart to NATO, it never developed comparable integrated command structures and was formally dissolved in 1977 — an early lesson that treaty text without military machinery behind it does not produce an alliance.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>Compiled 8 September 2026 from newsletters received in the preceding 36 hours. Assessments are those of the cited publications.</footer>
+</div>
+
+<script>
+function showTab(id, btn) {
+  var panels = document.querySelectorAll('.panel');
+  for (var i = 0; i < panels.length; i++) { panels[i].classList.remove('active'); }
+  var target = document.getElementById(id);
+  if (target) { target.classList.add('active'); }
+  var btns = document.querySelectorAll('nav.tabs button');
+  for (var j = 0; j < btns.length; j++) { btns[j].classList.remove('on'); }
+  if (btn) { btn.classList.add('on'); }
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
