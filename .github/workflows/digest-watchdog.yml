@@ -1,0 +1,165 @@
+name: Digest Watchdog
+
+# Confirms that today's digest actually published. Runs 05:45 Europe/Berlin,
+# Mon-Fri, 45 min after the 05:00 publish job.
+#
+# The publisher writes each edition to d/YYYY-MM-DD-<hash>.html with an
+# unguessable hash, so there is no fixed "latest" URL to poll. This workflow
+# looks up today's file in the repo, then fetches that exact URL from GitHub
+# Pages and verifies the served page carries today's date. That checks both
+# halves: the commit landed AND Pages is serving it.
+#
+# Alerts go to you only. It never contacts the distribution list.
+
+on:
+  schedule:
+    # GitHub cron is UTC with no DST awareness, so both fire year-round and the
+    # gate step drops whichever one isn't 05:45 in Berlin.
+    - cron: '45 3 * * 1-5'
+    - cron: '45 4 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  PAGES_BASE: https://johnsalexander-06.github.io/Daily-Digest-Germany
+  DIGEST_DIR: d
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gate on Berlin local time
+        id: gate
+        run: |
+          HOUR=$(TZ=Europe/Berlin date +%H)
+          echo "Berlin hour is $HOUR"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          elif [ "$HOUR" = "05" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Off-season cron duplicate. Skipping."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check out repository
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Verify today's digest published
+        id: check
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          set +e
+
+          ISO=$(TZ=Europe/Berlin date +%Y-%m-%d)
+          US=$(TZ=Europe/Berlin date "+%B %-d, %Y")
+          GB=$(TZ=Europe/Berlin date "+%-d %B %Y")
+          echo "iso=$ISO" >> "$GITHUB_OUTPUT"
+
+          echo "Looking for $DIGEST_DIR/$ISO-*.html"
+
+          MATCH=$(ls -1 "$DIGEST_DIR/$ISO"-*.html 2>/dev/null | head -1)
+
+          if [ -z "$MATCH" ]; then
+            LAST=$(ls -1 "$DIGEST_DIR"/*.html 2>/dev/null | sort | tail -1 | xargs -r basename)
+            echo "status=missing" >> "$GITHUB_OUTPUT"
+            echo "detail=No file matching $DIGEST_DIR/$ISO-*.html in the repo. Most recent edition on record: ${LAST:-none}." >> "$GITHUB_OUTPUT"
+            echo "MISSING - nothing published for today."
+            exit 0
+          fi
+
+          FILE=$(basename "$MATCH")
+          URL="$PAGES_BASE/$DIGEST_DIR/$FILE"
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          echo "Found $FILE - now checking Pages serves it."
+
+          CODE=$(curl -sSL --max-time 30 --retry 4 --retry-delay 15 --retry-all-errors -o served.html -w '%{http_code}' "$URL")
+          CURL_RC=$?
+          echo "code=$CODE" >> "$GITHUB_OUTPUT"
+
+          if [ $CURL_RC -ne 0 ] || [ "$CODE" != "200" ]; then
+            echo "status=unserved" >> "$GITHUB_OUTPUT"
+            echo "detail=Committed as $FILE but Pages returned HTTP $CODE (curl exit $CURL_RC). The Pages build may have failed or is still running." >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if grep -qF "$ISO" served.html || grep -qF "$US" served.html || grep -qF "$GB" served.html; then
+            echo "status=ok" >> "$GITHUB_OUTPUT"
+            echo "OK - $FILE is live and dated today."
+          else
+            FOUND=$(grep -oE '[A-Z][a-z]+ [0-9]{1,2}, 20[0-9]{2}' served.html | head -1)
+            echo "status=wrongdate" >> "$GITHUB_OUTPUT"
+            echo "detail=Served $FILE but it does not contain today's date. Date string found: ${FOUND:-none}. A stale digest may have been published under today's filename." >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open an alert issue
+        if: steps.gate.outputs.run == 'true' && steps.check.outputs.status != 'ok'
+        uses: actions/github-script@v7
+        env:
+          STATUS: ${{ steps.check.outputs.status }}
+          ISO: ${{ steps.check.outputs.iso }}
+          DETAIL: ${{ steps.check.outputs.detail }}
+          URL: ${{ steps.check.outputs.url }}
+        with:
+          script: |
+            const STATUS = process.env.STATUS;
+            const ISO = process.env.ISO;
+            const DETAIL = process.env.DETAIL;
+            const URL = process.env.URL;
+            const title = 'Digest did not publish - ' + ISO + ' (' + STATUS + ')';
+
+            const open = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'digest-watchdog',
+              per_page: 100,
+            });
+            if (open.data.some(i => i.title === title)) {
+              core.info('Alert already open for today.');
+              return;
+            }
+
+            const body = [
+              "**Today's digest is not live as of 05:45 Europe/Berlin.**",
+              '',
+              '| Field | Value |',
+              '|---|---|',
+              '| Status | ' + STATUS + ' |',
+              '| Detail | ' + DETAIL + ' |',
+              '| URL | ' + (URL || 'never published') + ' |',
+              '',
+              'The distribution list was **not** contacted by this workflow.',
+              'Assume your colleagues received nothing today.',
+              '',
+              '**Triage:**',
+              '1. publish-germany.log - did the 05:00 job run at all?',
+              '2. digest-latest.html - does it exist and carry today of date?',
+              '   The publisher rejects anything older than maxStaleHours (6).',
+              '3. wake-network-status.txt - was the machine awake with network up?',
+              '4. File good but unpublished: re-run run-publish-germany.bat.',
+              '5. File never generated: rebuild the digest first. A stale-dated file',
+              '   will be refused even after a successful push.',
+              '',
+              '_Close this issue once the digest is out._',
+            ].join('\n');
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: title,
+              body: body,
+              labels: ['digest-watchdog'],
+            });
+
+      - name: Report success
+        if: steps.gate.outputs.run == 'true' && steps.check.outputs.status == 'ok'
+        run: |
+          echo "Digest live and current: ${{ steps.check.outputs.url }}"
